@@ -28,15 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPlatos));
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.bs = new System.Windows.Forms.BindingSource();
+            this.bs = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colGrupo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCodigo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPrecio = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTasaIva = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPrecioConIva = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCosto = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -57,7 +59,7 @@
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator();
+            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
@@ -80,9 +82,9 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.gridControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gridControl1.DataSource = this.bs;
             this.gridControl1.EmbeddedNavigator.Buttons.Append.Visible = false;
             this.gridControl1.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
@@ -122,6 +124,7 @@
             this.colCodigo,
             this.colDescripcion,
             this.colPrecio,
+            this.gridColumn1,
             this.colTasaIva,
             this.colPrecioConIva,
             this.colCosto,
@@ -133,9 +136,9 @@
             this.gridView1.OptionsView.EnableAppearanceEvenRow = true;
             this.gridView1.OptionsView.EnableAppearanceOddRow = true;
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
+            this.gridView1.OptionsView.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowOnlyInEditor;
             this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.OptionsView.ShowGroupedColumns = true;
-            this.gridView1.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowOnlyInEditor;
             // 
             // colGrupo
             // 
@@ -166,7 +169,7 @@
             this.colDescripcion.Name = "colDescripcion";
             this.colDescripcion.Visible = true;
             this.colDescripcion.VisibleIndex = 2;
-            this.colDescripcion.Width = 298;
+            this.colDescripcion.Width = 111;
             // 
             // colPrecio
             // 
@@ -183,6 +186,20 @@
             this.colPrecio.VisibleIndex = 4;
             this.colPrecio.Width = 80;
             // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Precio $";
+            this.gridColumn1.DisplayFormat.FormatString = "n2";
+            this.gridColumn1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn1.FieldName = "PrecioDolares";
+            this.gridColumn1.GroupFormat.FormatString = "n2";
+            this.gridColumn1.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.OptionsColumn.FixedWidth = true;
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 5;
+            this.gridColumn1.Width = 80;
+            // 
             // colTasaIva
             // 
             this.colTasaIva.AppearanceHeader.Options.UseTextOptions = true;
@@ -195,7 +212,7 @@
             this.colTasaIva.Name = "colTasaIva";
             this.colTasaIva.OptionsColumn.FixedWidth = true;
             this.colTasaIva.Visible = true;
-            this.colTasaIva.VisibleIndex = 5;
+            this.colTasaIva.VisibleIndex = 6;
             this.colTasaIva.Width = 70;
             // 
             // colPrecioConIva
@@ -210,7 +227,7 @@
             this.colPrecioConIva.Name = "colPrecioConIva";
             this.colPrecioConIva.OptionsColumn.FixedWidth = true;
             this.colPrecioConIva.Visible = true;
-            this.colPrecioConIva.VisibleIndex = 6;
+            this.colPrecioConIva.VisibleIndex = 7;
             this.colPrecioConIva.Width = 80;
             // 
             // colCosto
@@ -235,10 +252,10 @@
             this.colCoeficiente.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colCoeficiente.Name = "colCoeficiente";
             this.colCoeficiente.OptionsColumn.FixedWidth = true;
-            this.colCoeficiente.SummaryItem.DisplayFormat = "{0:n2}";
-            this.colCoeficiente.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Average;
+            this.colCoeficiente.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Average, "Coeficiente", "{0:n2}")});
             this.colCoeficiente.Visible = true;
-            this.colCoeficiente.VisibleIndex = 7;
+            this.colCoeficiente.VisibleIndex = 8;
             // 
             // repositoryItemCheckEdit1
             // 
@@ -274,7 +291,7 @@
             this.btnNuevo.Image = global::HK.Properties.Resources.note_new;
             this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(74, 50);
+            this.btnNuevo.Size = new System.Drawing.Size(78, 50);
             this.btnNuevo.Text = "Nuevo";
             // 
             // btnEditar
@@ -282,7 +299,7 @@
             this.btnEditar.Image = global::HK.Properties.Resources.note_edit;
             this.btnEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(71, 50);
+            this.btnEditar.Size = new System.Drawing.Size(73, 50);
             this.btnEditar.Text = "Editar";
             // 
             // toolStripSeparator1
@@ -295,7 +312,7 @@
             this.btnEliminar.Image = global::HK.Properties.Resources.note_delete;
             this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(79, 50);
+            this.btnEliminar.Size = new System.Drawing.Size(86, 50);
             this.btnEliminar.Text = "Eliminar";
             // 
             // txtBuscar
@@ -308,7 +325,7 @@
             this.btnBuscar.Image = global::HK.Properties.Resources.note_find;
             this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(43, 50);
+            this.btnBuscar.Size = new System.Drawing.Size(46, 50);
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -322,7 +339,7 @@
             this.btnActualizarCostos.Image = global::HK.Properties.Resources.data_find;
             this.btnActualizarCostos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnActualizarCostos.Name = "btnActualizarCostos";
-            this.btnActualizarCostos.Size = new System.Drawing.Size(126, 50);
+            this.btnActualizarCostos.Size = new System.Drawing.Size(134, 50);
             this.btnActualizarCostos.Text = "Actualizar Costos";
             // 
             // btnImprimir
@@ -330,7 +347,7 @@
             this.btnImprimir.Image = global::HK.Properties.Resources.printer;
             this.btnImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(81, 50);
+            this.btnImprimir.Size = new System.Drawing.Size(89, 50);
             this.btnImprimir.Text = "Imprimir";
             // 
             // btnRecetas
@@ -338,7 +355,7 @@
             this.btnRecetas.Image = global::HK.Properties.Resources.printer;
             this.btnRecetas.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnRecetas.Name = "btnRecetas";
-            this.btnRecetas.Size = new System.Drawing.Size(82, 50);
+            this.btnRecetas.Size = new System.Drawing.Size(83, 50);
             this.btnRecetas.Text = "Recetas";
             // 
             // bindingNavigatorPositionItem
@@ -407,7 +424,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(21, 22);
             this.bindingNavigatorCountItem.Text = "{0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -508,5 +525,6 @@
         private System.Windows.Forms.ToolStripButton btnActualizarCostos;
         private DevExpress.XtraGrid.Columns.GridColumn colCosto;
         private DevExpress.XtraGrid.Columns.GridColumn colCoeficiente;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
     }
 }

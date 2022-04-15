@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEditarMesa));
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -165,6 +166,8 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer();
+            this.calcEdit1 = new DevExpress.XtraEditors.CalcEdit();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -217,6 +220,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemForNumero)).BeginInit();
             this.BarraAcciones.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.calcEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -1449,6 +1454,7 @@
             // 
             // dataLayoutControl1
             // 
+            this.dataLayoutControl1.Controls.Add(this.calcEdit1);
             this.dataLayoutControl1.Controls.Add(this.IdMesaAbiertaTextEdit);
             this.dataLayoutControl1.Controls.Add(this.IdMesaTextEdit);
             this.dataLayoutControl1.Controls.Add(this.IdMesoneroTextEdit);
@@ -1656,7 +1662,7 @@
             this.MesoneroTextEdit.Properties.AppearanceDisabled.Options.UseBackColor = true;
             this.MesoneroTextEdit.Properties.AppearanceDisabled.Options.UseForeColor = true;
             this.MesoneroTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, true, false, false, editorButtonImageOptions1)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, true, false, false, editorButtonImageOptions2)});
             this.MesoneroTextEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.MesoneroTextEdit.Size = new System.Drawing.Size(286, 20);
             this.MesoneroTextEdit.StyleController = this.dataLayoutControl1;
@@ -1676,13 +1682,13 @@
             this.MontoTotalTextEdit.Properties.AppearanceDisabled.Options.UseBackColor = true;
             this.MontoTotalTextEdit.Properties.AppearanceDisabled.Options.UseForeColor = true;
             this.MontoTotalTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, editorButtonImageOptions2)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, editorButtonImageOptions3)});
             this.MontoTotalTextEdit.Properties.DisplayFormat.FormatString = "n2";
             this.MontoTotalTextEdit.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.MontoTotalTextEdit.Properties.EditFormat.FormatString = "n2";
             this.MontoTotalTextEdit.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.MontoTotalTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.MontoTotalTextEdit.Size = new System.Drawing.Size(286, 26);
+            this.MontoTotalTextEdit.Size = new System.Drawing.Size(110, 26);
             this.MontoTotalTextEdit.StyleController = this.dataLayoutControl1;
             this.MontoTotalTextEdit.TabIndex = 14;
             this.MontoTotalTextEdit.TabStop = false;
@@ -1811,7 +1817,8 @@
             this.ItemForPersonas,
             this.ItemForApertura,
             this.ItemForMontoTotal,
-            this.ItemForNumero});
+            this.ItemForNumero,
+            this.layoutControlItem1});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
             this.layoutControlGroup2.Size = new System.Drawing.Size(350, 135);
@@ -1862,7 +1869,7 @@
             this.ItemForMontoTotal.CustomizationFormText = "Monto Total";
             this.ItemForMontoTotal.Location = new System.Drawing.Point(0, 96);
             this.ItemForMontoTotal.Name = "ItemForMontoTotal";
-            this.ItemForMontoTotal.Size = new System.Drawing.Size(350, 39);
+            this.ItemForMontoTotal.Size = new System.Drawing.Size(174, 39);
             this.ItemForMontoTotal.Text = "Monto Total";
             this.ItemForMontoTotal.TextSize = new System.Drawing.Size(57, 13);
             // 
@@ -1996,6 +2003,39 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(349, 17);
             this.toolStripStatusLabel1.Text = "Software desarrollado por OK soluciones, telefonos 0414-8081015";
             // 
+            // calcEdit1
+            // 
+            this.calcEdit1.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mesasAbiertaBindingSource, "MontoTotalDolares", true));
+            this.calcEdit1.Enabled = false;
+            this.calcEdit1.Location = new System.Drawing.Point(236, 98);
+            this.calcEdit1.Name = "calcEdit1";
+            this.calcEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.calcEdit1.Properties.Appearance.Options.UseFont = true;
+            this.calcEdit1.Properties.AppearanceDisabled.BackColor = System.Drawing.SystemColors.Info;
+            this.calcEdit1.Properties.AppearanceDisabled.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.calcEdit1.Properties.AppearanceDisabled.Options.UseBackColor = true;
+            this.calcEdit1.Properties.AppearanceDisabled.Options.UseForeColor = true;
+            this.calcEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, editorButtonImageOptions1)});
+            this.calcEdit1.Properties.DisplayFormat.FormatString = "n2";
+            this.calcEdit1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcEdit1.Properties.EditFormat.FormatString = "n2";
+            this.calcEdit1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.calcEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.calcEdit1.Size = new System.Drawing.Size(112, 26);
+            this.calcEdit1.StyleController = this.dataLayoutControl1;
+            this.calcEdit1.TabIndex = 20;
+            this.calcEdit1.TabStop = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.calcEdit1;
+            this.layoutControlItem1.Location = new System.Drawing.Point(174, 96);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(176, 39);
+            this.layoutControlItem1.Text = "Monto $";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(57, 13);
+            // 
             // FrmEditarMesa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2064,6 +2104,8 @@
             this.BarraAcciones.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.calcEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2205,6 +2247,8 @@
         private System.Windows.Forms.Button btnMas;
         private System.Windows.Forms.ToolStripButton btnSeparar;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private DevExpress.XtraEditors.CalcEdit calcEdit1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
     }
 }
 
