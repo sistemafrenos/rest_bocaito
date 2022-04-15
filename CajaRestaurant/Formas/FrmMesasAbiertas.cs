@@ -291,9 +291,9 @@ namespace HK.Formas
             {
                 control.DrawString(m.Numero, fuente, Brushes.Black, new PointF(10, 20));
                 control.DrawString(m.Apertura.ToShortTimeString(), fuente, Brushes.Black, new PointF(width - 100, 30));
-                control.DrawString(m.Mesonero, fuente, Brushes.Black, new PointF(10, 45));
-                control.DrawString(m.Monto.GetValueOrDefault(0).ToString("n2").PadLeft(11), fuente, Brushes.Black, new PointF(width- 90, 60));
-                control.DrawString("$" + m.MontoDolares.GetValueOrDefault(0).ToString("n2").PadLeft(10), fuente, Brushes.Black, new PointF(width- 90, 80));
+                // control.DrawString(m.Mesonero, fuente, Brushes.Black, new PointF(10, 45));
+                control.DrawString(m.Monto.GetValueOrDefault(0).ToString("n2").PadLeft(11), fuente, Brushes.Black, new PointF(width- 90, 45));
+                control.DrawString("$" + m.MontoDolares.GetValueOrDefault(0).ToString("n2").PadLeft(10), fuente, Brushes.Black, new PointF(width- 90, 65));
             }
           }
         }
