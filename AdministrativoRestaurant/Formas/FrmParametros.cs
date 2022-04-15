@@ -8,6 +8,9 @@ using System.Text;
 using System.Windows.Forms;
 using System.Security;
 
+
+// Alter table
+// ALTER TABLE Parametros ADD IGTF FLOAT NULL DEFAULT 0
 namespace HK.Formas
 {
     public partial class FrmParametros : Form

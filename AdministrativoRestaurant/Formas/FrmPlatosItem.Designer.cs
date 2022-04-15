@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions5 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions6 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             this.BarraAcciones = new System.Windows.Forms.ToolStrip();
             this.Aceptar = new System.Windows.Forms.ToolStripButton();
             this.Cancelar = new System.Windows.Forms.ToolStripButton();
@@ -42,10 +43,11 @@
             this.btnComentariosComanda = new System.Windows.Forms.ToolStripButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
+            this.PrecioDolares = new DevExpress.XtraEditors.CalcEdit();
+            this.platoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnCrearCodigo = new DevExpress.XtraEditors.SimpleButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.IdPlatoTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.platoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.GrupoComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.CodigoTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.PrecioCalcEdit = new DevExpress.XtraEditors.CalcEdit();
@@ -83,6 +85,7 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForPrecioConIva = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForMostrarMenu = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
@@ -113,9 +116,10 @@
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PrecioDolares.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.platoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdPlatoTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.platoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrupoComboBoxEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodigoTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrecioCalcEdit.Properties)).BeginInit();
@@ -153,6 +157,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForPrecioConIva)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForMostrarMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -199,7 +204,7 @@
             this.Aceptar.Image = global::HK.Properties.Resources.disk_blue_ok;
             this.Aceptar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Aceptar.Name = "Aceptar";
-            this.Aceptar.Size = new System.Drawing.Size(77, 51);
+            this.Aceptar.Size = new System.Drawing.Size(81, 51);
             this.Aceptar.Text = "Aceptar - F12";
             this.Aceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -209,7 +214,7 @@
             this.Cancelar.Image = global::HK.Properties.Resources.disk_blue_error;
             this.Cancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Cancelar.Name = "Cancelar";
-            this.Cancelar.Size = new System.Drawing.Size(82, 51);
+            this.Cancelar.Size = new System.Drawing.Size(88, 51);
             this.Cancelar.Text = "Cancelar - ESC";
             this.Cancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -218,7 +223,7 @@
             this.btnCargarReceta.Image = global::HK.Properties.Resources.folder_refresh;
             this.btnCargarReceta.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCargarReceta.Name = "btnCargarReceta";
-            this.btnCargarReceta.Size = new System.Drawing.Size(135, 51);
+            this.btnCargarReceta.Size = new System.Drawing.Size(139, 51);
             this.btnCargarReceta.Text = "Cargar Receta - F3";
             // 
             // btnContornos
@@ -226,7 +231,7 @@
             this.btnContornos.Image = global::HK.Properties.Resources.preferences;
             this.btnContornos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnContornos.Name = "btnContornos";
-            this.btnContornos.Size = new System.Drawing.Size(93, 51);
+            this.btnContornos.Size = new System.Drawing.Size(99, 51);
             this.btnContornos.Text = "Contornos";
             // 
             // btnComentariosComanda
@@ -234,7 +239,7 @@
             this.btnComentariosComanda.Image = global::HK.Properties.Resources.question_and_answer;
             this.btnComentariosComanda.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnComentariosComanda.Name = "btnComentariosComanda";
-            this.btnComentariosComanda.Size = new System.Drawing.Size(151, 51);
+            this.btnComentariosComanda.Size = new System.Drawing.Size(166, 51);
             this.btnComentariosComanda.Text = "Comentarios Comanda";
             // 
             // groupControl1
@@ -242,11 +247,12 @@
             this.groupControl1.Controls.Add(this.dataLayoutControl1);
             this.groupControl1.Location = new System.Drawing.Point(13, 6);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(769, 149);
+            this.groupControl1.Size = new System.Drawing.Size(769, 150);
             this.groupControl1.TabIndex = 39;
             // 
             // dataLayoutControl1
             // 
+            this.dataLayoutControl1.Controls.Add(this.PrecioDolares);
             this.dataLayoutControl1.Controls.Add(this.btnCrearCodigo);
             this.dataLayoutControl1.Controls.Add(this.pictureBox1);
             this.dataLayoutControl1.Controls.Add(this.IdPlatoTextEdit);
@@ -278,12 +284,32 @@
             this.ItemForCoeficiente,
             this.ItemForActivo,
             this.ItemForCosto});
-            this.dataLayoutControl1.Location = new System.Drawing.Point(2, 22);
+            this.dataLayoutControl1.Location = new System.Drawing.Point(2, 20);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(765, 125);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(765, 128);
             this.dataLayoutControl1.TabIndex = 0;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
+            // 
+            // PrecioDolares
+            // 
+            this.PrecioDolares.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.platoBindingSource, "PrecioDolares", true));
+            this.PrecioDolares.Location = new System.Drawing.Point(83, 100);
+            this.PrecioDolares.Name = "PrecioDolares";
+            this.PrecioDolares.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, editorButtonImageOptions1)});
+            this.PrecioDolares.Properties.DisplayFormat.FormatString = "n2";
+            this.PrecioDolares.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.PrecioDolares.Properties.EditFormat.FormatString = "n2";
+            this.PrecioDolares.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.PrecioDolares.Size = new System.Drawing.Size(223, 20);
+            this.PrecioDolares.StyleController = this.dataLayoutControl1;
+            this.PrecioDolares.TabIndex = 27;
+            this.PrecioDolares.Validated += new System.EventHandler(this.PrecioDolares_Validated);
+            // 
+            // platoBindingSource
+            // 
+            this.platoBindingSource.DataSource = typeof(HK.Plato);
             // 
             // btnCrearCodigo
             // 
@@ -299,7 +325,7 @@
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Location = new System.Drawing.Point(618, 18);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(145, 101);
+            this.pictureBox1.Size = new System.Drawing.Size(145, 102);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
@@ -313,97 +339,94 @@
             this.IdPlatoTextEdit.StyleController = this.dataLayoutControl1;
             this.IdPlatoTextEdit.TabIndex = 4;
             // 
-            // platoBindingSource
-            // 
-            this.platoBindingSource.DataSource = typeof(HK.Plato);
-            // 
             // GrupoComboBoxEdit
             // 
             this.GrupoComboBoxEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.platoBindingSource, "Grupo", true));
-            this.GrupoComboBoxEdit.Location = new System.Drawing.Point(84, 2);
+            this.GrupoComboBoxEdit.Location = new System.Drawing.Point(83, 2);
             this.GrupoComboBoxEdit.Name = "GrupoComboBoxEdit";
             this.GrupoComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.GrupoComboBoxEdit.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.GrupoComboBoxEdit.Size = new System.Drawing.Size(221, 20);
+            this.GrupoComboBoxEdit.Size = new System.Drawing.Size(222, 20);
             this.GrupoComboBoxEdit.StyleController = this.dataLayoutControl1;
             this.GrupoComboBoxEdit.TabIndex = 5;
             // 
             // CodigoTextEdit
             // 
             this.CodigoTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.platoBindingSource, "Codigo", true));
-            this.CodigoTextEdit.Location = new System.Drawing.Point(474, 2);
+            this.CodigoTextEdit.Location = new System.Drawing.Point(473, 2);
             this.CodigoTextEdit.Name = "CodigoTextEdit";
             this.CodigoTextEdit.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.CodigoTextEdit.Size = new System.Drawing.Size(140, 20);
+            this.CodigoTextEdit.Size = new System.Drawing.Size(141, 20);
             this.CodigoTextEdit.StyleController = this.dataLayoutControl1;
             this.CodigoTextEdit.TabIndex = 6;
             // 
             // PrecioCalcEdit
             // 
             this.PrecioCalcEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.platoBindingSource, "Precio", true));
-            this.PrecioCalcEdit.Location = new System.Drawing.Point(84, 76);
+            this.PrecioCalcEdit.Location = new System.Drawing.Point(83, 76);
             this.PrecioCalcEdit.Name = "PrecioCalcEdit";
             this.PrecioCalcEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, editorButtonImageOptions2)});
             this.PrecioCalcEdit.Properties.DisplayFormat.FormatString = "n2";
             this.PrecioCalcEdit.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.PrecioCalcEdit.Properties.EditFormat.FormatString = "n2";
             this.PrecioCalcEdit.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.PrecioCalcEdit.Size = new System.Drawing.Size(221, 20);
+            this.PrecioCalcEdit.Size = new System.Drawing.Size(222, 20);
             this.PrecioCalcEdit.StyleController = this.dataLayoutControl1;
             this.PrecioCalcEdit.TabIndex = 8;
+            this.PrecioCalcEdit.EditValueChanged += new System.EventHandler(this.PrecioCalcEdit_EditValueChanged);
             // 
             // TasaIvaCalcEdit
             // 
             this.TasaIvaCalcEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.platoBindingSource, "TasaIva", true));
-            this.TasaIvaCalcEdit.Location = new System.Drawing.Point(84, 52);
+            this.TasaIvaCalcEdit.Location = new System.Drawing.Point(83, 52);
             this.TasaIvaCalcEdit.Name = "TasaIvaCalcEdit";
             this.TasaIvaCalcEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, editorButtonImageOptions3)});
             this.TasaIvaCalcEdit.Properties.DisplayFormat.FormatString = "n2";
             this.TasaIvaCalcEdit.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.TasaIvaCalcEdit.Properties.EditFormat.FormatString = "n2";
             this.TasaIvaCalcEdit.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.TasaIvaCalcEdit.Size = new System.Drawing.Size(221, 20);
+            this.TasaIvaCalcEdit.Size = new System.Drawing.Size(222, 20);
             this.TasaIvaCalcEdit.StyleController = this.dataLayoutControl1;
             this.TasaIvaCalcEdit.TabIndex = 9;
             // 
             // PrecioConIvaCalcEdit
             // 
             this.PrecioConIvaCalcEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.platoBindingSource, "PrecioConIva", true));
-            this.PrecioConIvaCalcEdit.Location = new System.Drawing.Point(391, 76);
+            this.PrecioConIvaCalcEdit.Location = new System.Drawing.Point(390, 76);
             this.PrecioConIvaCalcEdit.Name = "PrecioConIvaCalcEdit";
             this.PrecioConIvaCalcEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, editorButtonImageOptions4)});
             this.PrecioConIvaCalcEdit.Properties.DisplayFormat.FormatString = "n2";
             this.PrecioConIvaCalcEdit.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.PrecioConIvaCalcEdit.Properties.EditFormat.FormatString = "n2";
             this.PrecioConIvaCalcEdit.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.PrecioConIvaCalcEdit.Size = new System.Drawing.Size(223, 20);
+            this.PrecioConIvaCalcEdit.Size = new System.Drawing.Size(224, 20);
             this.PrecioConIvaCalcEdit.StyleController = this.dataLayoutControl1;
             this.PrecioConIvaCalcEdit.TabIndex = 10;
             // 
             // EnviarComandaComboBoxEdit
             // 
             this.EnviarComandaComboBoxEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.platoBindingSource, "EnviarComanda", true));
-            this.EnviarComandaComboBoxEdit.Location = new System.Drawing.Point(391, 52);
+            this.EnviarComandaComboBoxEdit.Location = new System.Drawing.Point(390, 52);
             this.EnviarComandaComboBoxEdit.Name = "EnviarComandaComboBoxEdit";
             this.EnviarComandaComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.EnviarComandaComboBoxEdit.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.EnviarComandaComboBoxEdit.Size = new System.Drawing.Size(223, 20);
+            this.EnviarComandaComboBoxEdit.Size = new System.Drawing.Size(224, 20);
             this.EnviarComandaComboBoxEdit.StyleController = this.dataLayoutControl1;
             this.EnviarComandaComboBoxEdit.TabIndex = 16;
             // 
             // DescripcionTextEdit
             // 
             this.DescripcionTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.platoBindingSource, "Descripcion", true));
-            this.DescripcionTextEdit.Location = new System.Drawing.Point(84, 28);
+            this.DescripcionTextEdit.Location = new System.Drawing.Point(83, 28);
             this.DescripcionTextEdit.Name = "DescripcionTextEdit";
             this.DescripcionTextEdit.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.DescripcionTextEdit.Properties.MaxLength = 37;
-            this.DescripcionTextEdit.Size = new System.Drawing.Size(530, 20);
+            this.DescripcionTextEdit.Size = new System.Drawing.Size(531, 20);
             this.DescripcionTextEdit.StyleController = this.dataLayoutControl1;
             this.DescripcionTextEdit.TabIndex = 7;
             // 
@@ -482,10 +505,10 @@
             // MostrarMenuCheckEdit
             // 
             this.MostrarMenuCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.platoBindingSource, "MostrarMenu", true));
-            this.MostrarMenuCheckEdit.Location = new System.Drawing.Point(2, 100);
+            this.MostrarMenuCheckEdit.Location = new System.Drawing.Point(310, 100);
             this.MostrarMenuCheckEdit.Name = "MostrarMenuCheckEdit";
             this.MostrarMenuCheckEdit.Properties.Caption = "Mostrar Menu";
-            this.MostrarMenuCheckEdit.Size = new System.Drawing.Size(612, 19);
+            this.MostrarMenuCheckEdit.Size = new System.Drawing.Size(304, 19);
             this.MostrarMenuCheckEdit.StyleController = this.dataLayoutControl1;
             this.MostrarMenuCheckEdit.TabIndex = 26;
             // 
@@ -498,7 +521,6 @@
             this.ItemForIdPlato.Size = new System.Drawing.Size(0, 0);
             this.ItemForIdPlato.Text = "Id Plato";
             this.ItemForIdPlato.TextSize = new System.Drawing.Size(50, 20);
-            this.ItemForIdPlato.TextToControlDistance = 5;
             // 
             // ItemForPlatosIngredientes
             // 
@@ -509,7 +531,6 @@
             this.ItemForPlatosIngredientes.Size = new System.Drawing.Size(0, 0);
             this.ItemForPlatosIngredientes.Text = "Platos Ingredientes";
             this.ItemForPlatosIngredientes.TextSize = new System.Drawing.Size(50, 20);
-            this.ItemForPlatosIngredientes.TextToControlDistance = 5;
             // 
             // ItemForPlatosComentarios
             // 
@@ -520,7 +541,6 @@
             this.ItemForPlatosComentarios.Size = new System.Drawing.Size(0, 0);
             this.ItemForPlatosComentarios.Text = "Platos Comentarios";
             this.ItemForPlatosComentarios.TextSize = new System.Drawing.Size(50, 20);
-            this.ItemForPlatosComentarios.TextToControlDistance = 5;
             // 
             // ItemForPlatosContornos
             // 
@@ -531,7 +551,6 @@
             this.ItemForPlatosContornos.Size = new System.Drawing.Size(0, 0);
             this.ItemForPlatosContornos.Text = "Platos Contornos";
             this.ItemForPlatosContornos.TextSize = new System.Drawing.Size(50, 20);
-            this.ItemForPlatosContornos.TextToControlDistance = 5;
             // 
             // ItemForPlatosPresentacions
             // 
@@ -542,7 +561,6 @@
             this.ItemForPlatosPresentacions.Size = new System.Drawing.Size(0, 0);
             this.ItemForPlatosPresentacions.Text = "Platos Presentacions";
             this.ItemForPlatosPresentacions.TextSize = new System.Drawing.Size(50, 20);
-            this.ItemForPlatosPresentacions.TextToControlDistance = 5;
             // 
             // ItemForPlatosCombos
             // 
@@ -553,7 +571,6 @@
             this.ItemForPlatosCombos.Size = new System.Drawing.Size(0, 0);
             this.ItemForPlatosCombos.Text = "Platos Combos";
             this.ItemForPlatosCombos.TextSize = new System.Drawing.Size(50, 20);
-            this.ItemForPlatosCombos.TextToControlDistance = 5;
             // 
             // ItemForCoeficiente
             // 
@@ -564,7 +581,6 @@
             this.ItemForCoeficiente.Size = new System.Drawing.Size(748, 24);
             this.ItemForCoeficiente.Text = "Coeficiente";
             this.ItemForCoeficiente.TextSize = new System.Drawing.Size(50, 20);
-            this.ItemForCoeficiente.TextToControlDistance = 5;
             // 
             // ItemForActivo
             // 
@@ -575,7 +591,6 @@
             this.ItemForActivo.Size = new System.Drawing.Size(748, 24);
             this.ItemForActivo.Text = "Activo";
             this.ItemForActivo.TextSize = new System.Drawing.Size(50, 20);
-            this.ItemForActivo.TextToControlDistance = 5;
             // 
             // ItemForCosto
             // 
@@ -586,7 +601,6 @@
             this.ItemForCosto.Size = new System.Drawing.Size(748, 24);
             this.ItemForCosto.Text = "Costo";
             this.ItemForCosto.TextSize = new System.Drawing.Size(50, 20);
-            this.ItemForCosto.TextToControlDistance = 5;
             // 
             // layoutControlGroup1
             // 
@@ -599,9 +613,7 @@
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlGroup1.Size = new System.Drawing.Size(765, 125);
-            this.layoutControlGroup1.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlGroup1.Text = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(765, 128);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlGroup2
@@ -619,11 +631,11 @@
             this.ItemForTasaIva,
             this.layoutControlItem2,
             this.ItemForPrecioConIva,
-            this.ItemForMostrarMenu});
+            this.ItemForMostrarMenu,
+            this.layoutControlItem3});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(765, 121);
-            this.layoutControlGroup2.Text = "autoGeneratedGroup0";
+            this.layoutControlGroup2.Size = new System.Drawing.Size(765, 122);
             // 
             // ItemForGrupo
             // 
@@ -681,7 +693,7 @@
             this.layoutControlItem1.CustomizationFormText = "Imagen";
             this.layoutControlItem1.Location = new System.Drawing.Point(616, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(149, 121);
+            this.layoutControlItem1.Size = new System.Drawing.Size(149, 122);
             this.layoutControlItem1.Text = "Imagen";
             this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(78, 13);
@@ -703,9 +715,7 @@
             this.layoutControlItem2.Location = new System.Drawing.Point(307, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(83, 26);
-            this.layoutControlItem2.Text = "layoutControlItem2";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem2.TextToControlDistance = 0;
             this.layoutControlItem2.TextVisible = false;
             // 
             // ItemForPrecioConIva
@@ -722,13 +732,21 @@
             // 
             this.ItemForMostrarMenu.Control = this.MostrarMenuCheckEdit;
             this.ItemForMostrarMenu.CustomizationFormText = "Mostrar Menu";
-            this.ItemForMostrarMenu.Location = new System.Drawing.Point(0, 98);
+            this.ItemForMostrarMenu.Location = new System.Drawing.Point(308, 98);
             this.ItemForMostrarMenu.Name = "ItemForMostrarMenu";
-            this.ItemForMostrarMenu.Size = new System.Drawing.Size(616, 23);
+            this.ItemForMostrarMenu.Size = new System.Drawing.Size(308, 24);
             this.ItemForMostrarMenu.Text = "Mostrar Menu";
             this.ItemForMostrarMenu.TextSize = new System.Drawing.Size(0, 0);
-            this.ItemForMostrarMenu.TextToControlDistance = 0;
             this.ItemForMostrarMenu.TextVisible = false;
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.PrecioDolares;
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 98);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(308, 24);
+            this.layoutControlItem3.Text = "PrecioDolares";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(78, 13);
             // 
             // layoutControlGroup4
             // 
@@ -737,10 +755,9 @@
             this.layoutControlGroup4.GroupBordersVisible = false;
             this.layoutControlGroup4.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup3});
-            this.layoutControlGroup4.Location = new System.Drawing.Point(0, 121);
+            this.layoutControlGroup4.Location = new System.Drawing.Point(0, 122);
             this.layoutControlGroup4.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup4.Size = new System.Drawing.Size(765, 4);
-            this.layoutControlGroup4.Text = "autoGeneratedGroup0";
+            this.layoutControlGroup4.Size = new System.Drawing.Size(765, 6);
             // 
             // layoutControlGroup3
             // 
@@ -749,16 +766,15 @@
             this.layoutControlGroup3.GroupBordersVisible = false;
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(765, 4);
-            this.layoutControlGroup3.Text = "autoGeneratedGroup0";
+            this.layoutControlGroup3.Size = new System.Drawing.Size(765, 6);
             // 
             // groupControl2
             // 
             this.groupControl2.Controls.Add(this.groupControl4);
             this.groupControl2.Controls.Add(this.groupControl3);
-            this.groupControl2.Location = new System.Drawing.Point(13, 155);
+            this.groupControl2.Location = new System.Drawing.Point(13, 162);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(769, 481);
+            this.groupControl2.Size = new System.Drawing.Size(769, 474);
             this.groupControl2.TabIndex = 22;
             this.groupControl2.Text = "Receta";
             // 
@@ -830,7 +846,7 @@
             // 
             this.txtCantidad.AutoHeight = false;
             this.txtCantidad.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, editorButtonImageOptions5)});
             this.txtCantidad.Name = "txtCantidad";
             // 
             // colCostoRacion
@@ -850,7 +866,7 @@
             // 
             this.txtCostoRacion.AutoHeight = false;
             this.txtCostoRacion.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, editorButtonImageOptions6)});
             this.txtCostoRacion.Name = "txtCostoRacion";
             // 
             // colIngrediente
@@ -893,8 +909,8 @@
             this.colTotal.Name = "colTotal";
             this.colTotal.OptionsColumn.AllowEdit = false;
             this.colTotal.OptionsColumn.AllowFocus = false;
-            this.colTotal.SummaryItem.DisplayFormat = "{0:n2}";
-            this.colTotal.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            this.colTotal.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Total", "{0:n2}")});
             this.colTotal.Visible = true;
             this.colTotal.VisibleIndex = 4;
             // 
@@ -911,13 +927,13 @@
             // 
             this.gridControl2.DataSource = this.platosComboBindingSource;
             this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl2.Location = new System.Drawing.Point(2, 22);
+            this.gridControl2.Location = new System.Drawing.Point(2, 20);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
             this.gridControl2.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.txtPlato,
             this.txtCantidadPlato});
-            this.gridControl2.Size = new System.Drawing.Size(753, 177);
+            this.gridControl2.Size = new System.Drawing.Size(753, 179);
             this.gridControl2.TabIndex = 5;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -997,8 +1013,8 @@
             this.colTotalCosto.Name = "colTotalCosto";
             this.colTotalCosto.OptionsColumn.AllowFocus = false;
             this.colTotalCosto.OptionsColumn.FixedWidth = true;
-            this.colTotalCosto.SummaryItem.DisplayFormat = "{0:n2}";
-            this.colTotalCosto.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            this.colTotalCosto.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TotalCosto", "{0:n2}")});
             this.colTotalCosto.Visible = true;
             this.colTotalCosto.VisibleIndex = 3;
             this.colTotalCosto.Width = 127;
@@ -1021,9 +1037,10 @@
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PrecioDolares.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.platoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdPlatoTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.platoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrupoComboBoxEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodigoTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrecioCalcEdit.Properties)).EndInit();
@@ -1061,6 +1078,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForPrecioConIva)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForMostrarMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
@@ -1160,5 +1178,7 @@
         private DevExpress.XtraLayout.LayoutControlItem ItemForMostrarMenu;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit txtPlato;
         private DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit txtCantidadPlato;
+        private DevExpress.XtraEditors.CalcEdit PrecioDolares;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
     }
 }

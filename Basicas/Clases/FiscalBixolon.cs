@@ -302,6 +302,12 @@ namespace HK
                         bRet = SendCmd(&status, &error, sCmd);
                         TotalPagos += documento.Tarjeta.Value;
                     }
+                    if (documento.Dolares.GetValueOrDefault(0) != 0)
+                    {
+                        sCmd = "220" + ((double)documento.Dolares * 100).ToString("000000000000");
+                        bRet = SendCmd(&status, &error, sCmd);
+                        TotalPagos += documento.Dolares.Value;
+                    }
                     CargarS2();
                     if (this.montoPorPagar > 0)
                     {
@@ -615,12 +621,12 @@ namespace HK
                         // the file is reached.
                         while ((line = sr.ReadLine()) != null)
                         {
-                            DateTime tFecha;
+                            DateTime tFecha = DateTime.Today;
                             this.numeroFactura = line.Substring(21, 8);
                             this.ultimoZ = Convert.ToInt32(line.Substring(47, 4));
                             this.numeroRegistro = line.Substring(66, 10);
                             this.RIF = line.Substring(55, 11);
-                            tFecha = Convert.ToDateTime(line.Substring(82, 2) + "/" + line.Substring(84, 2) + "/" + line.Substring(86, 2));
+                            // tFecha = Convert.ToDateTime(line.Substring(82, 2) + "/" + line.Substring(84, 2) + "/" + line.Substring(86, 2));
                             this.fecha = tFecha;
 
                         }
@@ -657,7 +663,8 @@ namespace HK
                         {
                             this.subtotalBases = strToDouble(line.Substring(4, 13));
                             this.subtotalIva = strToDouble(line.Substring(18, 13));
-                            this.montoPorPagar = strToDouble(line.Substring(52, 13));                           
+                            this.montoPorPagar = strToDouble(line.Substring(52, 13));  
+                            
                             
                         }
                     }

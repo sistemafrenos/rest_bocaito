@@ -226,29 +226,27 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 480F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 360F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.groupControl1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.groupControl2, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 54);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 44);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.72222F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.27778F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1377, 816);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1033, 663);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.tableLayoutPanel2);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl1.Location = new System.Drawing.Point(5, 206);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupControl1.Location = new System.Drawing.Point(4, 168);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(472, 605);
+            this.groupControl1.Size = new System.Drawing.Size(354, 491);
             this.groupControl1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -258,13 +256,12 @@
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel6, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.gridControl1, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 25);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 20);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 182F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 148F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(468, 578);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(350, 469);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // tableLayoutPanel6
@@ -284,15 +281,14 @@
             this.tableLayoutPanel6.Controls.Add(this.cantidad0, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.txtPlato, 0, 3);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 4;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(460, 174);
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(344, 142);
             this.tableLayoutPanel6.TabIndex = 2;
             // 
             // cantidad8
@@ -300,10 +296,9 @@
             this.cantidad8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cantidad8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cantidad8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cantidad8.Location = new System.Drawing.Point(310, 102);
-            this.cantidad8.Margin = new System.Windows.Forms.Padding(4);
+            this.cantidad8.Location = new System.Drawing.Point(231, 83);
             this.cantidad8.Name = "cantidad8";
-            this.cantidad8.Size = new System.Drawing.Size(146, 41);
+            this.cantidad8.Size = new System.Drawing.Size(110, 34);
             this.cantidad8.TabIndex = 8;
             this.cantidad8.Text = "9";
             this.cantidad8.UseVisualStyleBackColor = true;
@@ -313,10 +308,9 @@
             this.cantidad7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cantidad7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cantidad7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cantidad7.Location = new System.Drawing.Point(157, 102);
-            this.cantidad7.Margin = new System.Windows.Forms.Padding(4);
+            this.cantidad7.Location = new System.Drawing.Point(117, 83);
             this.cantidad7.Name = "cantidad7";
-            this.cantidad7.Size = new System.Drawing.Size(145, 41);
+            this.cantidad7.Size = new System.Drawing.Size(108, 34);
             this.cantidad7.TabIndex = 7;
             this.cantidad7.Text = "8";
             this.cantidad7.UseVisualStyleBackColor = true;
@@ -326,10 +320,9 @@
             this.cantidad6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cantidad6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cantidad6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cantidad6.Location = new System.Drawing.Point(4, 102);
-            this.cantidad6.Margin = new System.Windows.Forms.Padding(4);
+            this.cantidad6.Location = new System.Drawing.Point(3, 83);
             this.cantidad6.Name = "cantidad6";
-            this.cantidad6.Size = new System.Drawing.Size(145, 41);
+            this.cantidad6.Size = new System.Drawing.Size(108, 34);
             this.cantidad6.TabIndex = 6;
             this.cantidad6.Text = "7";
             this.cantidad6.UseVisualStyleBackColor = true;
@@ -339,10 +332,9 @@
             this.cantidad5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cantidad5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cantidad5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cantidad5.Location = new System.Drawing.Point(310, 53);
-            this.cantidad5.Margin = new System.Windows.Forms.Padding(4);
+            this.cantidad5.Location = new System.Drawing.Point(231, 43);
             this.cantidad5.Name = "cantidad5";
-            this.cantidad5.Size = new System.Drawing.Size(146, 41);
+            this.cantidad5.Size = new System.Drawing.Size(110, 34);
             this.cantidad5.TabIndex = 5;
             this.cantidad5.Text = "6";
             this.cantidad5.UseVisualStyleBackColor = true;
@@ -352,10 +344,9 @@
             this.cantidad4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cantidad4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cantidad4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cantidad4.Location = new System.Drawing.Point(157, 53);
-            this.cantidad4.Margin = new System.Windows.Forms.Padding(4);
+            this.cantidad4.Location = new System.Drawing.Point(117, 43);
             this.cantidad4.Name = "cantidad4";
-            this.cantidad4.Size = new System.Drawing.Size(145, 41);
+            this.cantidad4.Size = new System.Drawing.Size(108, 34);
             this.cantidad4.TabIndex = 4;
             this.cantidad4.Text = "5";
             this.cantidad4.UseVisualStyleBackColor = true;
@@ -365,10 +356,9 @@
             this.cantidad3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cantidad3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cantidad3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cantidad3.Location = new System.Drawing.Point(4, 53);
-            this.cantidad3.Margin = new System.Windows.Forms.Padding(4);
+            this.cantidad3.Location = new System.Drawing.Point(3, 43);
             this.cantidad3.Name = "cantidad3";
-            this.cantidad3.Size = new System.Drawing.Size(145, 41);
+            this.cantidad3.Size = new System.Drawing.Size(108, 34);
             this.cantidad3.TabIndex = 3;
             this.cantidad3.Text = "4";
             this.cantidad3.UseVisualStyleBackColor = true;
@@ -378,10 +368,9 @@
             this.cantidad2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cantidad2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cantidad2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cantidad2.Location = new System.Drawing.Point(310, 4);
-            this.cantidad2.Margin = new System.Windows.Forms.Padding(4);
+            this.cantidad2.Location = new System.Drawing.Point(231, 3);
             this.cantidad2.Name = "cantidad2";
-            this.cantidad2.Size = new System.Drawing.Size(146, 41);
+            this.cantidad2.Size = new System.Drawing.Size(110, 34);
             this.cantidad2.TabIndex = 2;
             this.cantidad2.Text = "3";
             this.cantidad2.UseVisualStyleBackColor = true;
@@ -391,10 +380,9 @@
             this.cantidad1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cantidad1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cantidad1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cantidad1.Location = new System.Drawing.Point(157, 4);
-            this.cantidad1.Margin = new System.Windows.Forms.Padding(4);
+            this.cantidad1.Location = new System.Drawing.Point(117, 3);
             this.cantidad1.Name = "cantidad1";
-            this.cantidad1.Size = new System.Drawing.Size(145, 41);
+            this.cantidad1.Size = new System.Drawing.Size(108, 34);
             this.cantidad1.TabIndex = 1;
             this.cantidad1.Text = "2";
             this.cantidad1.UseVisualStyleBackColor = true;
@@ -404,10 +392,9 @@
             this.cantidad0.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cantidad0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cantidad0.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cantidad0.Location = new System.Drawing.Point(4, 4);
-            this.cantidad0.Margin = new System.Windows.Forms.Padding(4);
+            this.cantidad0.Location = new System.Drawing.Point(3, 3);
             this.cantidad0.Name = "cantidad0";
-            this.cantidad0.Size = new System.Drawing.Size(145, 41);
+            this.cantidad0.Size = new System.Drawing.Size(108, 34);
             this.cantidad0.TabIndex = 0;
             this.cantidad0.Text = "1";
             this.cantidad0.UseVisualStyleBackColor = true;
@@ -416,13 +403,12 @@
             // 
             this.tableLayoutPanel6.SetColumnSpan(this.txtPlato, 3);
             this.txtPlato.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtPlato.Location = new System.Drawing.Point(4, 151);
-            this.txtPlato.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPlato.Location = new System.Drawing.Point(3, 123);
             this.txtPlato.Name = "txtPlato";
             this.txtPlato.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtPlato.Properties.ValidateOnEnterKey = true;
-            this.txtPlato.Size = new System.Drawing.Size(452, 22);
+            this.txtPlato.Size = new System.Drawing.Size(338, 20);
             this.txtPlato.TabIndex = 0;
             // 
             // gridControl1
@@ -430,12 +416,10 @@
             this.gridControl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.gridControl1.DataSource = this.mesasAbiertasPlatoBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
-            this.gridControl1.Location = new System.Drawing.Point(4, 186);
+            this.gridControl1.Location = new System.Drawing.Point(3, 151);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(460, 388);
+            this.gridControl1.Size = new System.Drawing.Size(344, 315);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -527,14 +511,13 @@
             this.tableLayoutPanel3.Controls.Add(this.grupo16, 4, 2);
             this.tableLayoutPanel3.Controls.Add(this.grupo17, 5, 2);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(486, 5);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(365, 4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(886, 192);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(664, 157);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // grupo6
@@ -542,10 +525,9 @@
             this.grupo6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grupo6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grupo6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.grupo6.Location = new System.Drawing.Point(4, 68);
-            this.grupo6.Margin = new System.Windows.Forms.Padding(4);
+            this.grupo6.Location = new System.Drawing.Point(3, 55);
             this.grupo6.Name = "grupo6";
-            this.grupo6.Size = new System.Drawing.Size(139, 56);
+            this.grupo6.Size = new System.Drawing.Size(104, 46);
             this.grupo6.TabIndex = 40;
             this.grupo6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.grupo6.UseVisualStyleBackColor = true;
@@ -556,10 +538,9 @@
             this.grupo8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grupo8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grupo8.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.grupo8.Location = new System.Drawing.Point(298, 68);
-            this.grupo8.Margin = new System.Windows.Forms.Padding(4);
+            this.grupo8.Location = new System.Drawing.Point(223, 55);
             this.grupo8.Name = "grupo8";
-            this.grupo8.Size = new System.Drawing.Size(139, 56);
+            this.grupo8.Size = new System.Drawing.Size(104, 46);
             this.grupo8.TabIndex = 39;
             this.grupo8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.grupo8.UseVisualStyleBackColor = true;
@@ -570,10 +551,9 @@
             this.grupo9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grupo9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grupo9.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.grupo9.Location = new System.Drawing.Point(445, 68);
-            this.grupo9.Margin = new System.Windows.Forms.Padding(4);
+            this.grupo9.Location = new System.Drawing.Point(333, 55);
             this.grupo9.Name = "grupo9";
-            this.grupo9.Size = new System.Drawing.Size(139, 56);
+            this.grupo9.Size = new System.Drawing.Size(104, 46);
             this.grupo9.TabIndex = 38;
             this.grupo9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.grupo9.UseVisualStyleBackColor = true;
@@ -584,10 +564,9 @@
             this.grupo3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grupo3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grupo3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.grupo3.Location = new System.Drawing.Point(445, 4);
-            this.grupo3.Margin = new System.Windows.Forms.Padding(4);
+            this.grupo3.Location = new System.Drawing.Point(333, 3);
             this.grupo3.Name = "grupo3";
-            this.grupo3.Size = new System.Drawing.Size(139, 56);
+            this.grupo3.Size = new System.Drawing.Size(104, 46);
             this.grupo3.TabIndex = 37;
             this.grupo3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.grupo3.UseVisualStyleBackColor = true;
@@ -598,10 +577,9 @@
             this.grupo0.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grupo0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grupo0.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.grupo0.Location = new System.Drawing.Point(4, 4);
-            this.grupo0.Margin = new System.Windows.Forms.Padding(4);
+            this.grupo0.Location = new System.Drawing.Point(3, 3);
             this.grupo0.Name = "grupo0";
-            this.grupo0.Size = new System.Drawing.Size(139, 56);
+            this.grupo0.Size = new System.Drawing.Size(104, 46);
             this.grupo0.TabIndex = 36;
             this.grupo0.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.grupo0.UseVisualStyleBackColor = true;
@@ -612,10 +590,9 @@
             this.grupo1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grupo1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grupo1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.grupo1.Location = new System.Drawing.Point(151, 4);
-            this.grupo1.Margin = new System.Windows.Forms.Padding(4);
+            this.grupo1.Location = new System.Drawing.Point(113, 3);
             this.grupo1.Name = "grupo1";
-            this.grupo1.Size = new System.Drawing.Size(139, 56);
+            this.grupo1.Size = new System.Drawing.Size(104, 46);
             this.grupo1.TabIndex = 35;
             this.grupo1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.grupo1.UseVisualStyleBackColor = true;
@@ -626,10 +603,9 @@
             this.grupo2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grupo2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grupo2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.grupo2.Location = new System.Drawing.Point(298, 4);
-            this.grupo2.Margin = new System.Windows.Forms.Padding(4);
+            this.grupo2.Location = new System.Drawing.Point(223, 3);
             this.grupo2.Name = "grupo2";
-            this.grupo2.Size = new System.Drawing.Size(139, 56);
+            this.grupo2.Size = new System.Drawing.Size(104, 46);
             this.grupo2.TabIndex = 34;
             this.grupo2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.grupo2.UseVisualStyleBackColor = true;
@@ -640,10 +616,9 @@
             this.grupo7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grupo7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grupo7.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.grupo7.Location = new System.Drawing.Point(151, 68);
-            this.grupo7.Margin = new System.Windows.Forms.Padding(4);
+            this.grupo7.Location = new System.Drawing.Point(113, 55);
             this.grupo7.Name = "grupo7";
-            this.grupo7.Size = new System.Drawing.Size(139, 56);
+            this.grupo7.Size = new System.Drawing.Size(104, 46);
             this.grupo7.TabIndex = 33;
             this.grupo7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.grupo7.UseVisualStyleBackColor = true;
@@ -654,10 +629,9 @@
             this.grupo4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grupo4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grupo4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.grupo4.Location = new System.Drawing.Point(592, 4);
-            this.grupo4.Margin = new System.Windows.Forms.Padding(4);
+            this.grupo4.Location = new System.Drawing.Point(443, 3);
             this.grupo4.Name = "grupo4";
-            this.grupo4.Size = new System.Drawing.Size(139, 56);
+            this.grupo4.Size = new System.Drawing.Size(104, 46);
             this.grupo4.TabIndex = 32;
             this.grupo4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.grupo4.UseVisualStyleBackColor = true;
@@ -668,10 +642,9 @@
             this.grupo5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grupo5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grupo5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.grupo5.Location = new System.Drawing.Point(739, 4);
-            this.grupo5.Margin = new System.Windows.Forms.Padding(4);
+            this.grupo5.Location = new System.Drawing.Point(553, 3);
             this.grupo5.Name = "grupo5";
-            this.grupo5.Size = new System.Drawing.Size(143, 56);
+            this.grupo5.Size = new System.Drawing.Size(108, 46);
             this.grupo5.TabIndex = 41;
             this.grupo5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.grupo5.UseVisualStyleBackColor = true;
@@ -682,10 +655,9 @@
             this.grupo10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grupo10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grupo10.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.grupo10.Location = new System.Drawing.Point(592, 68);
-            this.grupo10.Margin = new System.Windows.Forms.Padding(4);
+            this.grupo10.Location = new System.Drawing.Point(443, 55);
             this.grupo10.Name = "grupo10";
-            this.grupo10.Size = new System.Drawing.Size(139, 56);
+            this.grupo10.Size = new System.Drawing.Size(104, 46);
             this.grupo10.TabIndex = 42;
             this.grupo10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.grupo10.UseVisualStyleBackColor = true;
@@ -696,10 +668,9 @@
             this.grupo11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grupo11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grupo11.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.grupo11.Location = new System.Drawing.Point(739, 68);
-            this.grupo11.Margin = new System.Windows.Forms.Padding(4);
+            this.grupo11.Location = new System.Drawing.Point(553, 55);
             this.grupo11.Name = "grupo11";
-            this.grupo11.Size = new System.Drawing.Size(143, 56);
+            this.grupo11.Size = new System.Drawing.Size(108, 46);
             this.grupo11.TabIndex = 43;
             this.grupo11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.grupo11.UseVisualStyleBackColor = true;
@@ -710,10 +681,9 @@
             this.grupo12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grupo12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grupo12.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.grupo12.Location = new System.Drawing.Point(4, 132);
-            this.grupo12.Margin = new System.Windows.Forms.Padding(4);
+            this.grupo12.Location = new System.Drawing.Point(3, 107);
             this.grupo12.Name = "grupo12";
-            this.grupo12.Size = new System.Drawing.Size(139, 56);
+            this.grupo12.Size = new System.Drawing.Size(104, 47);
             this.grupo12.TabIndex = 44;
             this.grupo12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.grupo12.UseVisualStyleBackColor = true;
@@ -724,10 +694,9 @@
             this.grupo13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grupo13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grupo13.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.grupo13.Location = new System.Drawing.Point(151, 132);
-            this.grupo13.Margin = new System.Windows.Forms.Padding(4);
+            this.grupo13.Location = new System.Drawing.Point(113, 107);
             this.grupo13.Name = "grupo13";
-            this.grupo13.Size = new System.Drawing.Size(139, 56);
+            this.grupo13.Size = new System.Drawing.Size(104, 47);
             this.grupo13.TabIndex = 45;
             this.grupo13.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.grupo13.UseVisualStyleBackColor = true;
@@ -738,10 +707,9 @@
             this.grupo14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grupo14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grupo14.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.grupo14.Location = new System.Drawing.Point(298, 132);
-            this.grupo14.Margin = new System.Windows.Forms.Padding(4);
+            this.grupo14.Location = new System.Drawing.Point(223, 107);
             this.grupo14.Name = "grupo14";
-            this.grupo14.Size = new System.Drawing.Size(139, 56);
+            this.grupo14.Size = new System.Drawing.Size(104, 47);
             this.grupo14.TabIndex = 46;
             this.grupo14.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.grupo14.UseVisualStyleBackColor = true;
@@ -752,10 +720,9 @@
             this.grupo15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grupo15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grupo15.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.grupo15.Location = new System.Drawing.Point(445, 132);
-            this.grupo15.Margin = new System.Windows.Forms.Padding(4);
+            this.grupo15.Location = new System.Drawing.Point(333, 107);
             this.grupo15.Name = "grupo15";
-            this.grupo15.Size = new System.Drawing.Size(139, 56);
+            this.grupo15.Size = new System.Drawing.Size(104, 47);
             this.grupo15.TabIndex = 47;
             this.grupo15.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.grupo15.UseVisualStyleBackColor = true;
@@ -764,10 +731,9 @@
             // 
             this.grupo16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grupo16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grupo16.Location = new System.Drawing.Point(592, 132);
-            this.grupo16.Margin = new System.Windows.Forms.Padding(4);
+            this.grupo16.Location = new System.Drawing.Point(443, 107);
             this.grupo16.Name = "grupo16";
-            this.grupo16.Size = new System.Drawing.Size(139, 56);
+            this.grupo16.Size = new System.Drawing.Size(104, 47);
             this.grupo16.TabIndex = 48;
             this.grupo16.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.grupo16.UseVisualStyleBackColor = true;
@@ -776,10 +742,9 @@
             // 
             this.grupo17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grupo17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grupo17.Location = new System.Drawing.Point(739, 132);
-            this.grupo17.Margin = new System.Windows.Forms.Padding(4);
+            this.grupo17.Location = new System.Drawing.Point(553, 107);
             this.grupo17.Name = "grupo17";
-            this.grupo17.Size = new System.Drawing.Size(143, 56);
+            this.grupo17.Size = new System.Drawing.Size(108, 47);
             this.grupo17.TabIndex = 49;
             this.grupo17.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.grupo17.UseVisualStyleBackColor = true;
@@ -837,8 +802,7 @@
             this.tableLayoutPanel4.Controls.Add(this.plato6, 5, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnMas, 5, 7);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(486, 206);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(365, 168);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 8;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
@@ -848,8 +812,8 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(886, 605);
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(664, 491);
             this.tableLayoutPanel4.TabIndex = 3;
             // 
             // plato25
@@ -858,10 +822,9 @@
             this.plato25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato25.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato25.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato25.Location = new System.Drawing.Point(4, 332);
-            this.plato25.Margin = new System.Windows.Forms.Padding(4);
+            this.plato25.Location = new System.Drawing.Point(3, 267);
             this.plato25.Name = "plato25";
-            this.plato25.Size = new System.Drawing.Size(139, 74);
+            this.plato25.Size = new System.Drawing.Size(104, 60);
             this.plato25.TabIndex = 53;
             this.plato25.Text = "button28";
             this.plato25.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -873,10 +836,9 @@
             this.plato20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato20.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato20.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato20.Location = new System.Drawing.Point(4, 250);
-            this.plato20.Margin = new System.Windows.Forms.Padding(4);
+            this.plato20.Location = new System.Drawing.Point(3, 201);
             this.plato20.Name = "plato20";
-            this.plato20.Size = new System.Drawing.Size(139, 74);
+            this.plato20.Size = new System.Drawing.Size(104, 60);
             this.plato20.TabIndex = 49;
             this.plato20.Text = "button4";
             this.plato20.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -889,10 +851,9 @@
             this.plato19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato19.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato19.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato19.Location = new System.Drawing.Point(151, 250);
-            this.plato19.Margin = new System.Windows.Forms.Padding(4);
+            this.plato19.Location = new System.Drawing.Point(113, 201);
             this.plato19.Name = "plato19";
-            this.plato19.Size = new System.Drawing.Size(139, 74);
+            this.plato19.Size = new System.Drawing.Size(104, 60);
             this.plato19.TabIndex = 48;
             this.plato19.Text = "button23";
             this.plato19.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -905,10 +866,9 @@
             this.plato14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato14.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato14.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato14.Location = new System.Drawing.Point(151, 168);
-            this.plato14.Margin = new System.Windows.Forms.Padding(4);
+            this.plato14.Location = new System.Drawing.Point(113, 135);
             this.plato14.Name = "plato14";
-            this.plato14.Size = new System.Drawing.Size(139, 74);
+            this.plato14.Size = new System.Drawing.Size(104, 60);
             this.plato14.TabIndex = 47;
             this.plato14.Text = "button4";
             this.plato14.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -921,10 +881,9 @@
             this.plato15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato15.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato15.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato15.Location = new System.Drawing.Point(298, 168);
-            this.plato15.Margin = new System.Windows.Forms.Padding(4);
+            this.plato15.Location = new System.Drawing.Point(223, 135);
             this.plato15.Name = "plato15";
-            this.plato15.Size = new System.Drawing.Size(139, 74);
+            this.plato15.Size = new System.Drawing.Size(104, 60);
             this.plato15.TabIndex = 44;
             this.plato15.Text = "button4";
             this.plato15.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -937,10 +896,9 @@
             this.plato13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato13.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato13.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato13.Location = new System.Drawing.Point(4, 168);
-            this.plato13.Margin = new System.Windows.Forms.Padding(4);
+            this.plato13.Location = new System.Drawing.Point(3, 135);
             this.plato13.Name = "plato13";
-            this.plato13.Size = new System.Drawing.Size(139, 74);
+            this.plato13.Size = new System.Drawing.Size(104, 60);
             this.plato13.TabIndex = 43;
             this.plato13.Text = "button18";
             this.plato13.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -953,10 +911,9 @@
             this.plato1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato1.Location = new System.Drawing.Point(4, 4);
-            this.plato1.Margin = new System.Windows.Forms.Padding(4);
+            this.plato1.Location = new System.Drawing.Point(3, 3);
             this.plato1.Name = "plato1";
-            this.plato1.Size = new System.Drawing.Size(139, 74);
+            this.plato1.Size = new System.Drawing.Size(104, 60);
             this.plato1.TabIndex = 42;
             this.plato1.Text = "button4";
             this.plato1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -969,10 +926,9 @@
             this.plato3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato3.Location = new System.Drawing.Point(445, 4);
-            this.plato3.Margin = new System.Windows.Forms.Padding(4);
+            this.plato3.Location = new System.Drawing.Point(333, 3);
             this.plato3.Name = "plato3";
-            this.plato3.Size = new System.Drawing.Size(139, 74);
+            this.plato3.Size = new System.Drawing.Size(104, 60);
             this.plato3.TabIndex = 41;
             this.plato3.Text = "button4";
             this.plato3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -985,10 +941,9 @@
             this.plato5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato5.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato5.Location = new System.Drawing.Point(298, 4);
-            this.plato5.Margin = new System.Windows.Forms.Padding(4);
+            this.plato5.Location = new System.Drawing.Point(223, 3);
             this.plato5.Name = "plato5";
-            this.plato5.Size = new System.Drawing.Size(139, 74);
+            this.plato5.Size = new System.Drawing.Size(104, 60);
             this.plato5.TabIndex = 40;
             this.plato5.Text = "button4";
             this.plato5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1001,10 +956,9 @@
             this.plato4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato4.Location = new System.Drawing.Point(151, 4);
-            this.plato4.Margin = new System.Windows.Forms.Padding(4);
+            this.plato4.Location = new System.Drawing.Point(113, 3);
             this.plato4.Name = "plato4";
-            this.plato4.Size = new System.Drawing.Size(139, 74);
+            this.plato4.Size = new System.Drawing.Size(104, 60);
             this.plato4.TabIndex = 39;
             this.plato4.Text = "button4";
             this.plato4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1017,10 +971,9 @@
             this.plato2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato2.Location = new System.Drawing.Point(592, 4);
-            this.plato2.Margin = new System.Windows.Forms.Padding(4);
+            this.plato2.Location = new System.Drawing.Point(443, 3);
             this.plato2.Name = "plato2";
-            this.plato2.Size = new System.Drawing.Size(139, 74);
+            this.plato2.Size = new System.Drawing.Size(104, 60);
             this.plato2.TabIndex = 38;
             this.plato2.Text = "button13";
             this.plato2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1033,10 +986,9 @@
             this.plato8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato8.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato8.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato8.Location = new System.Drawing.Point(298, 86);
-            this.plato8.Margin = new System.Windows.Forms.Padding(4);
+            this.plato8.Location = new System.Drawing.Point(223, 69);
             this.plato8.Name = "plato8";
-            this.plato8.Size = new System.Drawing.Size(139, 74);
+            this.plato8.Size = new System.Drawing.Size(104, 60);
             this.plato8.TabIndex = 37;
             this.plato8.Text = "button4";
             this.plato8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1049,10 +1001,9 @@
             this.plato9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato9.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato9.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato9.Location = new System.Drawing.Point(4, 86);
-            this.plato9.Margin = new System.Windows.Forms.Padding(4);
+            this.plato9.Location = new System.Drawing.Point(3, 69);
             this.plato9.Name = "plato9";
-            this.plato9.Size = new System.Drawing.Size(139, 74);
+            this.plato9.Size = new System.Drawing.Size(104, 60);
             this.plato9.TabIndex = 36;
             this.plato9.Text = "button4";
             this.plato9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1065,10 +1016,9 @@
             this.plato10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato10.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato10.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato10.Location = new System.Drawing.Point(445, 86);
-            this.plato10.Margin = new System.Windows.Forms.Padding(4);
+            this.plato10.Location = new System.Drawing.Point(333, 69);
             this.plato10.Name = "plato10";
-            this.plato10.Size = new System.Drawing.Size(139, 74);
+            this.plato10.Size = new System.Drawing.Size(104, 60);
             this.plato10.TabIndex = 35;
             this.plato10.Text = "button4";
             this.plato10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1081,10 +1031,9 @@
             this.plato7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato7.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato7.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato7.Location = new System.Drawing.Point(151, 86);
-            this.plato7.Margin = new System.Windows.Forms.Padding(4);
+            this.plato7.Location = new System.Drawing.Point(113, 69);
             this.plato7.Name = "plato7";
-            this.plato7.Size = new System.Drawing.Size(139, 74);
+            this.plato7.Size = new System.Drawing.Size(104, 60);
             this.plato7.TabIndex = 34;
             this.plato7.Text = "button4";
             this.plato7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1097,10 +1046,9 @@
             this.plato11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato11.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato11.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato11.Location = new System.Drawing.Point(592, 86);
-            this.plato11.Margin = new System.Windows.Forms.Padding(4);
+            this.plato11.Location = new System.Drawing.Point(443, 69);
             this.plato11.Name = "plato11";
-            this.plato11.Size = new System.Drawing.Size(139, 74);
+            this.plato11.Size = new System.Drawing.Size(104, 60);
             this.plato11.TabIndex = 46;
             this.plato11.Text = "button4";
             this.plato11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1113,10 +1061,9 @@
             this.plato12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato12.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato12.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato12.Location = new System.Drawing.Point(739, 86);
-            this.plato12.Margin = new System.Windows.Forms.Padding(4);
+            this.plato12.Location = new System.Drawing.Point(553, 69);
             this.plato12.Name = "plato12";
-            this.plato12.Size = new System.Drawing.Size(143, 74);
+            this.plato12.Size = new System.Drawing.Size(108, 60);
             this.plato12.TabIndex = 45;
             this.plato12.Text = "button4";
             this.plato12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1129,10 +1076,9 @@
             this.plato16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato16.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato16.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato16.Location = new System.Drawing.Point(445, 168);
-            this.plato16.Margin = new System.Windows.Forms.Padding(4);
+            this.plato16.Location = new System.Drawing.Point(333, 135);
             this.plato16.Name = "plato16";
-            this.plato16.Size = new System.Drawing.Size(139, 74);
+            this.plato16.Size = new System.Drawing.Size(104, 60);
             this.plato16.TabIndex = 51;
             this.plato16.Text = "button4";
             this.plato16.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1145,10 +1091,9 @@
             this.plato17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato17.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato17.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato17.Location = new System.Drawing.Point(592, 168);
-            this.plato17.Margin = new System.Windows.Forms.Padding(4);
+            this.plato17.Location = new System.Drawing.Point(443, 135);
             this.plato17.Name = "plato17";
-            this.plato17.Size = new System.Drawing.Size(139, 74);
+            this.plato17.Size = new System.Drawing.Size(104, 60);
             this.plato17.TabIndex = 50;
             this.plato17.Text = "button4";
             this.plato17.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1161,10 +1106,9 @@
             this.plato18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato18.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato18.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato18.Location = new System.Drawing.Point(739, 168);
-            this.plato18.Margin = new System.Windows.Forms.Padding(4);
+            this.plato18.Location = new System.Drawing.Point(553, 135);
             this.plato18.Name = "plato18";
-            this.plato18.Size = new System.Drawing.Size(143, 74);
+            this.plato18.Size = new System.Drawing.Size(108, 60);
             this.plato18.TabIndex = 52;
             this.plato18.Text = "button4";
             this.plato18.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1177,10 +1121,9 @@
             this.plato21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato21.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato21.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato21.Location = new System.Drawing.Point(298, 250);
-            this.plato21.Margin = new System.Windows.Forms.Padding(4);
+            this.plato21.Location = new System.Drawing.Point(223, 201);
             this.plato21.Name = "plato21";
-            this.plato21.Size = new System.Drawing.Size(139, 74);
+            this.plato21.Size = new System.Drawing.Size(104, 60);
             this.plato21.TabIndex = 56;
             this.plato21.Text = "button4";
             this.plato21.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1193,10 +1136,9 @@
             this.plato22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato22.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato22.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato22.Location = new System.Drawing.Point(445, 250);
-            this.plato22.Margin = new System.Windows.Forms.Padding(4);
+            this.plato22.Location = new System.Drawing.Point(333, 201);
             this.plato22.Name = "plato22";
-            this.plato22.Size = new System.Drawing.Size(139, 74);
+            this.plato22.Size = new System.Drawing.Size(104, 60);
             this.plato22.TabIndex = 55;
             this.plato22.Text = "button4";
             this.plato22.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1209,10 +1151,9 @@
             this.plato23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato23.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato23.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato23.Location = new System.Drawing.Point(592, 250);
-            this.plato23.Margin = new System.Windows.Forms.Padding(4);
+            this.plato23.Location = new System.Drawing.Point(443, 201);
             this.plato23.Name = "plato23";
-            this.plato23.Size = new System.Drawing.Size(139, 74);
+            this.plato23.Size = new System.Drawing.Size(104, 60);
             this.plato23.TabIndex = 57;
             this.plato23.Text = "button4";
             this.plato23.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1225,10 +1166,9 @@
             this.plato24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato24.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato24.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato24.Location = new System.Drawing.Point(739, 250);
-            this.plato24.Margin = new System.Windows.Forms.Padding(4);
+            this.plato24.Location = new System.Drawing.Point(553, 201);
             this.plato24.Name = "plato24";
-            this.plato24.Size = new System.Drawing.Size(143, 74);
+            this.plato24.Size = new System.Drawing.Size(108, 60);
             this.plato24.TabIndex = 54;
             this.plato24.Text = "button4";
             this.plato24.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1240,10 +1180,9 @@
             this.plato26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato26.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato26.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato26.Location = new System.Drawing.Point(151, 332);
-            this.plato26.Margin = new System.Windows.Forms.Padding(4);
+            this.plato26.Location = new System.Drawing.Point(113, 267);
             this.plato26.Name = "plato26";
-            this.plato26.Size = new System.Drawing.Size(139, 74);
+            this.plato26.Size = new System.Drawing.Size(104, 60);
             this.plato26.TabIndex = 61;
             this.plato26.Text = "button4";
             this.plato26.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1255,10 +1194,9 @@
             this.plato27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato27.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato27.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato27.Location = new System.Drawing.Point(298, 332);
-            this.plato27.Margin = new System.Windows.Forms.Padding(4);
+            this.plato27.Location = new System.Drawing.Point(223, 267);
             this.plato27.Name = "plato27";
-            this.plato27.Size = new System.Drawing.Size(139, 74);
+            this.plato27.Size = new System.Drawing.Size(104, 60);
             this.plato27.TabIndex = 60;
             this.plato27.Text = "button4";
             this.plato27.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1270,10 +1208,9 @@
             this.plato28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato28.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato28.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato28.Location = new System.Drawing.Point(445, 332);
-            this.plato28.Margin = new System.Windows.Forms.Padding(4);
+            this.plato28.Location = new System.Drawing.Point(333, 267);
             this.plato28.Name = "plato28";
-            this.plato28.Size = new System.Drawing.Size(139, 74);
+            this.plato28.Size = new System.Drawing.Size(104, 60);
             this.plato28.TabIndex = 62;
             this.plato28.Text = "button4";
             this.plato28.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1285,10 +1222,9 @@
             this.plato29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato29.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato29.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato29.Location = new System.Drawing.Point(592, 332);
-            this.plato29.Margin = new System.Windows.Forms.Padding(4);
+            this.plato29.Location = new System.Drawing.Point(443, 267);
             this.plato29.Name = "plato29";
-            this.plato29.Size = new System.Drawing.Size(139, 74);
+            this.plato29.Size = new System.Drawing.Size(104, 60);
             this.plato29.TabIndex = 59;
             this.plato29.Text = "button4";
             this.plato29.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1300,10 +1236,9 @@
             this.plato30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato30.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato30.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato30.Location = new System.Drawing.Point(739, 332);
-            this.plato30.Margin = new System.Windows.Forms.Padding(4);
+            this.plato30.Location = new System.Drawing.Point(553, 267);
             this.plato30.Name = "plato30";
-            this.plato30.Size = new System.Drawing.Size(143, 74);
+            this.plato30.Size = new System.Drawing.Size(108, 60);
             this.plato30.TabIndex = 58;
             this.plato30.Text = "button33";
             this.plato30.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1314,10 +1249,9 @@
             this.plato31.Dock = System.Windows.Forms.DockStyle.Fill;
             this.plato31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato31.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.plato31.Location = new System.Drawing.Point(4, 414);
-            this.plato31.Margin = new System.Windows.Forms.Padding(4);
+            this.plato31.Location = new System.Drawing.Point(3, 333);
             this.plato31.Name = "plato31";
-            this.plato31.Size = new System.Drawing.Size(139, 74);
+            this.plato31.Size = new System.Drawing.Size(104, 60);
             this.plato31.TabIndex = 63;
             this.plato31.Text = "button1";
             this.plato31.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1329,10 +1263,9 @@
             this.plato32.Dock = System.Windows.Forms.DockStyle.Fill;
             this.plato32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato32.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.plato32.Location = new System.Drawing.Point(151, 414);
-            this.plato32.Margin = new System.Windows.Forms.Padding(4);
+            this.plato32.Location = new System.Drawing.Point(113, 333);
             this.plato32.Name = "plato32";
-            this.plato32.Size = new System.Drawing.Size(139, 74);
+            this.plato32.Size = new System.Drawing.Size(104, 60);
             this.plato32.TabIndex = 64;
             this.plato32.Text = "button1";
             this.plato32.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1344,10 +1277,9 @@
             this.plato33.Dock = System.Windows.Forms.DockStyle.Fill;
             this.plato33.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato33.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.plato33.Location = new System.Drawing.Point(298, 414);
-            this.plato33.Margin = new System.Windows.Forms.Padding(4);
+            this.plato33.Location = new System.Drawing.Point(223, 333);
             this.plato33.Name = "plato33";
-            this.plato33.Size = new System.Drawing.Size(139, 74);
+            this.plato33.Size = new System.Drawing.Size(104, 60);
             this.plato33.TabIndex = 65;
             this.plato33.Text = "button1";
             this.plato33.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1359,10 +1291,9 @@
             this.plato34.Dock = System.Windows.Forms.DockStyle.Fill;
             this.plato34.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato34.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.plato34.Location = new System.Drawing.Point(445, 414);
-            this.plato34.Margin = new System.Windows.Forms.Padding(4);
+            this.plato34.Location = new System.Drawing.Point(333, 333);
             this.plato34.Name = "plato34";
-            this.plato34.Size = new System.Drawing.Size(139, 74);
+            this.plato34.Size = new System.Drawing.Size(104, 60);
             this.plato34.TabIndex = 66;
             this.plato34.Text = "button1";
             this.plato34.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1374,10 +1305,9 @@
             this.plato35.Dock = System.Windows.Forms.DockStyle.Fill;
             this.plato35.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato35.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.plato35.Location = new System.Drawing.Point(592, 414);
-            this.plato35.Margin = new System.Windows.Forms.Padding(4);
+            this.plato35.Location = new System.Drawing.Point(443, 333);
             this.plato35.Name = "plato35";
-            this.plato35.Size = new System.Drawing.Size(139, 74);
+            this.plato35.Size = new System.Drawing.Size(104, 60);
             this.plato35.TabIndex = 67;
             this.plato35.Text = "button1";
             this.plato35.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1389,10 +1319,9 @@
             this.plato36.Dock = System.Windows.Forms.DockStyle.Fill;
             this.plato36.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato36.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.plato36.Location = new System.Drawing.Point(739, 414);
-            this.plato36.Margin = new System.Windows.Forms.Padding(4);
+            this.plato36.Location = new System.Drawing.Point(553, 333);
             this.plato36.Name = "plato36";
-            this.plato36.Size = new System.Drawing.Size(143, 74);
+            this.plato36.Size = new System.Drawing.Size(108, 60);
             this.plato36.TabIndex = 68;
             this.plato36.Text = "button1";
             this.plato36.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1404,10 +1333,9 @@
             this.plato37.Dock = System.Windows.Forms.DockStyle.Fill;
             this.plato37.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato37.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.plato37.Location = new System.Drawing.Point(4, 496);
-            this.plato37.Margin = new System.Windows.Forms.Padding(4);
+            this.plato37.Location = new System.Drawing.Point(3, 399);
             this.plato37.Name = "plato37";
-            this.plato37.Size = new System.Drawing.Size(139, 74);
+            this.plato37.Size = new System.Drawing.Size(104, 60);
             this.plato37.TabIndex = 69;
             this.plato37.Text = "button1";
             this.plato37.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1419,10 +1347,9 @@
             this.plato38.Dock = System.Windows.Forms.DockStyle.Fill;
             this.plato38.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato38.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.plato38.Location = new System.Drawing.Point(151, 496);
-            this.plato38.Margin = new System.Windows.Forms.Padding(4);
+            this.plato38.Location = new System.Drawing.Point(113, 399);
             this.plato38.Name = "plato38";
-            this.plato38.Size = new System.Drawing.Size(139, 74);
+            this.plato38.Size = new System.Drawing.Size(104, 60);
             this.plato38.TabIndex = 70;
             this.plato38.Text = "button1";
             this.plato38.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1434,10 +1361,9 @@
             this.plato39.Dock = System.Windows.Forms.DockStyle.Fill;
             this.plato39.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato39.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.plato39.Location = new System.Drawing.Point(298, 496);
-            this.plato39.Margin = new System.Windows.Forms.Padding(4);
+            this.plato39.Location = new System.Drawing.Point(223, 399);
             this.plato39.Name = "plato39";
-            this.plato39.Size = new System.Drawing.Size(139, 74);
+            this.plato39.Size = new System.Drawing.Size(104, 60);
             this.plato39.TabIndex = 71;
             this.plato39.Text = "button1";
             this.plato39.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1449,10 +1375,9 @@
             this.plato40.Dock = System.Windows.Forms.DockStyle.Fill;
             this.plato40.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato40.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.plato40.Location = new System.Drawing.Point(445, 496);
-            this.plato40.Margin = new System.Windows.Forms.Padding(4);
+            this.plato40.Location = new System.Drawing.Point(333, 399);
             this.plato40.Name = "plato40";
-            this.plato40.Size = new System.Drawing.Size(139, 74);
+            this.plato40.Size = new System.Drawing.Size(104, 60);
             this.plato40.TabIndex = 72;
             this.plato40.Text = "button1";
             this.plato40.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1464,10 +1389,9 @@
             this.plato41.Dock = System.Windows.Forms.DockStyle.Fill;
             this.plato41.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato41.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.plato41.Location = new System.Drawing.Point(592, 496);
-            this.plato41.Margin = new System.Windows.Forms.Padding(4);
+            this.plato41.Location = new System.Drawing.Point(443, 399);
             this.plato41.Name = "plato41";
-            this.plato41.Size = new System.Drawing.Size(139, 74);
+            this.plato41.Size = new System.Drawing.Size(104, 60);
             this.plato41.TabIndex = 73;
             this.plato41.Text = "button1";
             this.plato41.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1479,10 +1403,9 @@
             this.plato42.Dock = System.Windows.Forms.DockStyle.Fill;
             this.plato42.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato42.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.plato42.Location = new System.Drawing.Point(739, 496);
-            this.plato42.Margin = new System.Windows.Forms.Padding(4);
+            this.plato42.Location = new System.Drawing.Point(553, 399);
             this.plato42.Name = "plato42";
-            this.plato42.Size = new System.Drawing.Size(143, 74);
+            this.plato42.Size = new System.Drawing.Size(108, 60);
             this.plato42.TabIndex = 74;
             this.plato42.Text = "button1";
             this.plato42.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1495,10 +1418,9 @@
             this.plato6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.plato6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.plato6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.plato6.Location = new System.Drawing.Point(739, 4);
-            this.plato6.Margin = new System.Windows.Forms.Padding(4);
+            this.plato6.Location = new System.Drawing.Point(553, 3);
             this.plato6.Name = "plato6";
-            this.plato6.Size = new System.Drawing.Size(143, 74);
+            this.plato6.Size = new System.Drawing.Size(108, 60);
             this.plato6.TabIndex = 33;
             this.plato6.Text = "button4";
             this.plato6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1509,10 +1431,9 @@
             // 
             this.btnMas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMas.Location = new System.Drawing.Point(739, 578);
-            this.btnMas.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMas.Location = new System.Drawing.Point(553, 465);
             this.btnMas.Name = "btnMas";
-            this.btnMas.Size = new System.Drawing.Size(143, 23);
+            this.btnMas.Size = new System.Drawing.Size(108, 23);
             this.btnMas.TabIndex = 75;
             this.btnMas.Text = "Mas";
             this.btnMas.UseVisualStyleBackColor = true;
@@ -1521,10 +1442,9 @@
             // 
             this.groupControl2.Controls.Add(this.dataLayoutControl1);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl2.Location = new System.Drawing.Point(5, 5);
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupControl2.Location = new System.Drawing.Point(4, 4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(472, 192);
+            this.groupControl2.Size = new System.Drawing.Size(354, 157);
             this.groupControl2.TabIndex = 4;
             // 
             // dataLayoutControl1
@@ -1558,11 +1478,10 @@
             this.ItemForEstatus,
             this.ItemForMesa1,
             this.ItemForMesasAbiertasPlatos});
-            this.dataLayoutControl1.Location = new System.Drawing.Point(2, 25);
-            this.dataLayoutControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataLayoutControl1.Location = new System.Drawing.Point(2, 20);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(468, 165);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(350, 135);
             this.dataLayoutControl1.TabIndex = 0;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
             // 
@@ -1570,9 +1489,8 @@
             // 
             this.IdMesaAbiertaTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mesasAbiertaBindingSource, "IdMesaAbierta", true));
             this.IdMesaAbiertaTextEdit.Location = new System.Drawing.Point(0, 0);
-            this.IdMesaAbiertaTextEdit.Margin = new System.Windows.Forms.Padding(4);
             this.IdMesaAbiertaTextEdit.Name = "IdMesaAbiertaTextEdit";
-            this.IdMesaAbiertaTextEdit.Size = new System.Drawing.Size(0, 22);
+            this.IdMesaAbiertaTextEdit.Size = new System.Drawing.Size(0, 20);
             this.IdMesaAbiertaTextEdit.StyleController = this.dataLayoutControl1;
             this.IdMesaAbiertaTextEdit.TabIndex = 4;
             // 
@@ -1584,9 +1502,8 @@
             // 
             this.IdMesaTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mesasAbiertaBindingSource, "IdMesa", true));
             this.IdMesaTextEdit.Location = new System.Drawing.Point(0, 0);
-            this.IdMesaTextEdit.Margin = new System.Windows.Forms.Padding(4);
             this.IdMesaTextEdit.Name = "IdMesaTextEdit";
-            this.IdMesaTextEdit.Size = new System.Drawing.Size(0, 22);
+            this.IdMesaTextEdit.Size = new System.Drawing.Size(0, 20);
             this.IdMesaTextEdit.StyleController = this.dataLayoutControl1;
             this.IdMesaTextEdit.TabIndex = 5;
             // 
@@ -1594,9 +1511,8 @@
             // 
             this.IdMesoneroTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mesasAbiertaBindingSource, "IdMesonero", true));
             this.IdMesoneroTextEdit.Location = new System.Drawing.Point(0, 0);
-            this.IdMesoneroTextEdit.Margin = new System.Windows.Forms.Padding(4);
             this.IdMesoneroTextEdit.Name = "IdMesoneroTextEdit";
-            this.IdMesoneroTextEdit.Size = new System.Drawing.Size(0, 22);
+            this.IdMesoneroTextEdit.Size = new System.Drawing.Size(0, 20);
             this.IdMesoneroTextEdit.StyleController = this.dataLayoutControl1;
             this.IdMesoneroTextEdit.TabIndex = 6;
             // 
@@ -1604,15 +1520,14 @@
             // 
             this.PersonasTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mesasAbiertaBindingSource, "Personas", true));
             this.PersonasTextEdit.Enabled = false;
-            this.PersonasTextEdit.Location = new System.Drawing.Point(74, 59);
-            this.PersonasTextEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.PersonasTextEdit.Location = new System.Drawing.Point(62, 50);
             this.PersonasTextEdit.Name = "PersonasTextEdit";
             this.PersonasTextEdit.Properties.AllowFocused = false;
             this.PersonasTextEdit.Properties.AppearanceDisabled.BackColor = System.Drawing.SystemColors.Info;
             this.PersonasTextEdit.Properties.AppearanceDisabled.ForeColor = System.Drawing.SystemColors.ControlText;
             this.PersonasTextEdit.Properties.AppearanceDisabled.Options.UseBackColor = true;
             this.PersonasTextEdit.Properties.AppearanceDisabled.Options.UseForeColor = true;
-            this.PersonasTextEdit.Size = new System.Drawing.Size(156, 22);
+            this.PersonasTextEdit.Size = new System.Drawing.Size(110, 20);
             this.PersonasTextEdit.StyleController = this.dataLayoutControl1;
             this.PersonasTextEdit.TabIndex = 9;
             this.PersonasTextEdit.TabStop = false;
@@ -1621,15 +1536,14 @@
             // 
             this.AperturaTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mesasAbiertaBindingSource, "Apertura", true));
             this.AperturaTextEdit.Enabled = false;
-            this.AperturaTextEdit.Location = new System.Drawing.Point(74, 87);
-            this.AperturaTextEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.AperturaTextEdit.Location = new System.Drawing.Point(62, 74);
             this.AperturaTextEdit.Name = "AperturaTextEdit";
             this.AperturaTextEdit.Properties.AllowFocused = false;
             this.AperturaTextEdit.Properties.AppearanceDisabled.BackColor = System.Drawing.SystemColors.Info;
             this.AperturaTextEdit.Properties.AppearanceDisabled.ForeColor = System.Drawing.SystemColors.ControlText;
             this.AperturaTextEdit.Properties.AppearanceDisabled.Options.UseBackColor = true;
             this.AperturaTextEdit.Properties.AppearanceDisabled.Options.UseForeColor = true;
-            this.AperturaTextEdit.Size = new System.Drawing.Size(391, 22);
+            this.AperturaTextEdit.Size = new System.Drawing.Size(286, 20);
             this.AperturaTextEdit.StyleController = this.dataLayoutControl1;
             this.AperturaTextEdit.TabIndex = 10;
             this.AperturaTextEdit.TabStop = false;
@@ -1638,9 +1552,8 @@
             // 
             this.MontoGravableTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mesasAbiertaBindingSource, "MontoGravable", true));
             this.MontoGravableTextEdit.Location = new System.Drawing.Point(0, 0);
-            this.MontoGravableTextEdit.Margin = new System.Windows.Forms.Padding(4);
             this.MontoGravableTextEdit.Name = "MontoGravableTextEdit";
-            this.MontoGravableTextEdit.Size = new System.Drawing.Size(0, 22);
+            this.MontoGravableTextEdit.Size = new System.Drawing.Size(0, 20);
             this.MontoGravableTextEdit.StyleController = this.dataLayoutControl1;
             this.MontoGravableTextEdit.TabIndex = 11;
             // 
@@ -1648,9 +1561,8 @@
             // 
             this.MontoExentoTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mesasAbiertaBindingSource, "MontoExento", true));
             this.MontoExentoTextEdit.Location = new System.Drawing.Point(0, 0);
-            this.MontoExentoTextEdit.Margin = new System.Windows.Forms.Padding(4);
             this.MontoExentoTextEdit.Name = "MontoExentoTextEdit";
-            this.MontoExentoTextEdit.Size = new System.Drawing.Size(0, 22);
+            this.MontoExentoTextEdit.Size = new System.Drawing.Size(0, 20);
             this.MontoExentoTextEdit.StyleController = this.dataLayoutControl1;
             this.MontoExentoTextEdit.TabIndex = 12;
             // 
@@ -1658,9 +1570,8 @@
             // 
             this.MontoIvaTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mesasAbiertaBindingSource, "MontoIva", true));
             this.MontoIvaTextEdit.Location = new System.Drawing.Point(0, 0);
-            this.MontoIvaTextEdit.Margin = new System.Windows.Forms.Padding(4);
             this.MontoIvaTextEdit.Name = "MontoIvaTextEdit";
-            this.MontoIvaTextEdit.Size = new System.Drawing.Size(0, 22);
+            this.MontoIvaTextEdit.Size = new System.Drawing.Size(0, 20);
             this.MontoIvaTextEdit.StyleController = this.dataLayoutControl1;
             this.MontoIvaTextEdit.TabIndex = 13;
             // 
@@ -1668,9 +1579,8 @@
             // 
             this.MontoServicioTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mesasAbiertaBindingSource, "MontoServicio", true));
             this.MontoServicioTextEdit.Location = new System.Drawing.Point(0, 0);
-            this.MontoServicioTextEdit.Margin = new System.Windows.Forms.Padding(4);
             this.MontoServicioTextEdit.Name = "MontoServicioTextEdit";
-            this.MontoServicioTextEdit.Size = new System.Drawing.Size(0, 22);
+            this.MontoServicioTextEdit.Size = new System.Drawing.Size(0, 20);
             this.MontoServicioTextEdit.StyleController = this.dataLayoutControl1;
             this.MontoServicioTextEdit.TabIndex = 15;
             // 
@@ -1678,9 +1588,8 @@
             // 
             this.EstatusTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mesasAbiertaBindingSource, "Estatus", true));
             this.EstatusTextEdit.Location = new System.Drawing.Point(0, 0);
-            this.EstatusTextEdit.Margin = new System.Windows.Forms.Padding(4);
             this.EstatusTextEdit.Name = "EstatusTextEdit";
-            this.EstatusTextEdit.Size = new System.Drawing.Size(0, 22);
+            this.EstatusTextEdit.Size = new System.Drawing.Size(0, 20);
             this.EstatusTextEdit.StyleController = this.dataLayoutControl1;
             this.EstatusTextEdit.TabIndex = 16;
             // 
@@ -1688,15 +1597,14 @@
             // 
             this.NumeroTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mesasAbiertaBindingSource, "Numero", true));
             this.NumeroTextEdit.Enabled = false;
-            this.NumeroTextEdit.Location = new System.Drawing.Point(307, 59);
-            this.NumeroTextEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.NumeroTextEdit.Location = new System.Drawing.Point(236, 50);
             this.NumeroTextEdit.Name = "NumeroTextEdit";
             this.NumeroTextEdit.Properties.AllowFocused = false;
             this.NumeroTextEdit.Properties.AppearanceDisabled.BackColor = System.Drawing.SystemColors.Info;
             this.NumeroTextEdit.Properties.AppearanceDisabled.ForeColor = System.Drawing.SystemColors.ControlText;
             this.NumeroTextEdit.Properties.AppearanceDisabled.Options.UseBackColor = true;
             this.NumeroTextEdit.Properties.AppearanceDisabled.Options.UseForeColor = true;
-            this.NumeroTextEdit.Size = new System.Drawing.Size(158, 22);
+            this.NumeroTextEdit.Size = new System.Drawing.Size(112, 20);
             this.NumeroTextEdit.StyleController = this.dataLayoutControl1;
             this.NumeroTextEdit.TabIndex = 17;
             this.NumeroTextEdit.TabStop = false;
@@ -1705,9 +1613,8 @@
             // 
             this.Mesa1TextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mesasAbiertaBindingSource, "Mesa1", true));
             this.Mesa1TextEdit.Location = new System.Drawing.Point(0, 0);
-            this.Mesa1TextEdit.Margin = new System.Windows.Forms.Padding(4);
             this.Mesa1TextEdit.Name = "Mesa1TextEdit";
-            this.Mesa1TextEdit.Size = new System.Drawing.Size(0, 22);
+            this.Mesa1TextEdit.Size = new System.Drawing.Size(0, 20);
             this.Mesa1TextEdit.StyleController = this.dataLayoutControl1;
             this.Mesa1TextEdit.TabIndex = 18;
             // 
@@ -1715,17 +1622,15 @@
             // 
             this.MesasAbiertasPlatosTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mesasAbiertaBindingSource, "MesasAbiertasPlatos", true));
             this.MesasAbiertasPlatosTextEdit.Location = new System.Drawing.Point(0, 0);
-            this.MesasAbiertasPlatosTextEdit.Margin = new System.Windows.Forms.Padding(4);
             this.MesasAbiertasPlatosTextEdit.Name = "MesasAbiertasPlatosTextEdit";
-            this.MesasAbiertasPlatosTextEdit.Size = new System.Drawing.Size(0, 22);
+            this.MesasAbiertasPlatosTextEdit.Size = new System.Drawing.Size(0, 20);
             this.MesasAbiertasPlatosTextEdit.StyleController = this.dataLayoutControl1;
             this.MesasAbiertasPlatosTextEdit.TabIndex = 19;
             // 
             // MesaTextEdit
             // 
             this.MesaTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mesasAbiertaBindingSource, "Mesa", true));
-            this.MesaTextEdit.Location = new System.Drawing.Point(74, 3);
-            this.MesaTextEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.MesaTextEdit.Location = new System.Drawing.Point(62, 2);
             this.MesaTextEdit.Name = "MesaTextEdit";
             this.MesaTextEdit.Properties.AppearanceDisabled.BackColor = System.Drawing.SystemColors.Info;
             this.MesaTextEdit.Properties.AppearanceDisabled.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -1734,7 +1639,7 @@
             this.MesaTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.MesaTextEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.MesaTextEdit.Size = new System.Drawing.Size(391, 22);
+            this.MesaTextEdit.Size = new System.Drawing.Size(286, 20);
             this.MesaTextEdit.StyleController = this.dataLayoutControl1;
             this.MesaTextEdit.TabIndex = 7;
             this.MesaTextEdit.TabStop = false;
@@ -1743,8 +1648,7 @@
             // 
             this.MesoneroTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mesasAbiertaBindingSource, "Mesonero", true));
             this.MesoneroTextEdit.Enabled = false;
-            this.MesoneroTextEdit.Location = new System.Drawing.Point(74, 31);
-            this.MesoneroTextEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.MesoneroTextEdit.Location = new System.Drawing.Point(62, 26);
             this.MesoneroTextEdit.Name = "MesoneroTextEdit";
             this.MesoneroTextEdit.Properties.AllowFocused = false;
             this.MesoneroTextEdit.Properties.AppearanceDisabled.BackColor = System.Drawing.SystemColors.Info;
@@ -1754,7 +1658,7 @@
             this.MesoneroTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, true, false, false, editorButtonImageOptions1)});
             this.MesoneroTextEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.MesoneroTextEdit.Size = new System.Drawing.Size(391, 22);
+            this.MesoneroTextEdit.Size = new System.Drawing.Size(286, 20);
             this.MesoneroTextEdit.StyleController = this.dataLayoutControl1;
             this.MesoneroTextEdit.TabIndex = 8;
             this.MesoneroTextEdit.TabStop = false;
@@ -1763,8 +1667,7 @@
             // 
             this.MontoTotalTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mesasAbiertaBindingSource, "MontoTotal", true));
             this.MontoTotalTextEdit.Enabled = false;
-            this.MontoTotalTextEdit.Location = new System.Drawing.Point(74, 115);
-            this.MontoTotalTextEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.MontoTotalTextEdit.Location = new System.Drawing.Point(62, 98);
             this.MontoTotalTextEdit.Name = "MontoTotalTextEdit";
             this.MontoTotalTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.MontoTotalTextEdit.Properties.Appearance.Options.UseFont = true;
@@ -1779,7 +1682,7 @@
             this.MontoTotalTextEdit.Properties.EditFormat.FormatString = "n2";
             this.MontoTotalTextEdit.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.MontoTotalTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.MontoTotalTextEdit.Size = new System.Drawing.Size(391, 30);
+            this.MontoTotalTextEdit.Size = new System.Drawing.Size(286, 26);
             this.MontoTotalTextEdit.StyleController = this.dataLayoutControl1;
             this.MontoTotalTextEdit.TabIndex = 14;
             this.MontoTotalTextEdit.TabStop = false;
@@ -1894,7 +1797,7 @@
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlGroup1.Size = new System.Drawing.Size(468, 165);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(350, 135);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlGroup2
@@ -1911,7 +1814,7 @@
             this.ItemForNumero});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(468, 165);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(350, 135);
             // 
             // ItemForMesa
             // 
@@ -1919,59 +1822,59 @@
             this.ItemForMesa.CustomizationFormText = "Mesa";
             this.ItemForMesa.Location = new System.Drawing.Point(0, 0);
             this.ItemForMesa.Name = "ItemForMesa";
-            this.ItemForMesa.Size = new System.Drawing.Size(468, 28);
+            this.ItemForMesa.Size = new System.Drawing.Size(350, 24);
             this.ItemForMesa.Text = "Mesa";
-            this.ItemForMesa.TextSize = new System.Drawing.Size(68, 16);
+            this.ItemForMesa.TextSize = new System.Drawing.Size(57, 13);
             // 
             // ItemForMesonero
             // 
             this.ItemForMesonero.Control = this.MesoneroTextEdit;
             this.ItemForMesonero.CustomizationFormText = "Mesonero";
-            this.ItemForMesonero.Location = new System.Drawing.Point(0, 28);
+            this.ItemForMesonero.Location = new System.Drawing.Point(0, 24);
             this.ItemForMesonero.Name = "ItemForMesonero";
-            this.ItemForMesonero.Size = new System.Drawing.Size(468, 28);
+            this.ItemForMesonero.Size = new System.Drawing.Size(350, 24);
             this.ItemForMesonero.Text = "Mesonero";
-            this.ItemForMesonero.TextSize = new System.Drawing.Size(68, 16);
+            this.ItemForMesonero.TextSize = new System.Drawing.Size(57, 13);
             // 
             // ItemForPersonas
             // 
             this.ItemForPersonas.Control = this.PersonasTextEdit;
             this.ItemForPersonas.CustomizationFormText = "Personas";
-            this.ItemForPersonas.Location = new System.Drawing.Point(0, 56);
+            this.ItemForPersonas.Location = new System.Drawing.Point(0, 48);
             this.ItemForPersonas.Name = "ItemForPersonas";
-            this.ItemForPersonas.Size = new System.Drawing.Size(233, 28);
+            this.ItemForPersonas.Size = new System.Drawing.Size(174, 24);
             this.ItemForPersonas.Text = "Personas";
-            this.ItemForPersonas.TextSize = new System.Drawing.Size(68, 16);
+            this.ItemForPersonas.TextSize = new System.Drawing.Size(57, 13);
             // 
             // ItemForApertura
             // 
             this.ItemForApertura.Control = this.AperturaTextEdit;
             this.ItemForApertura.CustomizationFormText = "Apertura";
-            this.ItemForApertura.Location = new System.Drawing.Point(0, 84);
+            this.ItemForApertura.Location = new System.Drawing.Point(0, 72);
             this.ItemForApertura.Name = "ItemForApertura";
-            this.ItemForApertura.Size = new System.Drawing.Size(468, 28);
+            this.ItemForApertura.Size = new System.Drawing.Size(350, 24);
             this.ItemForApertura.Text = "Apertura";
-            this.ItemForApertura.TextSize = new System.Drawing.Size(68, 16);
+            this.ItemForApertura.TextSize = new System.Drawing.Size(57, 13);
             // 
             // ItemForMontoTotal
             // 
             this.ItemForMontoTotal.Control = this.MontoTotalTextEdit;
             this.ItemForMontoTotal.CustomizationFormText = "Monto Total";
-            this.ItemForMontoTotal.Location = new System.Drawing.Point(0, 112);
+            this.ItemForMontoTotal.Location = new System.Drawing.Point(0, 96);
             this.ItemForMontoTotal.Name = "ItemForMontoTotal";
-            this.ItemForMontoTotal.Size = new System.Drawing.Size(468, 53);
+            this.ItemForMontoTotal.Size = new System.Drawing.Size(350, 39);
             this.ItemForMontoTotal.Text = "Monto Total";
-            this.ItemForMontoTotal.TextSize = new System.Drawing.Size(68, 16);
+            this.ItemForMontoTotal.TextSize = new System.Drawing.Size(57, 13);
             // 
             // ItemForNumero
             // 
             this.ItemForNumero.Control = this.NumeroTextEdit;
             this.ItemForNumero.CustomizationFormText = "Numero";
-            this.ItemForNumero.Location = new System.Drawing.Point(233, 56);
+            this.ItemForNumero.Location = new System.Drawing.Point(174, 48);
             this.ItemForNumero.Name = "ItemForNumero";
-            this.ItemForNumero.Size = new System.Drawing.Size(235, 28);
+            this.ItemForNumero.Size = new System.Drawing.Size(176, 24);
             this.ItemForNumero.Text = "Numero";
-            this.ItemForNumero.TextSize = new System.Drawing.Size(68, 16);
+            this.ItemForNumero.TextSize = new System.Drawing.Size(57, 13);
             // 
             // BarraAcciones
             // 
@@ -1990,9 +1893,9 @@
             this.toolStripTextBox1});
             this.BarraAcciones.Location = new System.Drawing.Point(0, 0);
             this.BarraAcciones.Name = "BarraAcciones";
-            this.BarraAcciones.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.BarraAcciones.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.BarraAcciones.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.BarraAcciones.Size = new System.Drawing.Size(1377, 50);
+            this.BarraAcciones.Size = new System.Drawing.Size(1033, 41);
             this.BarraAcciones.TabIndex = 22;
             this.BarraAcciones.Text = "toolStrip1";
             // 
@@ -2001,21 +1904,21 @@
             this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 47);
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 38);
             this.toolStripButton1.Text = "toolStripButton1";
             // 
             // txtEmpresa
             // 
             this.txtEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.txtEmpresa.Name = "txtEmpresa";
-            this.txtEmpresa.Size = new System.Drawing.Size(116, 47);
+            this.txtEmpresa.Size = new System.Drawing.Size(99, 38);
             this.txtEmpresa.Text = "Restaurant";
             // 
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(82, 47);
+            this.txtUsuario.Size = new System.Drawing.Size(68, 38);
             this.txtUsuario.Text = "USUARIO";
             // 
             // btnCancelar
@@ -2024,13 +1927,13 @@
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(102, 47);
+            this.btnCancelar.Size = new System.Drawing.Size(89, 38);
             this.btnCancelar.Text = "Cancelar";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 50);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 41);
             // 
             // btnGuardar
             // 
@@ -2038,8 +1941,9 @@
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(135, 47);
+            this.btnGuardar.Size = new System.Drawing.Size(114, 38);
             this.btnGuardar.Text = "Guardar - F12";
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
             // 
             // btnImprimir
             // 
@@ -2047,7 +1951,7 @@
             this.btnImprimir.Image = ((System.Drawing.Image)(resources.GetObject("btnImprimir.Image")));
             this.btnImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(139, 47);
+            this.btnImprimir.Size = new System.Drawing.Size(118, 38);
             this.btnImprimir.Text = "Imprimir - F10";
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click_1);
             // 
@@ -2057,7 +1961,7 @@
             this.btnPagos.Image = ((System.Drawing.Image)(resources.GetObject("btnPagos.Image")));
             this.btnPagos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnPagos.Name = "btnPagos";
-            this.btnPagos.Size = new System.Drawing.Size(113, 47);
+            this.btnPagos.Size = new System.Drawing.Size(98, 38);
             this.btnPagos.Text = "Pagos - F4";
             // 
             // btnSeparar
@@ -2066,13 +1970,13 @@
             this.btnSeparar.Image = global::HK.Properties.Resources.clipboard;
             this.btnSeparar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSeparar.Name = "btnSeparar";
-            this.btnSeparar.Size = new System.Drawing.Size(152, 47);
+            this.btnSeparar.Size = new System.Drawing.Size(128, 38);
             this.btnSeparar.Text = "Separar Cuentas";
             // 
             // toolStripTextBox1
             // 
             this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(150, 50);
+            this.toolStripTextBox1.Size = new System.Drawing.Size(114, 41);
             this.toolStripTextBox1.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // statusStrip1
@@ -2080,30 +1984,28 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 876);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 710);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1377, 25);
+            this.statusStrip1.Size = new System.Drawing.Size(1033, 22);
             this.statusStrip1.TabIndex = 23;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(447, 20);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(349, 17);
             this.toolStripStatusLabel1.Text = "Software desarrollado por OK soluciones, telefonos 0414-8081015";
             // 
             // FrmEditarMesa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1377, 901);
+            this.ClientSize = new System.Drawing.Size(1033, 732);
             this.ControlBox = false;
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.BarraAcciones);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmEditarMesa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Feria";

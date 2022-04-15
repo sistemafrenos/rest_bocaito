@@ -41,7 +41,7 @@ namespace HK.Formas
             {
                 control.Click += new EventHandler(Mesa_Click);
                 control.Paint += new PaintEventHandler(mesa_Paint);
-                control.Dock = DockStyle.None;
+                control.Dock = DockStyle.Fill;
                 control.Font = new System.Drawing.Font("Verdana", 9, FontStyle.Bold);
             }
             CargarSalones();
@@ -214,6 +214,7 @@ namespace HK.Formas
                        m.Apertura = mesa.Apertura.GetValueOrDefault(DateTime.Now);
                        m.Numero = mesa.Numero;
                        m.Monto = mesa.MontoTotal;
+                       m.MontoDolares = mesa.MontoTotalDolares;
                        m.Impresa = mesa.Estatus == "IMPRESA" ? true : false;
                        m.Mesonero = mesa.Mesonero;
                    }
@@ -274,6 +275,7 @@ namespace HK.Formas
         private void mesa_Paint(object sender, PaintEventArgs e)
         {
             Graphics control = e.Graphics;
+            var width = control.ClipBounds.Width;
             control.Clear(this.BackColor);
             Mesa m = (Mesa)((PictureBox)sender).Tag;
             if (m == null)
@@ -284,13 +286,14 @@ namespace HK.Formas
             control.FillRectangle(SystemBrushes.ActiveCaption, 0, 0, control.ClipBounds.Width, 20);
             control.DrawString(m.Descripcion,fuente , SystemBrushes.ActiveCaptionText, 0, 0);
             if (m.Impresa==true)
-                control.DrawImage(this.imageCollection1.Images[0], new PointF(140, 2));
+                control.DrawImage(this.imageCollection1.Images[0], new PointF(width - 40, 2));
             if(m.Monto.GetValueOrDefault(0)>0)
             {
                 control.DrawString(m.Numero, fuente, Brushes.Black, new PointF(10, 20));
-                control.DrawString(m.Apertura.ToShortTimeString(), fuente, Brushes.Black, new PointF(110, 30));
+                control.DrawString(m.Apertura.ToShortTimeString(), fuente, Brushes.Black, new PointF(width - 100, 30));
                 control.DrawString(m.Mesonero, fuente, Brushes.Black, new PointF(10, 45));
-                control.DrawString(m.Monto.GetValueOrDefault(0).ToString("n2").PadLeft(15), fuente, Brushes.Black, new PointF(60, 60));
+                control.DrawString(m.Monto.GetValueOrDefault(0).ToString("n2").PadLeft(11), fuente, Brushes.Black, new PointF(width- 90, 60));
+                control.DrawString("$" + m.MontoDolares.GetValueOrDefault(0).ToString("n2").PadLeft(10), fuente, Brushes.Black, new PointF(width- 90, 80));
             }
           }
         }

@@ -142,6 +142,10 @@ namespace HK
                     this.Aceptar.PerformClick();
                     e.Handled = true;
                     break;
+                case Keys.F3:
+                    this.pagoEnDolares.PerformClick();
+                    e.Handled = true;
+                    break;
                 case Keys.F4:
                     PagarEfectivo();
                     e.Handled = true;
@@ -304,6 +308,28 @@ namespace HK
             factura.Totalizar(cobraServicio.Value, descuento,12);
             this.txtAutorizadoPor.Properties.Items.AddRange(FactoryUsuarios.getUsuarios());
             this.txtAutorizadoPor.Focus();
+        }
+
+        private void pagoEnDolares_Click(object sender, EventArgs e)
+        {     
+            LimpiarPagos(Basicas.parametros().TasaIva);
+            factura.calcularSaldo(true);
+            var igtf = Basicas.parametros().IGTF.GetValueOrDefault(0);
+            if (igtf > 0)
+            {
+                factura.Dolares = factura.Saldo.GetValueOrDefault(0);
+                this.Aceptar.PerformClick();
+            }
+            else
+            {
+                MessageBox.Show("No esta registrado el IGTF", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }            
+        }
+
+        private void ConsumoInterno_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

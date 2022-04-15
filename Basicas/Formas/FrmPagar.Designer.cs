@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
@@ -37,10 +36,11 @@
             this.Aceptar = new System.Windows.Forms.ToolStripButton();
             this.Cancelar = new System.Windows.Forms.ToolStripButton();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
+            this.pagoEnDolares = new System.Windows.Forms.Button();
             this.txtContraseña = new DevExpress.XtraEditors.TextEdit();
             this.txtAutorizadoPor = new DevExpress.XtraEditors.ComboBoxEdit();
             this.ChequeTextEdit = new DevExpress.XtraEditors.CalcEdit();
-            this.facturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.facturaBindingSource = new System.Windows.Forms.BindingSource();
             this.Cheque = new System.Windows.Forms.Button();
             this.CestaTicket = new System.Windows.Forms.Button();
             this.IdFacturaTextEdit = new DevExpress.XtraEditors.TextEdit();
@@ -111,6 +111,7 @@
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
@@ -191,6 +192,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -209,11 +211,11 @@
             this.BarraAcciones.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Aceptar,
             this.Cancelar});
-            this.BarraAcciones.Location = new System.Drawing.Point(0, 655);
+            this.BarraAcciones.Location = new System.Drawing.Point(0, 635);
             this.BarraAcciones.Name = "BarraAcciones";
-            this.BarraAcciones.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.BarraAcciones.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.BarraAcciones.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.BarraAcciones.Size = new System.Drawing.Size(693, 69);
+            this.BarraAcciones.Size = new System.Drawing.Size(498, 56);
             this.BarraAcciones.TabIndex = 32;
             this.BarraAcciones.Text = "toolStrip1";
             // 
@@ -223,7 +225,7 @@
             this.Aceptar.Image = global::HK.Properties.Resources.disk_blue_ok;
             this.Aceptar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Aceptar.Name = "Aceptar";
-            this.Aceptar.Size = new System.Drawing.Size(102, 66);
+            this.Aceptar.Size = new System.Drawing.Size(81, 53);
             this.Aceptar.Text = "Aceptar - F12";
             this.Aceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -233,12 +235,13 @@
             this.Cancelar.Image = global::HK.Properties.Resources.disk_blue_error;
             this.Cancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Cancelar.Name = "Cancelar";
-            this.Cancelar.Size = new System.Drawing.Size(109, 66);
+            this.Cancelar.Size = new System.Drawing.Size(88, 53);
             this.Cancelar.Text = "Cancelar - ESC";
             this.Cancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // dataLayoutControl1
             // 
+            this.dataLayoutControl1.Controls.Add(this.pagoEnDolares);
             this.dataLayoutControl1.Controls.Add(this.txtContraseña);
             this.dataLayoutControl1.Controls.Add(this.txtAutorizadoPor);
             this.dataLayoutControl1.Controls.Add(this.ChequeTextEdit);
@@ -291,39 +294,51 @@
             this.ItemForAnulado,
             this.ItemForTasaIva,
             this.ItemForFacturasPlatos});
-            this.dataLayoutControl1.Location = new System.Drawing.Point(8, 31);
-            this.dataLayoutControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataLayoutControl1.Location = new System.Drawing.Point(6, 25);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(641, 449);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(475, 477);
             this.dataLayoutControl1.TabIndex = 33;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
             // 
+            // pagoEnDolares
+            // 
+            this.pagoEnDolares.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pagoEnDolares.Location = new System.Drawing.Point(2, 48);
+            this.pagoEnDolares.Name = "pagoEnDolares";
+            this.pagoEnDolares.Size = new System.Drawing.Size(198, 52);
+            this.pagoEnDolares.TabIndex = 38;
+            this.pagoEnDolares.TabStop = false;
+            this.pagoEnDolares.Text = "F3-Pago en dolares";
+            this.pagoEnDolares.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pagoEnDolares.UseVisualStyleBackColor = true;
+            this.pagoEnDolares.Click += new System.EventHandler(this.pagoEnDolares_Click);
+            // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(365, 404);
+            this.txtContraseña.Location = new System.Drawing.Point(279, 411);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtContraseña.Properties.PasswordChar = '*';
-            this.txtContraseña.Size = new System.Drawing.Size(269, 22);
+            this.txtContraseña.Size = new System.Drawing.Size(191, 20);
             this.txtContraseña.StyleController = this.dataLayoutControl1;
             this.txtContraseña.TabIndex = 36;
             // 
             // txtAutorizadoPor
             // 
-            this.txtAutorizadoPor.Location = new System.Drawing.Point(365, 352);
+            this.txtAutorizadoPor.Location = new System.Drawing.Point(279, 340);
             this.txtAutorizadoPor.Name = "txtAutorizadoPor";
             this.txtAutorizadoPor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtAutorizadoPor.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtAutorizadoPor.Size = new System.Drawing.Size(269, 22);
+            this.txtAutorizadoPor.Size = new System.Drawing.Size(191, 20);
             this.txtAutorizadoPor.StyleController = this.dataLayoutControl1;
             this.txtAutorizadoPor.TabIndex = 35;
             // 
             // ChequeTextEdit
             // 
             this.ChequeTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.facturaBindingSource, "Cheque", true));
-            this.ChequeTextEdit.Location = new System.Drawing.Point(278, 289);
+            this.ChequeTextEdit.Location = new System.Drawing.Point(206, 289);
             this.ChequeTextEdit.Name = "ChequeTextEdit";
             this.ChequeTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.ChequeTextEdit.Properties.Appearance.Options.UseFont = true;
@@ -335,7 +350,7 @@
             this.ChequeTextEdit.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.ChequeTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
             this.ChequeTextEdit.Properties.ValidateOnEnterKey = true;
-            this.ChequeTextEdit.Size = new System.Drawing.Size(360, 30);
+            this.ChequeTextEdit.Size = new System.Drawing.Size(267, 26);
             this.ChequeTextEdit.StyleController = this.dataLayoutControl1;
             this.ChequeTextEdit.TabIndex = 3;
             // 
@@ -346,9 +361,9 @@
             // Cheque
             // 
             this.Cheque.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cheque.Location = new System.Drawing.Point(3, 267);
+            this.Cheque.Location = new System.Drawing.Point(2, 259);
             this.Cheque.Name = "Cheque";
-            this.Cheque.Size = new System.Drawing.Size(269, 52);
+            this.Cheque.Size = new System.Drawing.Size(200, 56);
             this.Cheque.TabIndex = 31;
             this.Cheque.TabStop = false;
             this.Cheque.Text = "F7-Cheque";
@@ -358,9 +373,9 @@
             // CestaTicket
             // 
             this.CestaTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CestaTicket.Location = new System.Drawing.Point(3, 193);
+            this.CestaTicket.Location = new System.Drawing.Point(2, 201);
             this.CestaTicket.Name = "CestaTicket";
-            this.CestaTicket.Size = new System.Drawing.Size(267, 68);
+            this.CestaTicket.Size = new System.Drawing.Size(198, 54);
             this.CestaTicket.TabIndex = 30;
             this.CestaTicket.TabStop = false;
             this.CestaTicket.Text = "F6-Cesta Ticket";
@@ -372,7 +387,7 @@
             this.IdFacturaTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.facturaBindingSource, "IdFactura", true));
             this.IdFacturaTextEdit.Location = new System.Drawing.Point(0, 0);
             this.IdFacturaTextEdit.Name = "IdFacturaTextEdit";
-            this.IdFacturaTextEdit.Size = new System.Drawing.Size(0, 22);
+            this.IdFacturaTextEdit.Size = new System.Drawing.Size(0, 20);
             this.IdFacturaTextEdit.StyleController = this.dataLayoutControl1;
             this.IdFacturaTextEdit.TabIndex = 4;
             // 
@@ -381,7 +396,7 @@
             this.FechaTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.facturaBindingSource, "Fecha", true));
             this.FechaTextEdit.Location = new System.Drawing.Point(0, 0);
             this.FechaTextEdit.Name = "FechaTextEdit";
-            this.FechaTextEdit.Size = new System.Drawing.Size(0, 22);
+            this.FechaTextEdit.Size = new System.Drawing.Size(0, 20);
             this.FechaTextEdit.StyleController = this.dataLayoutControl1;
             this.FechaTextEdit.TabIndex = 5;
             // 
@@ -390,16 +405,16 @@
             this.NumeroTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.facturaBindingSource, "Numero", true));
             this.NumeroTextEdit.Location = new System.Drawing.Point(0, 0);
             this.NumeroTextEdit.Name = "NumeroTextEdit";
-            this.NumeroTextEdit.Size = new System.Drawing.Size(0, 22);
+            this.NumeroTextEdit.Size = new System.Drawing.Size(0, 20);
             this.NumeroTextEdit.StyleController = this.dataLayoutControl1;
             this.NumeroTextEdit.TabIndex = 6;
             // 
             // Credito
             // 
             this.Credito.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Credito.Location = new System.Drawing.Point(7, 404);
+            this.Credito.Location = new System.Drawing.Point(5, 411);
             this.Credito.Name = "Credito";
-            this.Credito.Size = new System.Drawing.Size(265, 38);
+            this.Credito.Size = new System.Drawing.Size(196, 61);
             this.Credito.TabIndex = 37;
             this.Credito.Text = "F9-Credito";
             this.Credito.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -410,16 +425,16 @@
             this.CajeroTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.facturaBindingSource, "Cajero", true));
             this.CajeroTextEdit.Location = new System.Drawing.Point(0, 0);
             this.CajeroTextEdit.Name = "CajeroTextEdit";
-            this.CajeroTextEdit.Size = new System.Drawing.Size(0, 22);
+            this.CajeroTextEdit.Size = new System.Drawing.Size(0, 20);
             this.CajeroTextEdit.StyleController = this.dataLayoutControl1;
             this.CajeroTextEdit.TabIndex = 7;
             // 
             // Tarjeta
             // 
             this.Tarjeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tarjeta.Location = new System.Drawing.Point(3, 120);
+            this.Tarjeta.Location = new System.Drawing.Point(2, 149);
             this.Tarjeta.Name = "Tarjeta";
-            this.Tarjeta.Size = new System.Drawing.Size(267, 67);
+            this.Tarjeta.Size = new System.Drawing.Size(198, 48);
             this.Tarjeta.TabIndex = 29;
             this.Tarjeta.TabStop = false;
             this.Tarjeta.Text = "F5-Tarjeta";
@@ -429,9 +444,9 @@
             // Efectivo
             // 
             this.Efectivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Efectivo.Location = new System.Drawing.Point(3, 58);
+            this.Efectivo.Location = new System.Drawing.Point(2, 104);
             this.Efectivo.Name = "Efectivo";
-            this.Efectivo.Size = new System.Drawing.Size(267, 56);
+            this.Efectivo.Size = new System.Drawing.Size(198, 41);
             this.Efectivo.TabIndex = 28;
             this.Efectivo.TabStop = false;
             this.Efectivo.Text = "F4-Efectivo";
@@ -443,7 +458,7 @@
             this.CedulaRifTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.facturaBindingSource, "CedulaRif", true));
             this.CedulaRifTextEdit.Location = new System.Drawing.Point(0, 0);
             this.CedulaRifTextEdit.Name = "CedulaRifTextEdit";
-            this.CedulaRifTextEdit.Size = new System.Drawing.Size(0, 22);
+            this.CedulaRifTextEdit.Size = new System.Drawing.Size(0, 20);
             this.CedulaRifTextEdit.StyleController = this.dataLayoutControl1;
             this.CedulaRifTextEdit.TabIndex = 8;
             // 
@@ -452,7 +467,7 @@
             this.RazonSocialTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.facturaBindingSource, "RazonSocial", true));
             this.RazonSocialTextEdit.Location = new System.Drawing.Point(0, 0);
             this.RazonSocialTextEdit.Name = "RazonSocialTextEdit";
-            this.RazonSocialTextEdit.Size = new System.Drawing.Size(0, 22);
+            this.RazonSocialTextEdit.Size = new System.Drawing.Size(0, 20);
             this.RazonSocialTextEdit.StyleController = this.dataLayoutControl1;
             this.RazonSocialTextEdit.TabIndex = 9;
             // 
@@ -461,7 +476,7 @@
             this.DireccionTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.facturaBindingSource, "Direccion", true));
             this.DireccionTextEdit.Location = new System.Drawing.Point(0, 0);
             this.DireccionTextEdit.Name = "DireccionTextEdit";
-            this.DireccionTextEdit.Size = new System.Drawing.Size(0, 22);
+            this.DireccionTextEdit.Size = new System.Drawing.Size(0, 20);
             this.DireccionTextEdit.StyleController = this.dataLayoutControl1;
             this.DireccionTextEdit.TabIndex = 10;
             // 
@@ -470,7 +485,7 @@
             this.MontoGravableTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.facturaBindingSource, "MontoGravable", true));
             this.MontoGravableTextEdit.Location = new System.Drawing.Point(0, 0);
             this.MontoGravableTextEdit.Name = "MontoGravableTextEdit";
-            this.MontoGravableTextEdit.Size = new System.Drawing.Size(0, 22);
+            this.MontoGravableTextEdit.Size = new System.Drawing.Size(0, 20);
             this.MontoGravableTextEdit.StyleController = this.dataLayoutControl1;
             this.MontoGravableTextEdit.TabIndex = 11;
             // 
@@ -479,7 +494,7 @@
             this.MontoExentoTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.facturaBindingSource, "MontoExento", true));
             this.MontoExentoTextEdit.Location = new System.Drawing.Point(0, 0);
             this.MontoExentoTextEdit.Name = "MontoExentoTextEdit";
-            this.MontoExentoTextEdit.Size = new System.Drawing.Size(0, 22);
+            this.MontoExentoTextEdit.Size = new System.Drawing.Size(0, 20);
             this.MontoExentoTextEdit.StyleController = this.dataLayoutControl1;
             this.MontoExentoTextEdit.TabIndex = 12;
             // 
@@ -488,14 +503,14 @@
             this.MontoIvaTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.facturaBindingSource, "MontoIva", true));
             this.MontoIvaTextEdit.Location = new System.Drawing.Point(0, 0);
             this.MontoIvaTextEdit.Name = "MontoIvaTextEdit";
-            this.MontoIvaTextEdit.Size = new System.Drawing.Size(0, 22);
+            this.MontoIvaTextEdit.Size = new System.Drawing.Size(0, 20);
             this.MontoIvaTextEdit.StyleController = this.dataLayoutControl1;
             this.MontoIvaTextEdit.TabIndex = 13;
             // 
             // MontoTotalTextEdit
             // 
             this.MontoTotalTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.facturaBindingSource, "MontoTotal", true));
-            this.MontoTotalTextEdit.Location = new System.Drawing.Point(3, 22);
+            this.MontoTotalTextEdit.Location = new System.Drawing.Point(2, 18);
             this.MontoTotalTextEdit.Name = "MontoTotalTextEdit";
             this.MontoTotalTextEdit.Properties.AllowFocused = false;
             this.MontoTotalTextEdit.Properties.Appearance.BackColor = System.Drawing.Color.Khaki;
@@ -506,7 +521,7 @@
             this.MontoTotalTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.MontoTotalTextEdit.Properties.DisplayFormat.FormatString = "n2";
             this.MontoTotalTextEdit.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.MontoTotalTextEdit.Size = new System.Drawing.Size(267, 30);
+            this.MontoTotalTextEdit.Size = new System.Drawing.Size(198, 26);
             this.MontoTotalTextEdit.StyleController = this.dataLayoutControl1;
             this.MontoTotalTextEdit.TabIndex = 14;
             this.MontoTotalTextEdit.TabStop = false;
@@ -516,7 +531,7 @@
             this.NumeroZTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.facturaBindingSource, "NumeroZ", true));
             this.NumeroZTextEdit.Location = new System.Drawing.Point(0, 0);
             this.NumeroZTextEdit.Name = "NumeroZTextEdit";
-            this.NumeroZTextEdit.Size = new System.Drawing.Size(0, 22);
+            this.NumeroZTextEdit.Size = new System.Drawing.Size(0, 20);
             this.NumeroZTextEdit.StyleController = this.dataLayoutControl1;
             this.NumeroZTextEdit.TabIndex = 18;
             // 
@@ -525,7 +540,7 @@
             this.MaquinaFiscalTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.facturaBindingSource, "MaquinaFiscal", true));
             this.MaquinaFiscalTextEdit.Location = new System.Drawing.Point(0, 0);
             this.MaquinaFiscalTextEdit.Name = "MaquinaFiscalTextEdit";
-            this.MaquinaFiscalTextEdit.Size = new System.Drawing.Size(0, 22);
+            this.MaquinaFiscalTextEdit.Size = new System.Drawing.Size(0, 20);
             this.MaquinaFiscalTextEdit.StyleController = this.dataLayoutControl1;
             this.MaquinaFiscalTextEdit.TabIndex = 19;
             // 
@@ -534,7 +549,7 @@
             this.IdCajeroTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.facturaBindingSource, "IdCajero", true));
             this.IdCajeroTextEdit.Location = new System.Drawing.Point(0, 0);
             this.IdCajeroTextEdit.Name = "IdCajeroTextEdit";
-            this.IdCajeroTextEdit.Size = new System.Drawing.Size(0, 22);
+            this.IdCajeroTextEdit.Size = new System.Drawing.Size(0, 20);
             this.IdCajeroTextEdit.StyleController = this.dataLayoutControl1;
             this.IdCajeroTextEdit.TabIndex = 20;
             // 
@@ -543,7 +558,7 @@
             this.HoraTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.facturaBindingSource, "Hora", true));
             this.HoraTextEdit.Location = new System.Drawing.Point(0, 0);
             this.HoraTextEdit.Name = "HoraTextEdit";
-            this.HoraTextEdit.Size = new System.Drawing.Size(0, 22);
+            this.HoraTextEdit.Size = new System.Drawing.Size(0, 20);
             this.HoraTextEdit.StyleController = this.dataLayoutControl1;
             this.HoraTextEdit.TabIndex = 21;
             // 
@@ -552,7 +567,7 @@
             this.AnuladoTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.facturaBindingSource, "Anulado", true));
             this.AnuladoTextEdit.Location = new System.Drawing.Point(0, 0);
             this.AnuladoTextEdit.Name = "AnuladoTextEdit";
-            this.AnuladoTextEdit.Size = new System.Drawing.Size(0, 22);
+            this.AnuladoTextEdit.Size = new System.Drawing.Size(0, 20);
             this.AnuladoTextEdit.StyleController = this.dataLayoutControl1;
             this.AnuladoTextEdit.TabIndex = 23;
             // 
@@ -561,14 +576,14 @@
             this.TasaIvaTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.facturaBindingSource, "TasaIva", true));
             this.TasaIvaTextEdit.Location = new System.Drawing.Point(0, 0);
             this.TasaIvaTextEdit.Name = "TasaIvaTextEdit";
-            this.TasaIvaTextEdit.Size = new System.Drawing.Size(0, 22);
+            this.TasaIvaTextEdit.Size = new System.Drawing.Size(0, 20);
             this.TasaIvaTextEdit.StyleController = this.dataLayoutControl1;
             this.TasaIvaTextEdit.TabIndex = 24;
             // 
             // SaldoTextEdit
             // 
             this.SaldoTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.facturaBindingSource, "Saldo", true));
-            this.SaldoTextEdit.Location = new System.Drawing.Point(276, 22);
+            this.SaldoTextEdit.Location = new System.Drawing.Point(204, 18);
             this.SaldoTextEdit.Name = "SaldoTextEdit";
             this.SaldoTextEdit.Properties.AllowFocused = false;
             this.SaldoTextEdit.Properties.Appearance.BackColor = System.Drawing.Color.Khaki;
@@ -581,7 +596,7 @@
             this.SaldoTextEdit.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.SaldoTextEdit.Properties.EditFormat.FormatString = "n2";
             this.SaldoTextEdit.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.SaldoTextEdit.Size = new System.Drawing.Size(177, 30);
+            this.SaldoTextEdit.Size = new System.Drawing.Size(132, 26);
             this.SaldoTextEdit.StyleController = this.dataLayoutControl1;
             this.SaldoTextEdit.TabIndex = 26;
             this.SaldoTextEdit.TabStop = false;
@@ -591,14 +606,14 @@
             this.FacturasPlatosTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.facturaBindingSource, "FacturasPlatos", true));
             this.FacturasPlatosTextEdit.Location = new System.Drawing.Point(0, 0);
             this.FacturasPlatosTextEdit.Name = "FacturasPlatosTextEdit";
-            this.FacturasPlatosTextEdit.Size = new System.Drawing.Size(0, 22);
+            this.FacturasPlatosTextEdit.Size = new System.Drawing.Size(0, 20);
             this.FacturasPlatosTextEdit.StyleController = this.dataLayoutControl1;
             this.FacturasPlatosTextEdit.TabIndex = 27;
             // 
             // EfectivoTextEdit
             // 
             this.EfectivoTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.facturaBindingSource, "Efectivo", true));
-            this.EfectivoTextEdit.Location = new System.Drawing.Point(276, 84);
+            this.EfectivoTextEdit.Location = new System.Drawing.Point(204, 119);
             this.EfectivoTextEdit.Name = "EfectivoTextEdit";
             this.EfectivoTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.EfectivoTextEdit.Properties.Appearance.Options.UseFont = true;
@@ -610,14 +625,14 @@
             this.EfectivoTextEdit.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.EfectivoTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
             this.EfectivoTextEdit.Properties.ValidateOnEnterKey = true;
-            this.EfectivoTextEdit.Size = new System.Drawing.Size(362, 30);
+            this.EfectivoTextEdit.Size = new System.Drawing.Size(269, 26);
             this.EfectivoTextEdit.StyleController = this.dataLayoutControl1;
             this.EfectivoTextEdit.TabIndex = 0;
             // 
             // CestaTicketTextEdit
             // 
             this.CestaTicketTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.facturaBindingSource, "CestaTicket", true));
-            this.CestaTicketTextEdit.Location = new System.Drawing.Point(276, 231);
+            this.CestaTicketTextEdit.Location = new System.Drawing.Point(204, 229);
             this.CestaTicketTextEdit.Name = "CestaTicketTextEdit";
             this.CestaTicketTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.CestaTicketTextEdit.Properties.Appearance.Options.UseFont = true;
@@ -629,14 +644,14 @@
             this.CestaTicketTextEdit.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.CestaTicketTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
             this.CestaTicketTextEdit.Properties.ValidateOnEnterKey = true;
-            this.CestaTicketTextEdit.Size = new System.Drawing.Size(362, 30);
+            this.CestaTicketTextEdit.Size = new System.Drawing.Size(269, 26);
             this.CestaTicketTextEdit.StyleController = this.dataLayoutControl1;
             this.CestaTicketTextEdit.TabIndex = 2;
             // 
             // CambioTextEdit
             // 
             this.CambioTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.facturaBindingSource, "Cambio", true));
-            this.CambioTextEdit.Location = new System.Drawing.Point(459, 22);
+            this.CambioTextEdit.Location = new System.Drawing.Point(340, 18);
             this.CambioTextEdit.Name = "CambioTextEdit";
             this.CambioTextEdit.Properties.AllowFocused = false;
             this.CambioTextEdit.Properties.Appearance.BackColor = System.Drawing.Color.Khaki;
@@ -649,7 +664,7 @@
             this.CambioTextEdit.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.CambioTextEdit.Properties.EditFormat.FormatString = "n2";
             this.CambioTextEdit.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.CambioTextEdit.Size = new System.Drawing.Size(179, 30);
+            this.CambioTextEdit.Size = new System.Drawing.Size(133, 26);
             this.CambioTextEdit.StyleController = this.dataLayoutControl1;
             this.CambioTextEdit.TabIndex = 22;
             this.CambioTextEdit.TabStop = false;
@@ -657,7 +672,7 @@
             // TarjetaTextEdit
             // 
             this.TarjetaTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.facturaBindingSource, "Tarjeta", true));
-            this.TarjetaTextEdit.Location = new System.Drawing.Point(276, 157);
+            this.TarjetaTextEdit.Location = new System.Drawing.Point(204, 171);
             this.TarjetaTextEdit.Name = "TarjetaTextEdit";
             this.TarjetaTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.TarjetaTextEdit.Properties.Appearance.Options.UseFont = true;
@@ -669,21 +684,23 @@
             this.TarjetaTextEdit.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.TarjetaTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
             this.TarjetaTextEdit.Properties.ValidateOnEnterKey = true;
-            this.TarjetaTextEdit.Size = new System.Drawing.Size(362, 30);
+            this.TarjetaTextEdit.Size = new System.Drawing.Size(269, 26);
             this.TarjetaTextEdit.StyleController = this.dataLayoutControl1;
             this.TarjetaTextEdit.TabIndex = 1;
             // 
             // ConsumoInterno
             // 
             this.ConsumoInterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConsumoInterno.Location = new System.Drawing.Point(7, 352);
+            this.ConsumoInterno.Location = new System.Drawing.Point(5, 340);
+            this.ConsumoInterno.Margin = new System.Windows.Forms.Padding(2);
             this.ConsumoInterno.Name = "ConsumoInterno";
-            this.ConsumoInterno.Size = new System.Drawing.Size(265, 46);
+            this.ConsumoInterno.Size = new System.Drawing.Size(196, 67);
             this.ConsumoInterno.TabIndex = 34;
             this.ConsumoInterno.TabStop = false;
             this.ConsumoInterno.Text = "F8-Consumo Interno";
             this.ConsumoInterno.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ConsumoInterno.UseVisualStyleBackColor = true;
+            this.ConsumoInterno.Click += new System.EventHandler(this.ConsumoInterno_Click_1);
             // 
             // ItemForIdFactura
             // 
@@ -865,7 +882,7 @@
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlGroup1.Size = new System.Drawing.Size(641, 449);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(475, 477);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlGroup2
@@ -889,18 +906,19 @@
             this.layoutControlItem4,
             this.layoutControlItem9,
             this.emptySpaceItem5,
-            this.layoutControlGroup3});
+            this.layoutControlGroup3,
+            this.layoutControlItem10});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(641, 449);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(475, 477);
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.Efectivo;
             this.layoutControlItem1.CustomizationFormText = "layoutControlItem1";
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 55);
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 102);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(273, 62);
+            this.layoutControlItem1.Size = new System.Drawing.Size(202, 45);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -908,9 +926,9 @@
             // 
             this.layoutControlItem2.Control = this.Tarjeta;
             this.layoutControlItem2.CustomizationFormText = "layoutControlItem2";
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 117);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 147);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(273, 73);
+            this.layoutControlItem2.Size = new System.Drawing.Size(202, 52);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -918,9 +936,9 @@
             // 
             this.layoutControlItem3.Control = this.CestaTicket;
             this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 190);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 199);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(273, 74);
+            this.layoutControlItem3.Size = new System.Drawing.Size(202, 58);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -928,36 +946,36 @@
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
-            this.emptySpaceItem3.Location = new System.Drawing.Point(273, 55);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(202, 46);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(368, 26);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(273, 71);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem2";
-            this.emptySpaceItem2.Location = new System.Drawing.Point(273, 117);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(202, 147);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(368, 37);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(273, 22);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
             this.emptySpaceItem4.CustomizationFormText = "emptySpaceItem4";
-            this.emptySpaceItem4.Location = new System.Drawing.Point(273, 190);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(202, 199);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(368, 38);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(273, 28);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // ItemForEfectivo
             // 
             this.ItemForEfectivo.Control = this.EfectivoTextEdit;
             this.ItemForEfectivo.CustomizationFormText = "Efectivo";
-            this.ItemForEfectivo.Location = new System.Drawing.Point(273, 81);
+            this.ItemForEfectivo.Location = new System.Drawing.Point(202, 117);
             this.ItemForEfectivo.Name = "ItemForEfectivo";
-            this.ItemForEfectivo.Size = new System.Drawing.Size(368, 36);
+            this.ItemForEfectivo.Size = new System.Drawing.Size(273, 30);
             this.ItemForEfectivo.Text = "F4-Efectivo";
             this.ItemForEfectivo.TextSize = new System.Drawing.Size(0, 0);
             this.ItemForEfectivo.TextVisible = false;
@@ -968,40 +986,40 @@
             this.ItemForMontoTotal.CustomizationFormText = "Monto Total";
             this.ItemForMontoTotal.Location = new System.Drawing.Point(0, 0);
             this.ItemForMontoTotal.Name = "ItemForMontoTotal";
-            this.ItemForMontoTotal.Size = new System.Drawing.Size(273, 55);
+            this.ItemForMontoTotal.Size = new System.Drawing.Size(202, 46);
             this.ItemForMontoTotal.Text = "Monto Total";
             this.ItemForMontoTotal.TextLocation = DevExpress.Utils.Locations.Top;
-            this.ItemForMontoTotal.TextSize = new System.Drawing.Size(84, 16);
+            this.ItemForMontoTotal.TextSize = new System.Drawing.Size(71, 13);
             // 
             // ItemForSaldo
             // 
             this.ItemForSaldo.Control = this.SaldoTextEdit;
             this.ItemForSaldo.CustomizationFormText = "Saldo";
-            this.ItemForSaldo.Location = new System.Drawing.Point(273, 0);
+            this.ItemForSaldo.Location = new System.Drawing.Point(202, 0);
             this.ItemForSaldo.Name = "ItemForSaldo";
-            this.ItemForSaldo.Size = new System.Drawing.Size(183, 55);
+            this.ItemForSaldo.Size = new System.Drawing.Size(136, 46);
             this.ItemForSaldo.Text = "Saldo";
             this.ItemForSaldo.TextLocation = DevExpress.Utils.Locations.Top;
-            this.ItemForSaldo.TextSize = new System.Drawing.Size(84, 16);
+            this.ItemForSaldo.TextSize = new System.Drawing.Size(71, 13);
             // 
             // ItemForCambio
             // 
             this.ItemForCambio.Control = this.CambioTextEdit;
             this.ItemForCambio.CustomizationFormText = "Cambio";
-            this.ItemForCambio.Location = new System.Drawing.Point(456, 0);
+            this.ItemForCambio.Location = new System.Drawing.Point(338, 0);
             this.ItemForCambio.Name = "ItemForCambio";
-            this.ItemForCambio.Size = new System.Drawing.Size(185, 55);
+            this.ItemForCambio.Size = new System.Drawing.Size(137, 46);
             this.ItemForCambio.Text = "Cambio";
             this.ItemForCambio.TextLocation = DevExpress.Utils.Locations.Top;
-            this.ItemForCambio.TextSize = new System.Drawing.Size(84, 16);
+            this.ItemForCambio.TextSize = new System.Drawing.Size(71, 13);
             // 
             // ItemForTarjeta
             // 
             this.ItemForTarjeta.Control = this.TarjetaTextEdit;
             this.ItemForTarjeta.CustomizationFormText = "Tarjeta";
-            this.ItemForTarjeta.Location = new System.Drawing.Point(273, 154);
+            this.ItemForTarjeta.Location = new System.Drawing.Point(202, 169);
             this.ItemForTarjeta.Name = "ItemForTarjeta";
-            this.ItemForTarjeta.Size = new System.Drawing.Size(368, 36);
+            this.ItemForTarjeta.Size = new System.Drawing.Size(273, 30);
             this.ItemForTarjeta.Text = "F5-Tarjeta";
             this.ItemForTarjeta.TextSize = new System.Drawing.Size(0, 0);
             this.ItemForTarjeta.TextVisible = false;
@@ -1010,9 +1028,9 @@
             // 
             this.ItemForCestaTicket.Control = this.CestaTicketTextEdit;
             this.ItemForCestaTicket.CustomizationFormText = "Cesta Ticket";
-            this.ItemForCestaTicket.Location = new System.Drawing.Point(273, 228);
+            this.ItemForCestaTicket.Location = new System.Drawing.Point(202, 227);
             this.ItemForCestaTicket.Name = "ItemForCestaTicket";
-            this.ItemForCestaTicket.Size = new System.Drawing.Size(368, 36);
+            this.ItemForCestaTicket.Size = new System.Drawing.Size(273, 30);
             this.ItemForCestaTicket.Text = "F6-Cesta Ticket";
             this.ItemForCestaTicket.TextSize = new System.Drawing.Size(0, 0);
             this.ItemForCestaTicket.TextVisible = false;
@@ -1021,9 +1039,9 @@
             // 
             this.layoutControlItem4.Control = this.Cheque;
             this.layoutControlItem4.CustomizationFormText = "layoutControlItem4";
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 264);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 257);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(275, 58);
+            this.layoutControlItem4.Size = new System.Drawing.Size(204, 60);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
@@ -1031,9 +1049,9 @@
             // 
             this.layoutControlItem9.Control = this.ChequeTextEdit;
             this.layoutControlItem9.CustomizationFormText = "layoutControlItem9";
-            this.layoutControlItem9.Location = new System.Drawing.Point(275, 286);
+            this.layoutControlItem9.Location = new System.Drawing.Point(204, 287);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(366, 36);
+            this.layoutControlItem9.Size = new System.Drawing.Size(271, 30);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
             // 
@@ -1041,9 +1059,9 @@
             // 
             this.emptySpaceItem5.AllowHotTrack = false;
             this.emptySpaceItem5.CustomizationFormText = "emptySpaceItem5";
-            this.emptySpaceItem5.Location = new System.Drawing.Point(275, 264);
+            this.emptySpaceItem5.Location = new System.Drawing.Point(204, 257);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(366, 22);
+            this.emptySpaceItem5.Size = new System.Drawing.Size(271, 30);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlGroup3
@@ -1056,10 +1074,10 @@
             this.layoutControlItem7,
             this.emptySpaceItem1,
             this.emptySpaceItem6});
-            this.layoutControlGroup3.Location = new System.Drawing.Point(0, 322);
+            this.layoutControlGroup3.Location = new System.Drawing.Point(0, 317);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
             this.layoutControlGroup3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlGroup3.Size = new System.Drawing.Size(641, 127);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(475, 160);
             this.layoutControlGroup3.Text = " ";
             // 
             // layoutControlItem5
@@ -1068,7 +1086,7 @@
             this.layoutControlItem5.CustomizationFormText = "layoutControlItem5";
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(271, 52);
+            this.layoutControlItem5.Size = new System.Drawing.Size(200, 71);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
@@ -1076,9 +1094,9 @@
             // 
             this.layoutControlItem8.Control = this.Credito;
             this.layoutControlItem8.CustomizationFormText = "layoutControlItem8";
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 52);
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 71);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(271, 44);
+            this.layoutControlItem8.Size = new System.Drawing.Size(200, 65);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 
@@ -1086,47 +1104,55 @@
             // 
             this.layoutControlItem6.Control = this.txtAutorizadoPor;
             this.layoutControlItem6.CustomizationFormText = "Autorizado Por";
-            this.layoutControlItem6.Location = new System.Drawing.Point(271, 0);
+            this.layoutControlItem6.Location = new System.Drawing.Point(200, 0);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(362, 28);
+            this.layoutControlItem6.Size = new System.Drawing.Size(269, 24);
             this.layoutControlItem6.Text = "Autorizado Por";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(84, 16);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(71, 13);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.txtContraseña;
             this.layoutControlItem7.CustomizationFormText = "Clave";
-            this.layoutControlItem7.Location = new System.Drawing.Point(271, 52);
+            this.layoutControlItem7.Location = new System.Drawing.Point(200, 71);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(362, 28);
+            this.layoutControlItem7.Size = new System.Drawing.Size(269, 24);
             this.layoutControlItem7.Text = "Clave";
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(84, 16);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(71, 13);
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(271, 80);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(200, 95);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(362, 16);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(269, 41);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem6
             // 
             this.emptySpaceItem6.AllowHotTrack = false;
             this.emptySpaceItem6.CustomizationFormText = "emptySpaceItem6";
-            this.emptySpaceItem6.Location = new System.Drawing.Point(271, 28);
+            this.emptySpaceItem6.Location = new System.Drawing.Point(200, 24);
             this.emptySpaceItem6.Name = "emptySpaceItem6";
-            this.emptySpaceItem6.Size = new System.Drawing.Size(362, 24);
+            this.emptySpaceItem6.Size = new System.Drawing.Size(269, 47);
             this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.pagoEnDolares;
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 46);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(202, 56);
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem10.TextVisible = false;
             // 
             // groupControl2
             // 
             this.groupControl2.Controls.Add(this.tableLayoutPanel5);
-            this.groupControl2.Location = new System.Drawing.Point(11, 10);
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl2.Location = new System.Drawing.Point(8, 8);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(620, 132);
+            this.groupControl2.Size = new System.Drawing.Size(490, 107);
             this.groupControl2.TabIndex = 34;
             // 
             // tableLayoutPanel5
@@ -1142,25 +1168,23 @@
             this.tableLayoutPanel5.Controls.Add(this.txtRazonSocial, 1, 2);
             this.tableLayoutPanel5.Controls.Add(this.txtDireccion, 1, 3);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(2, 25);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(2, 20);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 4;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(616, 105);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(486, 85);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(4, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 17);
+            this.label3.Size = new System.Drawing.Size(86, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "CEDULA/RIF:";
             // 
@@ -1168,10 +1192,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(4, 30);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(3, 26);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 17);
+            this.label4.Size = new System.Drawing.Size(64, 13);
             this.label4.TabIndex = 6;
             this.label4.Text = "NOMBRE:";
             // 
@@ -1179,10 +1202,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(4, 60);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(3, 52);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 17);
+            this.label5.Size = new System.Drawing.Size(71, 13);
             this.label5.TabIndex = 7;
             this.label5.Text = "DIRECION:";
             // 
@@ -1190,14 +1212,13 @@
             // 
             this.txtCedulaRif.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.facturaBindingSource, "CedulaRif", true));
             this.txtCedulaRif.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtCedulaRif.Location = new System.Drawing.Point(209, 4);
-            this.txtCedulaRif.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCedulaRif.Location = new System.Drawing.Point(165, 3);
             this.txtCedulaRif.Name = "txtCedulaRif";
             this.txtCedulaRif.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtCedulaRif.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCedulaRif.Properties.ValidateOnEnterKey = true;
-            this.txtCedulaRif.Size = new System.Drawing.Size(197, 22);
+            this.txtCedulaRif.Size = new System.Drawing.Size(156, 20);
             this.txtCedulaRif.TabIndex = 8;
             // 
             // txtRazonSocial
@@ -1205,11 +1226,10 @@
             this.tableLayoutPanel5.SetColumnSpan(this.txtRazonSocial, 2);
             this.txtRazonSocial.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.facturaBindingSource, "RazonSocial", true));
             this.txtRazonSocial.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtRazonSocial.Location = new System.Drawing.Point(209, 34);
-            this.txtRazonSocial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRazonSocial.Location = new System.Drawing.Point(165, 29);
             this.txtRazonSocial.Name = "txtRazonSocial";
             this.txtRazonSocial.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtRazonSocial.Size = new System.Drawing.Size(403, 22);
+            this.txtRazonSocial.Size = new System.Drawing.Size(318, 20);
             this.txtRazonSocial.TabIndex = 9;
             // 
             // txtDireccion
@@ -1217,32 +1237,29 @@
             this.tableLayoutPanel5.SetColumnSpan(this.txtDireccion, 2);
             this.txtDireccion.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.facturaBindingSource, "Direccion", true));
             this.txtDireccion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtDireccion.Location = new System.Drawing.Point(209, 64);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDireccion.Location = new System.Drawing.Point(165, 55);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtDireccion.Size = new System.Drawing.Size(403, 22);
+            this.txtDireccion.Size = new System.Drawing.Size(318, 20);
             this.txtDireccion.TabIndex = 10;
             // 
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.dataLayoutControl1);
-            this.groupControl1.Location = new System.Drawing.Point(13, 146);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl1.Location = new System.Drawing.Point(10, 119);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(668, 505);
+            this.groupControl1.Size = new System.Drawing.Size(487, 510);
             this.groupControl1.TabIndex = 35;
             // 
             // FrmPagar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(693, 724);
+            this.ClientSize = new System.Drawing.Size(498, 691);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.BarraAcciones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmPagar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Confirmar Pago";
@@ -1318,6 +1335,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
@@ -1420,5 +1438,7 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem6;
+        private System.Windows.Forms.Button pagoEnDolares;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
     }
 }

@@ -3948,6 +3948,30 @@ namespace HK
         private global::System.String _Mesonero;
         partial void OnMesoneroChanging(global::System.String value);
         partial void OnMesoneroChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> Dolares
+        {
+            get
+            {
+                return _Dolares;
+            }
+            set
+            {
+                OnDolaresChanging(value);
+                ReportPropertyChanging("Dolares");
+                _Dolares = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Dolares");
+                OnDolaresChanged();
+            }
+        }
+        private Nullable<global::System.Double> _Dolares;
+        partial void OnDolaresChanging(Nullable<global::System.Double> value);
+        partial void OnDolaresChanged();
 
         #endregion
 
@@ -7165,6 +7189,30 @@ namespace HK
         private Nullable<global::System.Boolean> _Impresa;
         partial void OnImpresaChanging(Nullable<global::System.Boolean> value);
         partial void OnImpresaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> MontoTotalDolares
+        {
+            get
+            {
+                return _MontoTotalDolares;
+            }
+            set
+            {
+                OnMontoTotalDolaresChanging(value);
+                ReportPropertyChanging("MontoTotalDolares");
+                _MontoTotalDolares = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("MontoTotalDolares");
+                OnMontoTotalDolaresChanged();
+            }
+        }
+        private Nullable<global::System.Double> _MontoTotalDolares;
+        partial void OnMontoTotalDolaresChanging(Nullable<global::System.Double> value);
+        partial void OnMontoTotalDolaresChanged();
 
         #endregion
 
@@ -8497,6 +8545,54 @@ namespace HK
         private Nullable<global::System.Boolean> _SolicitarMesonero;
         partial void OnSolicitarMesoneroChanging(Nullable<global::System.Boolean> value);
         partial void OnSolicitarMesoneroChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> CostoDolar
+        {
+            get
+            {
+                return _CostoDolar;
+            }
+            set
+            {
+                OnCostoDolarChanging(value);
+                ReportPropertyChanging("CostoDolar");
+                _CostoDolar = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("CostoDolar");
+                OnCostoDolarChanged();
+            }
+        }
+        private Nullable<global::System.Double> _CostoDolar;
+        partial void OnCostoDolarChanging(Nullable<global::System.Double> value);
+        partial void OnCostoDolarChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> IGTF
+        {
+            get
+            {
+                return _IGTF;
+            }
+            set
+            {
+                OnIGTFChanging(value);
+                ReportPropertyChanging("IGTF");
+                _IGTF = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IGTF");
+                OnIGTFChanged();
+            }
+        }
+        private Nullable<global::System.Double> _IGTF;
+        partial void OnIGTFChanging(Nullable<global::System.Double> value);
+        partial void OnIGTFChanged();
 
         #endregion
 
@@ -8794,6 +8890,30 @@ namespace HK
         private Nullable<global::System.Boolean> _MostrarMenu;
         partial void OnMostrarMenuChanging(Nullable<global::System.Boolean> value);
         partial void OnMostrarMenuChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> PrecioDolares
+        {
+            get
+            {
+                return _PrecioDolares;
+            }
+            set
+            {
+                OnPrecioDolaresChanging(value);
+                ReportPropertyChanging("PrecioDolares");
+                _PrecioDolares = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PrecioDolares");
+                OnPrecioDolaresChanged();
+            }
+        }
+        private Nullable<global::System.Double> _PrecioDolares;
+        partial void OnPrecioDolaresChanging(Nullable<global::System.Double> value);
+        partial void OnPrecioDolaresChanged();
 
         #endregion
 

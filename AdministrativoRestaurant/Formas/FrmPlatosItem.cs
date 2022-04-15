@@ -56,35 +56,11 @@ namespace HK.Formas
         }
         void btnCrearCodigo_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string contador = FactoryContadores.GetMax(this.GrupoComboBoxEdit.Text);
-                registro.Codigo = this.GrupoComboBoxEdit.Text.Substring(0, 2) + contador.Substring(3, 3);
-            }
-            catch { }
+
         }
         void btnCargarReceta_Click(object sender, EventArgs e)
         {
-            Plato p = new Plato();
-            FrmBuscarEntidades f = new FrmBuscarEntidades();
-            f.BuscarPlatos("");
-            if (f.DialogResult != System.Windows.Forms.DialogResult.OK)
-                return;
-            p = (Plato)f.registro;
-            foreach (PlatosIngrediente item in p.PlatosIngredientes)
-            {
-                PlatosIngrediente nuevo = new PlatosIngrediente();
-                nuevo.Cantidad = item.Cantidad;
-                nuevo.CostoRacion = item.CostoRacion;
-                nuevo.IdIngrediente = item.IdIngrediente;
-                nuevo.Ingrediente = item.Ingrediente;
-                nuevo.Raciones = item.Raciones;
-                nuevo.Total = item.Total;
-                nuevo.UnidadMedida = item.UnidadMedida;
-                nuevo.IdPlatoIngrediente = FactoryContadores.GetMax("IdPlatoIngrediente");
-                registro.PlatosIngredientes.Add(nuevo);
-            }
-            this.platosIngredienteBindingSource.ResetBindings(true);
+
         }
         void PrecioCalcEdit_Validating(object sender, CancelEventArgs e)
         {
@@ -130,6 +106,7 @@ namespace HK.Formas
             registro = new Plato();
             registro.TasaIva = Basicas.parametros().TasaIva;
             registro.Precio = 0;
+            registro.PrecioConIva = 0;
             registro.PrecioConIva = 0;
             registro.Activo = true;
             registro.MostrarMenu = true;
@@ -544,5 +521,23 @@ namespace HK.Formas
             platosCombo.TotalCosto = (double)(double)Editor.Value * platosCombo.Costo;
         }
         #endregion
+
+        private void PrecioDolares_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PrecioCalcEdit_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PrecioDolares_Validated(object sender, EventArgs e)
+        {
+            platoBindingSource.EndEdit();
+            registro.Precio = registro.PrecioDolares.GetValueOrDefault(0) * Basicas.parametros().CostoDolar.GetValueOrDefault(0);
+            registro.PrecioConIva = registro.Precio.GetValueOrDefault(0) + (registro.Precio.GetValueOrDefault(0) * registro.TasaIva.GetValueOrDefault(0) / 100);
+            this.Aceptar.PerformClick();
+        }
     }
 }

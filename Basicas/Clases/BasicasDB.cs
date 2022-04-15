@@ -55,9 +55,19 @@ namespace HK
     }
     public partial class Factura : EntityObject
     {
-        public void calcularSaldo()
+        public void calcularSaldo(bool addIGTF = false)
         {
-            this.Saldo = this.MontoTotal.GetValueOrDefault(0) - (this.Efectivo.GetValueOrDefault(0) + this.CestaTicket.GetValueOrDefault(0) + this.Tarjeta.GetValueOrDefault(0) + this.Cheque.GetValueOrDefault(0) + this.Cambio.GetValueOrDefault(0) + this.ConsumoInterno.GetValueOrDefault(0) + this.Credito.GetValueOrDefault(0));
+            var montoTotal = this.MontoTotal.GetValueOrDefault(0);
+            if (addIGTF)
+            {
+                var igtf = Basicas.parametros().IGTF.GetValueOrDefault(0);
+                
+                if (igtf > 0)
+                {
+                    this.MontoTotal = montoTotal * (1 + (igtf / 100));
+                }
+            }
+            this.Saldo =  this.MontoTotal - (this.Efectivo.GetValueOrDefault(0) + this.CestaTicket.GetValueOrDefault(0) + this.Tarjeta.GetValueOrDefault(0) + this.Cheque.GetValueOrDefault(0) + this.Cambio.GetValueOrDefault(0) + this.ConsumoInterno.GetValueOrDefault(0) + this.Credito.GetValueOrDefault(0) + this.Dolares.GetValueOrDefault(0));
             if (this.Saldo < 0)
             {
                 this.Cambio = (double)decimal.Round((decimal)Saldo * -1, 2);
@@ -86,6 +96,7 @@ namespace HK
             this.MontoIva = this.FacturasPlatos.Where(x => x.TasaIva > 0).Sum(x => x.Cantidad * x.Precio * tasaIva / 100);
             this.MontoTotal = this.MontoGravable.GetValueOrDefault(0) + this.MontoExento.GetValueOrDefault(0) + this.MontoIva.GetValueOrDefault(0) + this.MontoServicio.GetValueOrDefault(0);
             this.MontoTotal = this.MontoTotal - (this.MontoTotal * descuento / 100);
+
             this.calcularSaldo();
         }
     }
@@ -102,6 +113,7 @@ namespace HK
             this.MontoIva = platos.Where(x => x.TasaIva.GetValueOrDefault(0) > 0).Sum(x => x.Cantidad * x.Precio * x.TasaIva / 100);
             this.MontoTotal = this.MontoTotal - (this.MontoTotal * descuento.GetValueOrDefault(0) / 100);
             this.MontoTotal = this.MontoGravable.GetValueOrDefault(0) + this.MontoExento.GetValueOrDefault(0) + this.MontoIva.GetValueOrDefault(0) + this.MontoServicio.GetValueOrDefault(0);
+            this.MontoTotalDolares = this.MontoTotal / Basicas.parametros().CostoDolar;
         }
     }
     public partial class Mesonero : EntityObject
@@ -419,6 +431,14 @@ namespace HK
             {
                 get { return mesonero; }
                 set { mesonero = value; }
+            }
+
+            double? montoDolares = 0;
+
+            public double? MontoDolares
+            {
+                get { return montoDolares; }
+                set { montoDolares = value; }
             }
         }
         #endregion
