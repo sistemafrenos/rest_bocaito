@@ -393,6 +393,7 @@ namespace HK
                 }
                 if (esNuevo)
                 {
+                    factura.Dolares = factura.Dolares.GetValueOrDefault(0);
                     factura.Anulado = false;
                     factura.Inventarios=false;
                     factura.LibroVentas = false;
