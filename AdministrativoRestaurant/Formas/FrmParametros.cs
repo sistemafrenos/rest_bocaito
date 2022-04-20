@@ -15,6 +15,7 @@ namespace HK.Formas
 {
     public partial class FrmParametros : Form
     {
+        double oldCosto = 0;
         RestaurantEntities db = new RestaurantEntities();
         Parametro parametro = new Parametro();
         public FrmParametros()
@@ -28,6 +29,7 @@ namespace HK.Formas
             db = new RestaurantEntities();
             parametro = (from xx in db.Parametros
                             select xx).FirstOrDefault();
+            oldCosto = parametro.CostoDolar.GetValueOrDefault();
             this.parametroBindingSource.DataSource = parametro;
             this.parametroBindingSource.ResetBindings(true);
             this.Aceptar.Click += new EventHandler(Aceptar_Click);
@@ -48,6 +50,10 @@ namespace HK.Formas
                 parametroBindingSource.EndEdit();
                 parametro = (Parametro)parametroBindingSource.Current;
                 parametro.Licencia = claves.GetHashKey(parametro.Empresa);
+                if (parametro.CostoDolar != oldCosto)
+                {
+                    actualizarPrecios(oldCosto, parametro.CostoDolar.GetValueOrDefault());
+                }
                 db.SaveChanges();
                 this.DialogResult = DialogResult.OK;
                 this.Close();
@@ -57,6 +63,18 @@ namespace HK.Formas
                 MessageBox.Show("Error al guardar los datos \n" + ex.Source + "\n" + ex.Message, "Atencion", MessageBoxButtons.OK);
             }
         }
+
+        private void actualizarPrecios(double oldDolar, double newDolar) {
+            var productos = (from xx in db.Platos
+                             where xx.PrecioDolares >0
+                             select xx);
+            foreach (var p in productos)
+            {
+                p.Precio = p.PrecioDolares.Value * newDolar;
+            }
+            db.SaveChanges();
+        }
+
         private void Cancelar_Click(object sender, EventArgs e)
         {
             this.parametroBindingSource.ResetCurrentItem();
