@@ -166,6 +166,16 @@ namespace HK
                 }
             }
         }
+        private double AgregarPago(string tipo, double monto) {
+            int status;
+            int error;
+            unsafe
+            {
+                var sCmd = tipo + (monto * 100).ToString("000000000000");
+                var bRet = SendCmd(&status, &error, sCmd);
+            }
+            return monto;
+        }
         public void ImprimeFactura(Factura documento)
         {
             int error;
@@ -278,41 +288,29 @@ namespace HK
                     double TotalPagos = 0;
                     if (documento.Efectivo.GetValueOrDefault(0) != 0)
                     {
-                        double pago = documento.Efectivo.GetValueOrDefault(0) + documento.Cambio.GetValueOrDefault(0);
-                        sCmd = "201" + (pago * 100).ToString("000000000000");
-                        bRet = SendCmd(&status, &error, sCmd);
-                        TotalPagos += documento.Efectivo.Value;
+                        TotalPagos += this.AgregarPago("201",documento.Efectivo.Value - documento.Cambio.GetValueOrDefault(0));
                     }
                     if (documento.CestaTicket.GetValueOrDefault(0) != 0)
                     {
-                        sCmd = "202" + ((double)documento.CestaTicket * 100).ToString("000000000000");
-                        bRet = SendCmd(&status, &error, sCmd);
-                        TotalPagos += documento.CestaTicket.Value;
+                        TotalPagos += this.AgregarPago("202", documento.CestaTicket.Value);
                     }
 
                     if (documento.Cheque.GetValueOrDefault(0) != 0)
                     {
-                        sCmd = "205" + ((double)documento.Cheque * 100).ToString("000000000000");
-                        bRet = SendCmd(&status, &error, sCmd);
-                        TotalPagos += documento.Cheque.Value;
+                        TotalPagos += this.AgregarPago("205", documento.Cheque.Value);
                     }
                     if (documento.Tarjeta.GetValueOrDefault(0) != 0)
                     {
-                        sCmd = "209" + ((double)documento.Tarjeta * 100).ToString("000000000000");
-                        bRet = SendCmd(&status, &error, sCmd);
-                        TotalPagos += documento.Tarjeta.Value;
+                        TotalPagos += this.AgregarPago("209", documento.Tarjeta.Value);
                     }
                     if (documento.Dolares.GetValueOrDefault(0) != 0)
                     {
-                        sCmd = "220" + ((double)documento.Dolares * 100).ToString("000000000000");
-                        bRet = SendCmd(&status, &error, sCmd);
-                        TotalPagos += documento.Dolares.Value;
+                        TotalPagos += this.AgregarPago("229", documento.Dolares.Value);
                     }
                     CargarS2();
-                    if (this.montoPorPagar > 0)
+                    if (documento.MontoTotal > TotalPagos)
                     {
-                        sCmd = "116" + (montoPorPagar * 100).ToString("000000000000");
-                        bRet = SendCmd(&status, &error, sCmd);
+                        TotalPagos += this.AgregarPago("116", documento.MontoTotal.GetValueOrDefault(0) - TotalPagos);
                     }
                     System.Threading.Thread.Sleep(1000);
                     CargarS1(false);
@@ -661,11 +659,9 @@ namespace HK
                         String line;
                         while ((line = sr.ReadLine()) != null)
                         {
-                            this.subtotalBases = strToDouble(line.Substring(4, 13));
-                            this.subtotalIva = strToDouble(line.Substring(18, 13));
-                            this.montoPorPagar = strToDouble(line.Substring(52, 13));  
-                            
-                            
+                            //this.subtotalBases = strToDouble(line.Substring(4, 13));
+                            //this.subtotalIva = strToDouble(line.Substring(18, 13));
+                            //this.montoPorPagar = strToDouble(line.Substring(52, 13));  
                         }
                     }
                 }
