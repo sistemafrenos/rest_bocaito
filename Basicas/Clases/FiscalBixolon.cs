@@ -8,6 +8,8 @@ using System.Data.Linq;
 using System.Linq;
 using HK.Clases;
 using System.Globalization;
+using TfhkaNet.IF.VE;
+
 
 namespace HK
 {
@@ -534,6 +536,7 @@ namespace HK
             string sCmd;
             bool bRet;
             ConectarImpresora();
+           
             unsafe
             {
                 //************ Imprimir Reporte X *******************
@@ -953,6 +956,14 @@ namespace HK
                 }
             }
 
+        }
+        public void DoImprimirX()
+        {
+            var x = new Tfhka();
+            x.OpenFpCtrl("COM3");
+            var status = x.GetPrinterStatus();
+            x.PrintXReport();
+            x.CloseFpCtrl();
         }
     }
 }
