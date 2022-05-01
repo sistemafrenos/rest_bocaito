@@ -117,7 +117,7 @@
             // 
             this.barButtonUsuarios.Caption = "Usuarios";
             this.barButtonUsuarios.Id = 34;
-            this.barButtonUsuarios.ImageIndex = 6;
+            this.barButtonUsuarios.ImageOptions.ImageIndex = 6;
             this.barButtonUsuarios.Name = "barButtonUsuarios";
             // 
             // barCargarPropietarios
@@ -148,7 +148,7 @@
             // 
             this.barRegistrarCompras.Caption = "Registrar Compras";
             this.barRegistrarCompras.Id = 31;
-            this.barRegistrarCompras.LargeImageIndex = 9;
+            this.barRegistrarCompras.ImageOptions.LargeImageIndex = 9;
             this.barRegistrarCompras.Name = "barRegistrarCompras";
             // 
             // barButtonCargarMovimiento
@@ -273,14 +273,14 @@
             // 
             this.barButtonCajeros.Caption = "Cajeros";
             this.barButtonCajeros.Id = 59;
-            this.barButtonCajeros.ImageIndex = 6;
+            this.barButtonCajeros.ImageOptions.ImageIndex = 6;
             this.barButtonCajeros.Name = "barButtonCajeros";
             // 
             // barButtonMesoneros
             // 
             this.barButtonMesoneros.Caption = "Mesoneros";
             this.barButtonMesoneros.Id = 49;
-            this.barButtonMesoneros.ImageIndex = 6;
+            this.barButtonMesoneros.ImageOptions.ImageIndex = 6;
             this.barButtonMesoneros.Name = "barButtonMesoneros";
             // 
             // ribbonPageGroup1
@@ -295,7 +295,7 @@
             // 
             this.barButtonPlatos.Caption = "Platos";
             this.barButtonPlatos.Id = 3;
-            this.barButtonPlatos.LargeImageIndex = 0;
+            this.barButtonPlatos.ImageOptions.LargeImageIndex = 0;
             this.barButtonPlatos.Name = "barButtonPlatos";
             // 
             // barButtonAjustePrecios
@@ -342,7 +342,7 @@
             // 
             this.barButtonComprasEntradas.Caption = "Compras y Entradas";
             this.barButtonComprasEntradas.Id = 58;
-            this.barButtonComprasEntradas.ImageIndex = 5;
+            this.barButtonComprasEntradas.ImageOptions.ImageIndex = 5;
             this.barButtonComprasEntradas.Name = "barButtonComprasEntradas";
             this.barButtonComprasEntradas.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -362,7 +362,7 @@
             // 
             this.barButtonFacturas.Caption = "Facturas";
             this.barButtonFacturas.Id = 43;
-            this.barButtonFacturas.ImageIndex = 7;
+            this.barButtonFacturas.ImageOptions.ImageIndex = 7;
             this.barButtonFacturas.Name = "barButtonFacturas";
             this.barButtonFacturas.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -371,6 +371,7 @@
             this.barButtonReporteX.Caption = "Reporte X";
             this.barButtonReporteX.Id = 41;
             this.barButtonReporteX.Name = "barButtonReporteX";
+            this.barButtonReporteX.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonReporteX_ItemClick_1);
             // 
             // barButtonReporteZ
             // 
@@ -414,8 +415,8 @@
             // 
             this.barButtonRespaldo.Caption = "Respaldo";
             this.barButtonRespaldo.Id = 54;
-            this.barButtonRespaldo.ImageIndex = 1;
-            this.barButtonRespaldo.LargeImageIndex = 0;
+            this.barButtonRespaldo.ImageOptions.ImageIndex = 1;
+            this.barButtonRespaldo.ImageOptions.LargeImageIndex = 0;
             this.barButtonRespaldo.Name = "barButtonRespaldo";
             this.barButtonRespaldo.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -423,7 +424,7 @@
             // 
             this.barButtonRecuperacion.Caption = "Recuperacion";
             this.barButtonRecuperacion.Id = 55;
-            this.barButtonRecuperacion.ImageIndex = 2;
+            this.barButtonRecuperacion.ImageOptions.ImageIndex = 2;
             this.barButtonRecuperacion.Name = "barButtonRecuperacion";
             this.barButtonRecuperacion.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -431,7 +432,7 @@
             // 
             this.barButtonParametros.Caption = "Parametros";
             this.barButtonParametros.Id = 40;
-            this.barButtonParametros.ImageIndex = 9;
+            this.barButtonParametros.ImageOptions.ImageIndex = 9;
             this.barButtonParametros.Name = "barButtonParametros";
             this.barButtonParametros.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -445,14 +446,14 @@
             // 
             this.barButtonContratos.Caption = "Contratos";
             this.barButtonContratos.Id = 5;
-            this.barButtonContratos.LargeImageIndex = 1;
+            this.barButtonContratos.ImageOptions.LargeImageIndex = 1;
             this.barButtonContratos.Name = "barButtonContratos";
             // 
             // barButtonCuentasxCobrar
             // 
             this.barButtonCuentasxCobrar.Caption = "Cuentas x Cobrar";
             this.barButtonCuentasxCobrar.Id = 27;
-            this.barButtonCuentasxCobrar.LargeImageIndex = 7;
+            this.barButtonCuentasxCobrar.ImageOptions.LargeImageIndex = 7;
             this.barButtonCuentasxCobrar.Name = "barButtonCuentasxCobrar";
             // 
             // barButtonItem16
@@ -469,17 +470,17 @@
             // 
             // applicationMenu1
             // 
-            this.applicationMenu1.BottomPaneControlContainer = null;
             this.applicationMenu1.Name = "applicationMenu1";
             this.applicationMenu1.Ribbon = this.ribbonControl1;
-            this.applicationMenu1.RightPaneControlContainer = null;
             // 
             // ribbonControl1
             // 
             this.ribbonControl1.ApplicationButtonDropDownControl = this.applicationMenu1;
             this.ribbonControl1.ApplicationButtonText = null;
+            this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Images = this.imageCollection1;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.ribbonControl1.ExpandCollapseItem,
             this.barButtonItem1,
             this.barButtonItem2,
             this.barButtonItem3,
@@ -537,7 +538,6 @@
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPageReportes});
-            this.ribbonControl1.SelectedPage = this.ribbonPage1;
             this.ribbonControl1.Size = new System.Drawing.Size(1016, 141);
             // 
             // imageCollection1
@@ -577,7 +577,7 @@
             // 
             this.barButtonItem8.Caption = "Salir";
             this.barButtonItem8.Id = 11;
-            this.barButtonItem8.LargeImageIndex = 5;
+            this.barButtonItem8.ImageOptions.LargeImageIndex = 5;
             this.barButtonItem8.Name = "barButtonItem8";
             // 
             // barButtonItem4
@@ -632,21 +632,21 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(326, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(349, 17);
             this.toolStripStatusLabel1.Text = "Software desarrollado por OK soluciones, telefonos 0414-8081015";
             // 
             // barRespaldoDatos
             // 
             this.barRespaldoDatos.Caption = "Llevar a PenDrive";
             this.barRespaldoDatos.Id = 43;
-            this.barRespaldoDatos.LargeImageIndex = 1;
+            this.barRespaldoDatos.ImageOptions.LargeImageIndex = 1;
             this.barRespaldoDatos.Name = "barRespaldoDatos";
             // 
             // barCargaDatos
             // 
             this.barCargaDatos.Caption = "Pasar a Disco Duro";
             this.barCargaDatos.Id = 44;
-            this.barCargaDatos.LargeImageIndex = 2;
+            this.barCargaDatos.ImageOptions.LargeImageIndex = 2;
             this.barCargaDatos.Name = "barCargaDatos";
             // 
             // FrmPrincipal

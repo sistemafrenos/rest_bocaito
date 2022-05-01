@@ -86,7 +86,7 @@ namespace HK.Formas
             if (MessageBox.Show("Esta seguro de emitir el reporte Z", "Atencion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.Yes)
                 return;
             this.ImpresoraEnUso = true;
-            FiscalBixolon f = new FiscalBixolon();
+            FiscalBixolon2020 f = new FiscalBixolon2020(Basicas.parametros().PuertoImpresoraFiscal);
             f.ReporteZ();
             f = null;
             this.ImpresoraEnUso = false;
@@ -94,7 +94,7 @@ namespace HK.Formas
         void btnReporteX_Click(object sender, EventArgs e)
         {
             this.ImpresoraEnUso = true;
-            FiscalBixolon f = new FiscalBixolon();
+            FiscalBixolon2020 f = new FiscalBixolon2020(Basicas.parametros().PuertoImpresoraFiscal);
             f.ReporteX();
             f = null;
             this.ImpresoraEnUso = false;

@@ -208,7 +208,7 @@ namespace HK.Clases
         }
         public static void ImprimirFacturaFiscal(Factura factura)
         {
-            FiscalBixolon f = new FiscalBixolon();
+            FiscalBixolon2020 f = new FiscalBixolon2020(Basicas.parametros().PuertoImpresoraFiscal);
             f.ImprimeFactura(factura);
         }
         public static void ImprimirFacturaWindows(Factura factura)

@@ -366,7 +366,8 @@ namespace HK.Formas
         {
             try
             {
-                FiscalBixolon f = new FiscalBixolon();
+                // FiscalBixolon f = new FiscalBixolon();
+                FiscalBixolon2020 f = new FiscalBixolon2020(Basicas.parametros().PuertoImpresoraFiscal);
                 f.ReporteX();
             }
             catch (Exception x)
@@ -409,6 +410,11 @@ namespace HK.Formas
 
         }
         #endregion
+
+        private void barButtonReporteX_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
 
     }
 }

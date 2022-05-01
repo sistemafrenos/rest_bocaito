@@ -84,6 +84,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="TfhkaNet">
+      <HintPath>.\TfhkaNet.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\BasicasDB.cs" />
@@ -107,6 +110,7 @@
     <Compile Include="Clases\FactoryMesas.cs" />
     <Compile Include="Clases\FactoryPlatos.cs" />
     <Compile Include="Clases\FiscalBixolon.cs" />
+    <Compile Include="Clases\FiscalBixolon2020.cs" />
     <Compile Include="Formas\FrmBuscarEntidades.cs">
       <SubType>Form</SubType>
     </Compile>

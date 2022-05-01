@@ -7,7 +7,7 @@ using HK;
 using TfhkaNet.IF.VE;
 using TfhkaNet.IF;
 
-namespace HK.Clases
+namespace HK
 {
     public class Pagos 
     {
@@ -17,7 +17,7 @@ namespace HK.Clases
         static public string Resto="102";
     }
     
-    class FiscalBixolon2020
+    public class FiscalBixolon2020
     {
         Tfhka fiscal;
         string Puerto="";
@@ -101,7 +101,7 @@ namespace HK.Clases
                 throw new Exception(string.Format("Error de conexión\n{0}\nEstatus {1}", x.Message, fiscal.Status_Error));
             }
         }
-        public void ImprimeFactura(Factura documento, Pago pago)
+        public void ImprimeFactura(Factura documento)
         {
             #region Validaciones
             double SubTotal = 0;
@@ -114,17 +114,14 @@ namespace HK.Clases
             {
                 throw new Exception("Esta factura no tiene productos");
             }
-            if (fiscal.Estado != "OK")
-            {
-                throw new Exception(string.Format("Error en impresora Fiscal Error {0}, Estado {1} ", fiscal.Status_Error, fiscal.StatusPort));
-            }
+
             #endregion
             #region Encabezado
             fiscal.SendCmd("i01Cedula/Rif:" + documento.CedulaRif);
                 fiscal.SendCmd("i02Razon Social:");
                 if (documento.RazonSocial.Length <= 37)
                 {
-                    fiscal.SendCmd("i03" + Basicas.PrintFix(documento.RazonSocial, 37, 1));
+                    fiscal.SendCmd("i03" + documento.RazonSocial);
                 }
                 else
                 {
@@ -215,21 +212,21 @@ namespace HK.Clases
 #endregion
             #region Pagos
                 double TotalPagos = 0;
-                if (pago.Efectivo.GetValueOrDefault(0) != 0)
+                if (documento.Efectivo.GetValueOrDefault(0) != 0)
                 {
-                    double x = pago.Efectivo.GetValueOrDefault(0) + pago.Cambio.GetValueOrDefault(0);
+                    double x = documento.Efectivo.GetValueOrDefault(0) + documento.Cambio.GetValueOrDefault(0);
                     fiscal.SendCmd(Pagos.Efectivo + (x * 100).ToString("000000000000"));
-                    TotalPagos += pago.Efectivo.Value;
+                    TotalPagos += documento.Efectivo.Value;
                 }
-                if (pago.Tarjeta.GetValueOrDefault(0) != 0)
+                if (documento.Tarjeta.GetValueOrDefault(0) != 0)
                 {
-                        fiscal.SendCmd(Pagos.Tarjeta + ((double)pago.Credito * 100).ToString("000000000000"));
-                        TotalPagos += pago.Tarjeta.Value;
+                        fiscal.SendCmd(Pagos.Tarjeta + ((double)documento.Tarjeta * 100).ToString("000000000000"));
+                        TotalPagos += documento.Tarjeta.Value;
                 }
-                if (pago.Divisa.GetValueOrDefault(0) != 0)
+                if (documento.Dolares.GetValueOrDefault(0) != 0)
                 {
-                        fiscal.SendCmd(Pagos.Divisa + ((double)pago.Credito * 100).ToString("000000000000"));
-                        TotalPagos += pago.Divisa.Value;
+                        fiscal.SendCmd(Pagos.Divisa + ((double)documento.Dolares * 100).ToString("000000000000"));
+                        TotalPagos += documento.Dolares.Value;
                 }
                 System.Threading.Thread.Sleep(500);
                 S2PrinterData s2 = CargarS2();
@@ -282,7 +279,6 @@ namespace HK.Clases
                 {
                     throw new Exception("No hay facturas aún hoy");
                 }
-                ultimoZ = d.DailyClosureCounter + 2;
                 //************ Imprimir Reporte Z *******************
                 fiscal.SendCmd("I0Z");
             }
