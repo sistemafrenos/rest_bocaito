@@ -210,7 +210,8 @@ namespace HK
                 }
             System.Threading.Thread.Sleep(500);
 #endregion
-            #region Pagos
+            fiscal.SendCmd("3"); // subtotal
+            #region Pagos     
                 double TotalPagos = 0;
                 if (documento.Efectivo.GetValueOrDefault(0) != 0)
                 {
@@ -228,6 +229,7 @@ namespace HK
                         fiscal.SendCmd(Pagos.Divisa + ((double)documento.Dolares * 100).ToString("000000000000"));
                         TotalPagos += documento.Dolares.Value;
                 }
+             
                 System.Threading.Thread.Sleep(500);
                 S2PrinterData s2 = CargarS2();
                 System.Threading.Thread.Sleep(500);
@@ -249,6 +251,9 @@ namespace HK
                         documento.MontoTotal = s2.SubTotalBases + s2.SubTotalTax;
                         System.Threading.Thread.Sleep(500);
             #endregion
+                        fiscal.CheckFPrinter();
+                        fiscal.CloseFpCtrl();
+            
         }
         public void ReporteX()
         {
