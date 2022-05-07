@@ -124,6 +124,28 @@ namespace HK
             factura.Efectivo = (double)editor.Value;
             this.facturaBindingSource.ResetCurrentItem();
         }
+        void DolaresEdit_Validating(object sender, CancelEventArgs e)
+        {
+            DevExpress.XtraEditors.CalcEdit editor = (DevExpress.XtraEditors.CalcEdit)sender;
+            factura.Dolares = (double)editor.Value;
+            this.facturaBindingSource.ResetCurrentItem();
+        }
+        void Dolares_Enter(object sender, EventArgs e)
+        {
+            factura.calcularSaldo(true);
+            DevExpress.XtraEditors.CalcEdit editor = (DevExpress.XtraEditors.CalcEdit)sender;
+            var igtf = Basicas.parametros().IGTF.GetValueOrDefault(0);
+            if (igtf > 0)
+            {
+                editor.Value = (decimal)factura.Saldo;
+                editor.SelectAll();
+            }
+            else
+            {
+                MessageBox.Show("No esta registrado el IGTF", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }    
+        }
         void Editor_Enter(object sender, EventArgs e)
         {
             DevExpress.XtraEditors.CalcEdit editor = (DevExpress.XtraEditors.CalcEdit)sender;
@@ -216,6 +238,7 @@ namespace HK
             factura.Efectivo = null;
             factura.ConsumoInterno = null;
             factura.Credito = null;
+            factura.Dolares = null;
             factura.Totalizar(cobraServicio.Value, descuento, tasaIva);
             factura.calcularSaldo();
         }
@@ -271,6 +294,8 @@ namespace HK
             this.Aceptar.Click += new EventHandler(Aceptar_Click);
             this.Cancelar.Click += new EventHandler(Cancelar_Click);
             this.KeyDown += new KeyEventHandler(FrmPagar_KeyDown);
+            this.DolaresEdit.Enter += new EventHandler(Dolares_Enter);
+            this.DolaresEdit.Validating +=new CancelEventHandler(DolaresEdit_Validating);
             this.EfectivoTextEdit.Enter += new EventHandler(Editor_Enter);
             this.ChequeTextEdit.Enter += new EventHandler(Editor_Enter);
             this.TarjetaTextEdit.Enter += new EventHandler(Editor_Enter);
@@ -300,7 +325,6 @@ namespace HK
             this.facturaBindingSource.DataSource = factura;
             this.facturaBindingSource.ResetBindings(true);
         }
-
         void Credito_Click(object sender, EventArgs e)
         {
             LimpiarPagos(Basicas.parametros().TasaIva);
@@ -309,7 +333,6 @@ namespace HK
             this.txtAutorizadoPor.Properties.Items.AddRange(FactoryUsuarios.getUsuarios());
             this.txtAutorizadoPor.Focus();
         }
-
         private void pagoEnDolares_Click(object sender, EventArgs e)
         {     
             LimpiarPagos(Basicas.parametros().TasaIva);
@@ -326,7 +349,6 @@ namespace HK
                 return;
             }            
         }
-
         private void ConsumoInterno_Click_1(object sender, EventArgs e)
         {
 

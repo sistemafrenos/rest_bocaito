@@ -64,13 +64,10 @@ namespace HK.Formas
             this.CenterToScreen();
             //  ImprimirFacturasPendientes();
         }
-
         void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
-
         void btnSalir_Click(object sender, EventArgs e)
         {
             this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
@@ -117,7 +114,6 @@ namespace HK.Formas
             if(Basicas.PuertoComandas!=null)
                 ImprimirComandasPendientes();
         }
-
         private void ImprimirComandasPendientes()
         {
             var ComandasAbiertas = (from x in db.MesasAbiertasPlatos

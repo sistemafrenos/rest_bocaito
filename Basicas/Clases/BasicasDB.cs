@@ -58,16 +58,16 @@ namespace HK
         public void calcularSaldo(bool addIGTF = false)
         {
             var montoTotal = this.MontoTotal.GetValueOrDefault(0);
+            this.Saldo =  this.MontoTotal - (this.Efectivo.GetValueOrDefault(0) + this.CestaTicket.GetValueOrDefault(0) + this.Tarjeta.GetValueOrDefault(0) + this.Cheque.GetValueOrDefault(0) + this.Cambio.GetValueOrDefault(0) + this.ConsumoInterno.GetValueOrDefault(0) + this.Credito.GetValueOrDefault(0));
             if (addIGTF)
             {
                 var igtf = Basicas.parametros().IGTF.GetValueOrDefault(0);
-                
+
                 if (igtf > 0)
                 {
-                    this.MontoTotal = montoTotal * (1 + (igtf / 100));
+                    this.Saldo = (this.Saldo * (1 + (igtf / 100))) - this.Dolares.GetValueOrDefault(0);
                 }
             }
-            this.Saldo =  this.MontoTotal - (this.Efectivo.GetValueOrDefault(0) + this.CestaTicket.GetValueOrDefault(0) + this.Tarjeta.GetValueOrDefault(0) + this.Cheque.GetValueOrDefault(0) + this.Cambio.GetValueOrDefault(0) + this.ConsumoInterno.GetValueOrDefault(0) + this.Credito.GetValueOrDefault(0) + this.Dolares.GetValueOrDefault(0));
             if (this.Saldo < 0)
             {
                 this.Cambio = (double)decimal.Round((decimal)Saldo * -1, 2);

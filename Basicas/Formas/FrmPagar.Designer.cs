@@ -28,19 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions5 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             this.BarraAcciones = new System.Windows.Forms.ToolStrip();
             this.Aceptar = new System.Windows.Forms.ToolStripButton();
             this.Cancelar = new System.Windows.Forms.ToolStripButton();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
+            this.DolaresEdit = new DevExpress.XtraEditors.CalcEdit();
+            this.facturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pagoEnDolares = new System.Windows.Forms.Button();
             this.txtContraseña = new DevExpress.XtraEditors.TextEdit();
             this.txtAutorizadoPor = new DevExpress.XtraEditors.ComboBoxEdit();
             this.ChequeTextEdit = new DevExpress.XtraEditors.CalcEdit();
-            this.facturaBindingSource = new System.Windows.Forms.BindingSource();
             this.Cheque = new System.Windows.Forms.Button();
             this.CestaTicket = new System.Windows.Forms.Button();
             this.IdFacturaTextEdit = new DevExpress.XtraEditors.TextEdit();
@@ -112,6 +115,7 @@
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
@@ -124,10 +128,11 @@
             this.BarraAcciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DolaresEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.facturaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContraseña.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAutorizadoPor.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChequeTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.facturaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdFacturaTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FechaTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumeroTextEdit.Properties)).BeginInit();
@@ -193,6 +198,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -241,6 +247,7 @@
             // 
             // dataLayoutControl1
             // 
+            this.dataLayoutControl1.Controls.Add(this.DolaresEdit);
             this.dataLayoutControl1.Controls.Add(this.pagoEnDolares);
             this.dataLayoutControl1.Controls.Add(this.txtContraseña);
             this.dataLayoutControl1.Controls.Add(this.txtAutorizadoPor);
@@ -301,6 +308,29 @@
             this.dataLayoutControl1.TabIndex = 33;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
             // 
+            // DolaresEdit
+            // 
+            this.DolaresEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.facturaBindingSource, "Dolares", true));
+            this.DolaresEdit.Location = new System.Drawing.Point(204, 48);
+            this.DolaresEdit.Name = "DolaresEdit";
+            this.DolaresEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.DolaresEdit.Properties.Appearance.Options.UseFont = true;
+            this.DolaresEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, editorButtonImageOptions1)});
+            this.DolaresEdit.Properties.DisplayFormat.FormatString = "n2";
+            this.DolaresEdit.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.DolaresEdit.Properties.EditFormat.FormatString = "n2";
+            this.DolaresEdit.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.DolaresEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.DolaresEdit.Properties.ValidateOnEnterKey = true;
+            this.DolaresEdit.Size = new System.Drawing.Size(269, 26);
+            this.DolaresEdit.StyleController = this.dataLayoutControl1;
+            this.DolaresEdit.TabIndex = 39;
+            // 
+            // facturaBindingSource
+            // 
+            this.facturaBindingSource.DataSource = typeof(HK.Factura);
+            // 
             // pagoEnDolares
             // 
             this.pagoEnDolares.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -343,7 +373,7 @@
             this.ChequeTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.ChequeTextEdit.Properties.Appearance.Options.UseFont = true;
             this.ChequeTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, editorButtonImageOptions1)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, editorButtonImageOptions2)});
             this.ChequeTextEdit.Properties.DisplayFormat.FormatString = "n2";
             this.ChequeTextEdit.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.ChequeTextEdit.Properties.EditFormat.FormatString = "n2";
@@ -354,16 +384,12 @@
             this.ChequeTextEdit.StyleController = this.dataLayoutControl1;
             this.ChequeTextEdit.TabIndex = 3;
             // 
-            // facturaBindingSource
-            // 
-            this.facturaBindingSource.DataSource = typeof(HK.Factura);
-            // 
             // Cheque
             // 
             this.Cheque.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cheque.Location = new System.Drawing.Point(2, 259);
+            this.Cheque.Location = new System.Drawing.Point(2, 274);
             this.Cheque.Name = "Cheque";
-            this.Cheque.Size = new System.Drawing.Size(200, 56);
+            this.Cheque.Size = new System.Drawing.Size(200, 41);
             this.Cheque.TabIndex = 31;
             this.Cheque.TabStop = false;
             this.Cheque.Text = "F7-Cheque";
@@ -375,7 +401,7 @@
             this.CestaTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CestaTicket.Location = new System.Drawing.Point(2, 201);
             this.CestaTicket.Name = "CestaTicket";
-            this.CestaTicket.Size = new System.Drawing.Size(198, 54);
+            this.CestaTicket.Size = new System.Drawing.Size(198, 69);
             this.CestaTicket.TabIndex = 30;
             this.CestaTicket.TabStop = false;
             this.CestaTicket.Text = "F6-Cesta Ticket";
@@ -618,7 +644,7 @@
             this.EfectivoTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.EfectivoTextEdit.Properties.Appearance.Options.UseFont = true;
             this.EfectivoTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, editorButtonImageOptions2)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, editorButtonImageOptions3)});
             this.EfectivoTextEdit.Properties.DisplayFormat.FormatString = "n2";
             this.EfectivoTextEdit.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.EfectivoTextEdit.Properties.EditFormat.FormatString = "n2";
@@ -632,12 +658,12 @@
             // CestaTicketTextEdit
             // 
             this.CestaTicketTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.facturaBindingSource, "CestaTicket", true));
-            this.CestaTicketTextEdit.Location = new System.Drawing.Point(204, 229);
+            this.CestaTicketTextEdit.Location = new System.Drawing.Point(204, 244);
             this.CestaTicketTextEdit.Name = "CestaTicketTextEdit";
             this.CestaTicketTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.CestaTicketTextEdit.Properties.Appearance.Options.UseFont = true;
             this.CestaTicketTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, editorButtonImageOptions3)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, editorButtonImageOptions4)});
             this.CestaTicketTextEdit.Properties.DisplayFormat.FormatString = "n2";
             this.CestaTicketTextEdit.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.CestaTicketTextEdit.Properties.EditFormat.FormatString = "n2";
@@ -677,7 +703,7 @@
             this.TarjetaTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
             this.TarjetaTextEdit.Properties.Appearance.Options.UseFont = true;
             this.TarjetaTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, editorButtonImageOptions4)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, editorButtonImageOptions5)});
             this.TarjetaTextEdit.Properties.DisplayFormat.FormatString = "n2";
             this.TarjetaTextEdit.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.TarjetaTextEdit.Properties.EditFormat.FormatString = "n2";
@@ -880,7 +906,7 @@
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.layoutControlGroup1.Size = new System.Drawing.Size(475, 477);
             this.layoutControlGroup1.TextVisible = false;
@@ -907,7 +933,8 @@
             this.layoutControlItem9,
             this.emptySpaceItem5,
             this.layoutControlGroup3,
-            this.layoutControlItem10});
+            this.layoutControlItem10,
+            this.layoutControlItem11});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
             this.layoutControlGroup2.Size = new System.Drawing.Size(475, 477);
@@ -938,7 +965,7 @@
             this.layoutControlItem3.CustomizationFormText = "layoutControlItem3";
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 199);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(202, 58);
+            this.layoutControlItem3.Size = new System.Drawing.Size(202, 73);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -946,9 +973,9 @@
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem3";
-            this.emptySpaceItem3.Location = new System.Drawing.Point(202, 46);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(202, 76);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(273, 71);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(273, 41);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem2
@@ -966,7 +993,7 @@
             this.emptySpaceItem4.CustomizationFormText = "emptySpaceItem4";
             this.emptySpaceItem4.Location = new System.Drawing.Point(202, 199);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(273, 28);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(273, 43);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // ItemForEfectivo
@@ -1028,7 +1055,7 @@
             // 
             this.ItemForCestaTicket.Control = this.CestaTicketTextEdit;
             this.ItemForCestaTicket.CustomizationFormText = "Cesta Ticket";
-            this.ItemForCestaTicket.Location = new System.Drawing.Point(202, 227);
+            this.ItemForCestaTicket.Location = new System.Drawing.Point(202, 242);
             this.ItemForCestaTicket.Name = "ItemForCestaTicket";
             this.ItemForCestaTicket.Size = new System.Drawing.Size(273, 30);
             this.ItemForCestaTicket.Text = "F6-Cesta Ticket";
@@ -1039,9 +1066,9 @@
             // 
             this.layoutControlItem4.Control = this.Cheque;
             this.layoutControlItem4.CustomizationFormText = "layoutControlItem4";
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 257);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 272);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(204, 60);
+            this.layoutControlItem4.Size = new System.Drawing.Size(204, 45);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
@@ -1059,9 +1086,9 @@
             // 
             this.emptySpaceItem5.AllowHotTrack = false;
             this.emptySpaceItem5.CustomizationFormText = "emptySpaceItem5";
-            this.emptySpaceItem5.Location = new System.Drawing.Point(204, 257);
+            this.emptySpaceItem5.Location = new System.Drawing.Point(204, 272);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(271, 30);
+            this.emptySpaceItem5.Size = new System.Drawing.Size(271, 15);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlGroup3
@@ -1146,6 +1173,16 @@
             this.layoutControlItem10.Size = new System.Drawing.Size(202, 56);
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem10.TextVisible = false;
+            // 
+            // layoutControlItem11
+            // 
+            this.layoutControlItem11.Control = this.DolaresEdit;
+            this.layoutControlItem11.Location = new System.Drawing.Point(202, 46);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Size = new System.Drawing.Size(273, 30);
+            this.layoutControlItem11.TextLocation = DevExpress.Utils.Locations.Bottom;
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem11.TextVisible = false;
             // 
             // groupControl2
             // 
@@ -1267,10 +1304,11 @@
             this.BarraAcciones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DolaresEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.facturaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContraseña.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAutorizadoPor.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChequeTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.facturaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdFacturaTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FechaTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumeroTextEdit.Properties)).EndInit();
@@ -1336,6 +1374,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
@@ -1440,5 +1479,7 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem6;
         private System.Windows.Forms.Button pagoEnDolares;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+        private DevExpress.XtraEditors.CalcEdit DolaresEdit;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
     }
 }

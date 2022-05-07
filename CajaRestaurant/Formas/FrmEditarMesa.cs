@@ -328,7 +328,7 @@ namespace HK
                 {
                     return;
                 }
-                factura.calcularSaldo();
+                factura.calcularSaldo(true);
                 // factura.Totalizar(mesa.CobraServicio.GetValueOrDefault(false),mesa.Descuento.GetValueOrDefault(0), 12);
                 if (decimal.Round((decimal)factura.Saldo.GetValueOrDefault(0), 0) == 0)
                 {
