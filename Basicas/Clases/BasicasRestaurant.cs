@@ -9,6 +9,7 @@ using System.Drawing.Printing;
 using System.Security.Cryptography;
 using System.Windows.Forms;
 using System.IO;
+using System.Data.Objects;
 namespace HK.Clases
 {
     public partial class Basicas
@@ -784,7 +785,7 @@ namespace HK.Clases
             {
                 var q = from factura in db.Facturas
                         join facturaplato in db.FacturasPlatos on factura.IdFactura equals facturaplato.IdFactura
-                        where factura.Fecha.Value >= desde && factura.Fecha.Value <= hasta && factura.Anulado == false && cajero.IdUsuario == factura.IdCajero
+                        where EntityFunctions.TruncateTime(factura.Fecha.Value) >= desde && EntityFunctions.TruncateTime(factura.Fecha.Value) <= hasta && factura.Anulado == false && cajero.IdUsuario == factura.IdCajero
                         select new VentasxPlato
                         {
                             Grupo = facturaplato.Grupo,
@@ -815,7 +816,7 @@ namespace HK.Clases
                 List<IngredientesConsumo> q = (from factura in db.Facturas
                                                join facturaplato in db.FacturasPlatos on factura.IdFactura equals facturaplato.IdFactura
                                                join productoIngrediente in db.PlatosIngredientes on facturaplato.Idplato equals productoIngrediente.IdPlato
-                                               where factura.Fecha.Value == fecha && factura.IdCajero == cajero.IdUsuario && (factura.Tipo == "FACTURA" || factura.Tipo == "CONSUMO")
+                                               where EntityFunctions.TruncateTime(factura.Fecha.Value) == fecha && factura.IdCajero == cajero.IdUsuario && (factura.Tipo == "FACTURA" || factura.Tipo == "CONSUMO")
                                                select new IngredientesConsumo
                                                {
                                                    IdIngrediente = productoIngrediente.IdIngrediente,
@@ -844,7 +845,7 @@ namespace HK.Clases
                 List<IngredientesConsumo> q = (from factura in db.Facturas
                                                join facturaplato in db.FacturasPlatos on factura.IdFactura equals facturaplato.IdFactura
                                                join productoIngrediente in db.PlatosIngredientes on facturaplato.Idplato equals productoIngrediente.IdPlato
-                                               where factura.Fecha.Value == fecha && (factura.Tipo == "FACTURA" || factura.Tipo == "CONSUMO")
+                                               where EntityFunctions.TruncateTime(factura.Fecha.Value) == fecha && (factura.Tipo == "FACTURA" || factura.Tipo == "CONSUMO")
                                                select new IngredientesConsumo
                                                {
                                                    IdIngrediente = productoIngrediente.IdIngrediente,
@@ -872,7 +873,7 @@ namespace HK.Clases
                 List<IngredientesConsumo> q = (from factura in db.Facturas
                                                join facturaplato in db.FacturasPlatos on factura.IdFactura equals facturaplato.IdFactura
                                                join productoIngrediente in db.PlatosIngredientes on facturaplato.Idplato equals productoIngrediente.IdPlato
-                                               where factura.Fecha.Value >= desde && factura.Fecha.Value <= hasta && (factura.Tipo == "FACTURA" || factura.Tipo == "CONSUMO")
+                                               where EntityFunctions.TruncateTime(factura.Fecha.Value) >= desde && EntityFunctions.TruncateTime(factura.Fecha.Value) <= hasta && (factura.Tipo == "FACTURA" || factura.Tipo == "CONSUMO")
                                                select new IngredientesConsumo
                                                {
                                                    IdIngrediente = productoIngrediente.IdIngrediente,
@@ -900,7 +901,7 @@ namespace HK.Clases
                 var q = from factura in db.Facturas
                         join facturaplato in db.FacturasPlatos on factura.IdFactura equals facturaplato.IdFactura
                         orderby facturaplato.Grupo, facturaplato.Descripcion
-                        where factura.Fecha.Value >= desde && factura.Fecha.Value <= hasta && factura.Anulado == false && ( factura.Tipo == "FACTURA" || factura.Tipo == "CONSUMO" )
+                        where EntityFunctions.TruncateTime(factura.Fecha.Value) >= desde && EntityFunctions.TruncateTime(factura.Fecha.Value) <= hasta && factura.Anulado == false && ( factura.Tipo == "FACTURA" || factura.Tipo == "CONSUMO" )
                         select new VentasxPlato
                         {
                             Grupo = facturaplato.Grupo,
@@ -985,7 +986,7 @@ namespace HK.Clases
             using (var db = new RestaurantEntities())
             {
                 var consulta = from q in db.Facturas
-                               where (q.Fecha.Value >= desde && q.Fecha.Value <= hasta && q.Anulado == false) && (q.Tipo == "FACTURA" ) && q.IdCajero == cajero.IdUsuario
+                               where (EntityFunctions.TruncateTime(q.Fecha.Value) >= desde && EntityFunctions.TruncateTime(q.Fecha.Value) <= hasta && q.Anulado == false) && (q.Tipo == "FACTURA") && q.IdCajero == cajero.IdUsuario
                                select q;
                 return consulta.ToList();
             }
