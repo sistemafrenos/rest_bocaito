@@ -237,6 +237,8 @@ namespace HK
                 {
                     fiscal.SendCmd(Pagos.Resto + (s2.AmountPayable * 100).ToString("000000000000"));
                 }
+                // cerrar factura
+                fiscal.SendCmd("199");
                 System.Threading.Thread.Sleep(500);
 #endregion
             #region CargarFactura
