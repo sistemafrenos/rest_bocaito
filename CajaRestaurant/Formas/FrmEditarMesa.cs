@@ -451,7 +451,7 @@ namespace HK
         }
         private void ValidarFactura()
         {
-            factura.Totalizar(mesa.CobraServicio.GetValueOrDefault(false),mesa.Descuento.GetValueOrDefault(0),12);
+            factura.Totalizar(mesa.CobraServicio.GetValueOrDefault(false),mesa.Descuento.GetValueOrDefault(0),16);
             if (factura.FacturasPlatos.Count == 0)
                 throw new Exception("Cuenta sin platos");
         }
@@ -495,7 +495,7 @@ namespace HK
             }
             factura.Fecha = DateTime.Today;
             factura.Hora = DateTime.Now;
-            factura.Totalizar(mesa.CobraServicio.GetValueOrDefault(false), mesa.Descuento.GetValueOrDefault(0),12);
+            factura.Totalizar(mesa.CobraServicio.GetValueOrDefault(false), mesa.Descuento.GetValueOrDefault(0),16);
             if (!Basicas.ImpresoraActiva)
             {
                 factura.Tipo = "POR IMPRIMIR";
@@ -535,7 +535,7 @@ namespace HK
                 nuevo.Costo = item.Costo;
                 factura.FacturasPlatos.Add(nuevo);
             }
-            factura.Totalizar(mesa.CobraServicio.GetValueOrDefault(false),mesa.Descuento.GetValueOrDefault(0),12);
+            factura.Totalizar(mesa.CobraServicio.GetValueOrDefault(false),mesa.Descuento.GetValueOrDefault(0),16);
         }
         private void Imprimir()
         {
