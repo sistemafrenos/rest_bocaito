@@ -383,6 +383,7 @@
             this.ChequeTextEdit.Size = new System.Drawing.Size(267, 26);
             this.ChequeTextEdit.StyleController = this.dataLayoutControl1;
             this.ChequeTextEdit.TabIndex = 3;
+            this.ChequeTextEdit.Visible = false;
             // 
             // Cheque
             // 
@@ -392,9 +393,9 @@
             this.Cheque.Size = new System.Drawing.Size(200, 41);
             this.Cheque.TabIndex = 31;
             this.Cheque.TabStop = false;
-            this.Cheque.Text = "F7-Cheque";
             this.Cheque.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Cheque.UseVisualStyleBackColor = true;
+            this.Cheque.Visible = false;
             // 
             // CestaTicket
             // 
@@ -404,7 +405,7 @@
             this.CestaTicket.Size = new System.Drawing.Size(198, 69);
             this.CestaTicket.TabIndex = 30;
             this.CestaTicket.TabStop = false;
-            this.CestaTicket.Text = "F6-Cesta Ticket";
+            this.CestaTicket.Text = "F6-Pago Movil";
             this.CestaTicket.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CestaTicket.UseVisualStyleBackColor = true;
             // 

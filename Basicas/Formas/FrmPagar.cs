@@ -94,7 +94,7 @@ namespace HK
         }
         void Cheque_Click(object sender, EventArgs e)
         {
-            PagarCheque();
+            // PagarCheque();
         }
         void Efectivo_Click(object sender, EventArgs e)
         {
@@ -181,7 +181,7 @@ namespace HK
                     e.Handled = true;
                     break;
                 case Keys.F7:
-                    PagarCheque();
+                    // PagarCheque();
                     e.Handled = true;
                     break;
                 case Keys.F8:
@@ -192,11 +192,12 @@ namespace HK
         }
         private void PagarCheque()
         {
+            /*
             LimpiarPagos(Basicas.parametros().TasaIva);
             factura.calcularSaldo();
             ChequeTextEdit.Value = (decimal)factura.Saldo;
             ChequeTextEdit.SelectAll();
-            this.ChequeTextEdit.Focus();
+            this.ChequeTextEdit.Focus(); */
         }
         private void PagarCestaTicket()
         {

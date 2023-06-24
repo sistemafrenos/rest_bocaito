@@ -846,11 +846,11 @@
             // ItemForCestaTicket
             // 
             this.ItemForCestaTicket.Control = this.CestaTicketTextEdit;
-            this.ItemForCestaTicket.CustomizationFormText = "Cesta Ticket";
+            this.ItemForCestaTicket.CustomizationFormText = "Cheques";
             this.ItemForCestaTicket.Location = new System.Drawing.Point(689, 240);
             this.ItemForCestaTicket.Name = "ItemForCestaTicket";
             this.ItemForCestaTicket.Size = new System.Drawing.Size(90, 40);
-            this.ItemForCestaTicket.Text = "Cesta Ticket";
+            this.ItemForCestaTicket.Text = "Cesta ticket";
             this.ItemForCestaTicket.TextLocation = DevExpress.Utils.Locations.Top;
             this.ItemForCestaTicket.TextSize = new System.Drawing.Size(76, 13);
             // 

@@ -360,6 +360,8 @@ namespace HK.Clases
             try
             {
                 int Lineas = 1;
+                double total = 0;
+                double subtotal = 0;
                 LPrintWriter l = new LPrintWriter();
               //  l.WriteLine(Basicas.parametros().Empresa);
                 l.WriteLine("");
@@ -383,16 +385,26 @@ namespace HK.Clases
                                     {
                                         Descripcion = itemResumido.Key.Descripcion,
                                         Cantidad = itemResumido.Sum(x => x.Cantidad),
-                                        Total = itemResumido.Sum(x => x.Precio * x.Cantidad)
+                                        TotalConIva = itemResumido.Sum(x => x.PrecioConIva * x.Cantidad),
+                                        Total = itemResumido.Sum(x => x.Precio * x.Cantidad)                                       
                                     };
 
                     foreach (var Item in Acumulado)
                     {
-                        l.WriteLine("{0} {1} ", Item.Cantidad.Value.ToString("000"), Item.Descripcion.PadRight(30, ' ').Substring(0, 30));
+                        l.WriteLine("{0} {1} {2}", Item.Cantidad.Value.ToString("000"), Item.Descripcion.PadRight(20, ' ').Substring(0, 20),Item.Total.Value.ToString("N2"));
+                        subtotal += Item.Total.Value;
+                        total += Item.TotalConIva.Value;
                     }
                 }
                 l.WriteLine(" ");
-                l.WriteLine(String.Format("POR EXIGENCIAS DEL SENIAT "));
+                l.WriteLine("COMPROBANTE NO FISCAL");
+                l.WriteLine("==============================");
+                l.WriteLine("MONTO => {0}", subtotal.ToString("N2"));
+                l.WriteLine("IVA   => {0}", (total - subtotal).ToString("N2"));
+                l.WriteLine("TOTAL => {0}", total.ToString("N2"));
+                l.WriteLine("==============================");
+                l.WriteLine(" ");
+                /*l.WriteLine(String.Format("POR EXIGENCIAS DEL SENIAT "));
                 l.WriteLine(String.Format("NECESITAMOS LO SIGUIENTE:"));
                 l.WriteLine(String.Format("PARA EMITIR SU FACTURA:"));
                 l.WriteLine(" ");
@@ -415,7 +427,7 @@ namespace HK.Clases
                 l.WriteLine("SEA  LA FACTURA FINAL, POR  ESTA");
                 l.WriteLine("RAZON ENLISTAMOS SOLAMENTE LOS");
                 l.WriteLine("ALIMENTOS Y/O BEBIDAS CONSUMIDOS");
-                l.WriteLine(" ");
+                l.WriteLine(" "); */
                 l.WriteLine(" *** NO COBRAMOS 10% ***");
                 for (Lineas = 0; Lineas < 6; Lineas++)
                 {
@@ -625,7 +637,7 @@ namespace HK.Clases
                 tarjeta.Bolivares = consulta.Sum(x => x.Tarjeta).GetValueOrDefault(0);
                 retorno.Add(tarjeta);
                 TotalxFormaPago cestaTicket = new TotalxFormaPago();
-                cestaTicket.FormaPago = "CESTA TICKET";
+                cestaTicket.FormaPago = "Cesta tiket";
                 cestaTicket.Bolivares = consulta.Sum(x => x.CestaTicket).GetValueOrDefault(0);
                 retorno.Add(cestaTicket);
                 TotalxFormaPago consumoInterno = new TotalxFormaPago();
@@ -657,7 +669,7 @@ namespace HK.Clases
                 tarjeta.Bolivares = consulta.Sum(x => x.Tarjeta).GetValueOrDefault(0);
                 retorno.Add(tarjeta);
                 TotalxFormaPago cestaTicket = new TotalxFormaPago();
-                cestaTicket.FormaPago = "CESTA TICKET";
+                cestaTicket.FormaPago = "Cestaticket";
                 cestaTicket.Bolivares = consulta.Sum(x => x.CestaTicket).GetValueOrDefault(0);
                 retorno.Add(cestaTicket);
                 TotalxFormaPago consumoInterno = new TotalxFormaPago();
@@ -689,7 +701,7 @@ namespace HK.Clases
                 tarjeta.Bolivares = consulta.Sum(x => x.Tarjeta).GetValueOrDefault(0);
                 retorno.Add(tarjeta);
                 TotalxFormaPago cestaTicket = new TotalxFormaPago();
-                cestaTicket.FormaPago = "CESTA TICKET";
+                cestaTicket.FormaPago = "Cestaticket";
                 cestaTicket.Bolivares = consulta.Sum(x => x.CestaTicket).GetValueOrDefault(0);
                 retorno.Add(cestaTicket);
                 TotalxFormaPago consumoInterno = new TotalxFormaPago();

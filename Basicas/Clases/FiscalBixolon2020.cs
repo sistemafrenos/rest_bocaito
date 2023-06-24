@@ -12,7 +12,8 @@ namespace HK
     public class Pagos 
     {
         static public string Efectivo="201";
-        static public string Tarjeta="209";
+        static public string Tarjeta="213";
+        static public string PagoMobil = "207"; // Internamente se almacena como cestaticket
         static public string Divisa="220";
         static public string Resto="102";
     }
@@ -228,6 +229,11 @@ namespace HK
                 {
                         fiscal.SendCmd(Pagos.Divisa + ((double)documento.Dolares * 100).ToString("000000000000"));
                         TotalPagos += documento.Dolares.Value;
+                }
+                if (documento.CestaTicket.GetValueOrDefault(0) != 0) 
+                {
+                    fiscal.SendCmd(Pagos.PagoMobil + ((double)documento.CestaTicket * 100).ToString("000000000000"));
+                    TotalPagos += documento.CestaTicket.Value;
                 }
              
                 System.Threading.Thread.Sleep(500);
