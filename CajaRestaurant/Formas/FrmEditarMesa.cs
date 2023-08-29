@@ -143,14 +143,7 @@ namespace HK
         }
         void btnImprimir_Click(object sender, EventArgs e)
         {
-            if (Basicas.parametros().ImprimirOrden == "FISCAL")
-            {
-                ImprimirCorte();
-            }
-            else
-            {
-                ImprimirCorte();
-            }
+                ImprimirCorte(false);
         }
         void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -270,18 +263,10 @@ namespace HK
                     e.Handled = true;
                     break;
                 case Keys.F11:
-                    ImprimirCorte();
+                    ImprimirCorte(true);
                     break;
                 case Keys.F10:
-                    if (Basicas.parametros().ImprimirOrden == "FISCAL")
-                    {
-                        ImprimirCorte();
-                    }
-                    else
-                    {
-                        ImprimirCorte();
-                    }
-                    e.Handled = true;
+                     ImprimirCorte(false);
                     break;
                 case Keys.F12:
                     this.btnGuardar.PerformClick();
@@ -298,12 +283,12 @@ namespace HK
                 e.Handled = true;
             }
         }
-        private void ImprimirCorte()
+        private void ImprimirCorte(bool fiscal)
         {
             try
             {
                 this.Guardar();
-                Basicas.ImprimirCorteCuenta(mesaAbierta);
+                Basicas.ImprimirCorteCuenta(mesaAbierta, fiscal);
                 mesaAbierta.Estatus = "IMPRESA";
                 db.SaveChanges();
             }
@@ -542,7 +527,7 @@ namespace HK
             try
             {
                 this.Guardar();
-                Basicas.ImprimirCorteCuenta(mesaAbierta);
+                Basicas.ImprimirCorteCuenta(mesaAbierta, false);
                 mesaAbierta.Estatus = "IMPRESA";
                 db.SaveChanges();
             }

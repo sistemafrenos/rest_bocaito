@@ -220,8 +220,13 @@ namespace HK.Clases
             factura.Tipo = "FACTURA";
             factura.Anulado = false;
         }
-        public static void ImprimirCorteCuenta(MesasAbierta mesaAbierta)
+        public static void ImprimirCorteCuenta(MesasAbierta mesaAbierta, bool fiscal)
         {
+            if (fiscal)
+            {
+                ImprimirCorteCuentaFiscal(mesaAbierta);
+                return;
+            }
             switch(Basicas.parametros().ImprimirCorteCuenta)
             {
                case "FISCAL":
@@ -237,8 +242,8 @@ namespace HK.Clases
         }
         static void ImprimirCorteCuentaFiscal(MesasAbierta mesaAbierta)
         {
-            FiscalBixolon f = new FiscalBixolon();
-            f.ImprimeCorte(mesaAbierta);
+            FiscalBixolon2020 f = new FiscalBixolon2020(Basicas.parametros().PuertoImpresoraFiscal);
+            f.ImprimeCorteConMontos(mesaAbierta);
         }
         public static void ImprimirAnulacion(MesasAbiertasPlatosAnulado item)
         {

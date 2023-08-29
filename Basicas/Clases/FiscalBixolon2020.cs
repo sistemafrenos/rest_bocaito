@@ -305,5 +305,46 @@ namespace HK
                 throw new Exception(string.Format("Error de conexión\n{0}\nEstatus {1}", x.Message, fiscal.Status_Error));
             }
         }
+        public void ImprimeCorteConMontos(MesasAbierta documento)
+        {
+            unsafe
+            {
+                try
+                {
+                    fiscal.SendCmd("800" + "                        CORTE DE CUENTA");
+                    fiscal.SendCmd("800" + "MESA:" + documento.Mesa);
+                    fiscal.SendCmd("800" + "MESONERO:" + documento.Mesonero);
+                    fiscal.SendCmd("800" + "CUENTA:" + documento.Numero);
+                    fiscal.SendCmd("800" + " ");
+                    fiscal.SendCmd("800" + "CANT  DESCRIPCION                          MONTO");
+                    fiscal.SendCmd("800" + "================================================");
+                    using (var db = new RestaurantEntities())
+                    {
+                        var mesaPlatos = from p in db.MesasAbiertasPlatos
+                                         where p.IdMesaAbierta == documento.IdMesaAbierta
+                                         select p;
+                        foreach (var item in mesaPlatos)
+                        {
+                            fiscal.SendCmd(string.Format("800" + "{0} {1} {2}", item.Cantidad.Value.ToString("000"), item.Descripcion.PadRight(30).Substring(0, 30), item.Total.GetValueOrDefault(0).ToString("n2").PadLeft(8)));
+                        }
+                    }
+                    fiscal.SendCmd("800" + "================================================");
+                    fiscal.SendCmd("800" + string.Format("MONTO SERVICIO:{0}".PadLeft(40), documento.MontoServicio.GetValueOrDefault(0).ToString("N2").PadLeft(8)));
+                    fiscal.SendCmd("800" + string.Format("  MONTO EXENTO:{0}".PadLeft(40), documento.MontoExento.GetValueOrDefault(0).ToString("N2").PadLeft(8)));
+                    fiscal.SendCmd("800" + string.Format("MONTO GRAVABLE:{0}".PadLeft(40), documento.MontoGravable.GetValueOrDefault(0).ToString("N2").PadLeft(8)));
+                    fiscal.SendCmd("800" + string.Format("     MONTO IVA:{0}".PadLeft(40), documento.MontoIva.GetValueOrDefault(0).ToString("N2").PadLeft(8)));
+                    fiscal.SendCmd("800" + string.Format("   MONTO TOTAL:{0}".PadLeft(40), documento.MontoTotal.GetValueOrDefault(0).ToString("N2").PadLeft(8)));
+                    fiscal.SendCmd("800" + "================================================");
+                    fiscal.SendCmd("810" + "  ");
+                }
+                catch (Exception x)
+                {
+                    fiscal.SendCmd("810  ");
+                    throw x;
+                }
+            }
+
+        }
+      
     }
 }
